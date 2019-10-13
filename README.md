@@ -16,13 +16,14 @@
 
 | 硬件 | 分辨率 | 测试 |
 | --- | --- | --- |
-| Raspberry Pi Zero | 720p | 已测试 |
-| Raspberry Pi 3A+  | 1080p |已测试 |
-| Raspberry Pi 3B+  | 1080p | 已测试 |
-| Raspberry Pi 4B   | 1080p | 待测试 |
-| Rockchip          | 1080p | 可定制 |
-| Windows 7/10      | 1080p | 可定制 |
-| 其它              | 1080p | 可定制 |
+| Raspberry Pi Zero  | 720p     | 已测试 |
+| Raspberry Pi 3A+   | 1080p    |已测试 |
+| Raspberry Pi 3B+   | 1080p    | 已测试 |
+| Raspberry Pi 4B    | 1080p    | 待测试 |
+| Rockchip           | 1080p    | 可定制 |
+| Linux Intel/NVIDIA | 1080p/4K | 可定制 |
+| Windows 7/10       | 1080p/4K | 可定制 |
+| 其它               | 1080p/4K | 可定制 |
 
 ---
 ### 支持功能
