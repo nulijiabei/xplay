@@ -41,11 +41,6 @@
 * 15，支持静音播放
 
 ---
-### 更多功能
-
- * XXXX 德纳科技提供基于云服务的信息发布系统(www.danoonetworks.com) XXXX
-
----
 ### 安装方法
 
  * XXX 
@@ -58,7 +53,7 @@
 ---
 ### 服务与支持
 
- * XXX
+ * XXXX 德纳科技提供基于云服务的信息发布系统(www.danoonetworks.com) XXXX
  
  ---
 
