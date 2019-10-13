@@ -4,6 +4,11 @@
 
 ---
 
+![image](https://github.com/nulijiabei/xplay/blob/master/images/%E6%A8%AA%E7%AB%96%E5%B1%8F.jpg)
+![image](https://github.com/nulijiabei/xplay/blob/master/images/%E5%A4%9A%E5%88%86%E5%B1%8F.gif)
+
+---
+
 注意：这并不是一个开源项目，只是免费提供已经编译好的多媒体播放程序包与通讯协议文档
 
 ---
