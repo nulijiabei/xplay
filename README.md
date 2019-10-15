@@ -77,7 +77,8 @@
 ---
 ### 更多功能
 
- * 德纳科技提供基于云服务的信息发布系统(www.danoonetworks.com)
+ * 基于云服务的信息发布系统(www.danoonetworks.com)
+ * 提供多媒体播放器的软(linux、windows)硬件(arm、intel、nvidia)定制服务
 
 ![image](https://github.com/nulijiabei/xplay/blob/master/images/cherry.jpg)
 
