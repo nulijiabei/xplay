@@ -78,7 +78,7 @@
 ### 更多功能
 
  * 基于云服务的信息发布系统(www.danoonetworks.com)
- * 提供多媒体播放器的软(linux、windows)硬件(arm、intel、nvidia)定制服务
+ * 提供一站式解决方案(软硬件、一体机、4G/WIFI网络、等 ...)
 
 ![image](https://github.com/nulijiabei/xplay/blob/master/images/cherry.jpg)
 
