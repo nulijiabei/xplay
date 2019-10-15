@@ -75,9 +75,14 @@
  ```
  
 ---
+### 更多功能
+
+![image](https://github.com/nulijiabei/xplay/blob/master/images/cherry.jpg)
+ 
+---
 ### 服务与支持
 
  * XXXX 德纳科技提供基于云服务的信息发布系统(www.danoonetworks.com) XXXX
- 
+
  ---
 
