@@ -57,26 +57,28 @@
 ---
 ### 安装方法
 
- ```
- # 更改国内源
- /etc/apt/sources.list
- deb https://mirrors4.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main contrib non-free rpi
- /etc/apt/sources.list.d/raspi.list
- deb https://mirrors4.tuna.tsinghua.edu.cn/raspberrypi/ stretch main ui
- ```
- ```
- # 更新 ...
+ ***源***
+ 
+ | 文件 | 地址 |
+ | --- | --- |
+ | /etc/apt/sources.list | https://mirrors4.tuna.tsinghua.edu.cn/raspbian/raspbian/
+ | /etc/apt/sources.list.d/raspi.list | https://mirrors4.tuna.tsinghua.edu.cn/raspberrypi/
+
+ ***更新***
+  ```
  apt-get update
  ```
+ 
+ ***安装支持库***
  ```
- # 安装支持库
  apt-get install qt5-default
  apt-get install libasound2-dev
  apt-get install libqrencode-dev
  apt-get install telnet
  ```
+ 
+ ***执行安装程序***
  ```
- # 执行安装程序
  XXX
  ```
 
