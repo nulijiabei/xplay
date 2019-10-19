@@ -72,7 +72,6 @@
  ***安装支持库***
  ```
  apt-get install qt5-default
- apt-get install libqrencode4
  ```
  
  ***执行安装程序***
