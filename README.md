@@ -25,6 +25,12 @@
 | Windows 7/10       | 1080p/4K      | 可定制 |
 | 其它               | 1080p/4K      | 可定制 |
 
+### 支持系统
+
+| 系统 | 日期 | 测试 |
+| --- | --- | --- |
+| Raspbian Buster with desktop | 2019-09-26 | 已测试 |
+
 ---
 ### 支持功能
 
@@ -64,7 +70,6 @@
  ```
  # 安装支持库
  apt-get install qt5-default
- apt-get install libx264-dev
  apt-get install libasound2-dev
  apt-get install libqrencode-dev
  apt-get install telnet
