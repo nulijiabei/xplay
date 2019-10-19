@@ -75,28 +75,41 @@
  | --- | --- |
  | /boot/config.txt | gpu_mem=192 (显存内存分配不能少于192M) |
  
- ***执行安装程序***
+ ***安装程序***
  ```
- XXX
+ git clone https://github.com/nulijiabei/xplay.git
+ cd xplay
+ sh -x install
  ```
-
+ 
+ ***运行程序***
+ ```
+ /usr/bin/xplay
+ /usr/bin/xplay &
+ ```
+ 
+ ***查看日志***
+ ```
+ tail -n 100 /dev/shm/xplay.log
+ ```
+ 
+ ***播放测试***
+ ```
+ // 测试工具
+ apt-get install telnet
+ ```
+ 
 ---
 ### 连接控制
 
  * 通过Socket接口与播放器建立TCP连接，向播放器发送指令，从播放器接收返回
  * 可以通过多种支持Socket连接语言开发控制程序(java、python、C++、golang、等 ...)
  
- ***测试连接***
- ```
- // 测试工具
- apt-get install telnet
- ```
- 
  ***连接样例***
  ```
  例：XXX
  ```
-
+ 
 ---
 ### 控制指令
 
@@ -106,9 +119,6 @@
 ### 系统优化
 
  * Raspbian 优化官方系统，使多媒体播放器更加稳定的长期运行 ...
- ```
- XXX
- ```
  
 ---
 ### 更多功能
