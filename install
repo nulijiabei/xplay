@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cp -aRrf ./usr/bin/xplay /usr/bin/xplay
+cp -aRrf ./usr/local/lib/* /usr/local/lib/
+
+mkdir /etc/xplay
+cp -aRrf ./etc/xplay/* /etc/xplay/
+cp -aRrf ./etc/ld.so.conf.d/00-xplay.conf /etc/ld.so.conf.d/
+
+ldconfig
+
+echo "Successful installation -> /usr/bin/xplay"
