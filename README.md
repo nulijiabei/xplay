@@ -72,9 +72,7 @@
  ***安装支持库***
  ```
  apt-get install qt5-default
- apt-get install libasound2-dev
- apt-get install libqrencode-dev
- apt-get install telnet
+ apt-get install libqrencode4
  ```
  
  ***执行安装程序***
@@ -87,6 +85,10 @@
 
  * 通过Socket接口与播放器建立TCP连接，向播放器发送指令，从播放器接收返回
  * 可以通过多种支持Socket连接语言开发控制程序(java、python、C++、golang、等 ...)
+ ```
+ // 测试连接
+ apt-get install telnet
+ ```
  ```
  例：XXX
  ```
