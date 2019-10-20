@@ -29,7 +29,6 @@
 
 | 系统 | 日期 | 安装 | 测试 |
 | --- | --- | --- | --- |
-| Raspbian Stretch with desktop | 2019-04-08 | stretch/install | 待测试 |
 | Raspbian Buster with desktop | 2019-09-26 | buster/install | 已测试 |
 
 ---
