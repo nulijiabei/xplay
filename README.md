@@ -57,49 +57,49 @@
 ---
 ### 安装方法
 
- ***源***
+ ***1. 设置源***
  
  | 文件 | 地址 |
  | --- | --- |
  | /etc/apt/sources.list | https://mirrors4.tuna.tsinghua.edu.cn/raspbian/raspbian/
  | /etc/apt/sources.list.d/raspi.list | https://mirrors4.tuna.tsinghua.edu.cn/raspberrypi/
 
- ***更新***
+ ***2. 更新源***
   ```
  apt-get update
  ```
  
- ***显存设置***
+ ***3. 显存设置***
  
  | 文件 | 设置 |
  | --- | --- |
  | /boot/config.txt | gpu_mem=192 (显存内存分配不能少于192M) |
  
- ***安装程序***
+ ***4. 安装程序***
  ```
  git clone https://github.com/nulijiabei/xplay.git
  cd xplay
  sh -x install
  ```
  
- ***运行程序***
+ ***5. 运行程序***
  ```
  /usr/bin/xplay
  或
  /usr/bin/xplay &
  ```
  
- ***查看日志***
- ```
- tail -n 100 /dev/shm/xplay.log
- ```
- 
- ***播放测试***
+ ***6. 播放测试***
  ```
  // 测试工具
  apt-get install telnet
  ```
  
+ ***7. 查看日志***
+ ```
+ tail -n 100 /dev/shm/xplay.log
+ ```
+
 ---
 ### 连接控制
 
