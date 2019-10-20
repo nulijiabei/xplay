@@ -29,6 +29,7 @@
 
 | 系统 | 日期 | 测试 |
 | --- | --- | --- |
+| Raspbian Stretch with desktop | 2019-04-08 | 已测试 |
 | Raspbian Buster with desktop | 2019-09-26 | 已测试 |
 
 ---
@@ -84,6 +85,7 @@
  ***运行程序***
  ```
  /usr/bin/xplay
+ 或
  /usr/bin/xplay &
  ```
  
