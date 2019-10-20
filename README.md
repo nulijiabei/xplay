@@ -27,10 +27,10 @@
 
 ### 支持系统
 
-| 系统 | 日期 | 测试 |
-| --- | --- | --- |
-| Raspbian Stretch with desktop | 2019-04-08 | 已测试 |
-| Raspbian Buster with desktop | 2019-09-26 | 已测试 |
+| 系统 | 日期 | 安装 | 测试 |
+| --- | --- | --- | --- |
+| Raspbian Stretch with desktop | 2019-04-08 | stretch/install | 已测试 |
+| Raspbian Buster with desktop | 2019-09-26 | buster/install | 已测试 |
 
 ---
 ### 支持功能
@@ -78,7 +78,8 @@
  ***4. 安装程序***
  ```
  git clone https://github.com/nulijiabei/xplay.git
- cd xplay
+ cd xplay/
+ cd buster/ # Raspbian Buster with desktop
  sh -x install
  ```
  
