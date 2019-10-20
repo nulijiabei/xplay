@@ -21,9 +21,9 @@
 | Raspberry Pi 3B+   | 1080p/720p    | 25 | 已测试 |
 | Raspberry Pi 4B    | 1080p         | 30 | 待测试 |
 | Rockchip           | 1080p         | 30 | 可定制 |
-| Linux Intel/NVIDIA | 1080p/4K      | 可定制 | 可定制 |
-| Windows 7/10       | 1080p/4K      | 可定制 | 可定制 |
-| 其它               | 1080p/4K      | 可定制 | 可定制 |
+| Linux Intel/NVIDIA | 1080p/4K      | 30/60 | 可定制 |
+| Windows 7/10       | 1080p/4K      | 30/60 | 可定制 |
+| 其它               | 1080p/4K      | 30/60 | 可定制 |
 
 ### 支持系统
 
