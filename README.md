@@ -256,10 +256,10 @@
  ```
  // 停止全部层
  {
-  "type": "stop",
-  "params": {
-   "all": true
-  }
+   "type": "stop",
+   "params": {
+       "all": true
+   }
  }
  #End
  ```
@@ -267,10 +267,10 @@
  ```
  // 停止指定层
  {
-  "type": "stop",
-  "params": {
-   "ids": ["10", "11", "12"]
-  }
+   "type": "stop",
+   "params": {
+       "ids": ["10", "11", "12"]
+   }
  }
  ```
 
