@@ -172,24 +172,87 @@
  ```
  // 指令说明
  {
-     "start": -1,                    // 开始时间(默认：-1，立即播放，本地毫秒时间戳)【非必填】
      "id": "Z10_Play_1557737960000", // 唯一标记(自定义唯一标识)【非必填】
+     "type": "play"                  // 指令类型【必填】
+     "start": -1,                    // 开始时间(默认：-1，立即播放，本地毫秒时间戳)【非必填】
      "libName": "video",             // 素材类型(video、pic、gif、qrcode、text）【必填】
      "params": {                     // 参数集合【必填】
-         "zIndex": 10                // 层【必填】
+         "zIndex": 10,               // 层(支持多层播放，层数小则画面前置)【必填】
          "path": "/root/sample.mp4", // 素材路径【必填】
          "left": 0,                  // 距左像素(X轴)【非必填】
          "top": 0,                   // 距顶像素(Y轴)【非必填】
          "width": 1920,              // 宽(素材显示的宽，非素材原始尺寸，支持缩放拉伸)【必填】
          "height": 1080,             // 高(素材显示的高，非素材原始尺寸，支持缩放拉伸)【必填】
          "screen_mode": "landscape", // 屏幕模式(横屏：landscape，竖屏：portrait，默认横屏)【非必填】
-         "screen_rotate": 0,         // 旋转角度(横屏角度：0、180，竖屏角度：90、270，默认横屏)【非必填】
-     },
-     "type": "play"                  // 指令类型【必填】
+         "screen_rotate": 0          // 旋转角度(横屏角度：0、180，竖屏角度：90、270，默认横屏)【非必填】
+     }
  }
  #End                                // 指令结束【必填】
  ```
  
+ ```
+ // 显示图片
+ {
+    "id": "Z10_Play_1556637960000",
+    "type": "play",
+    "start": -1,
+    "libName": "pic",
+    "params": {
+        "zIndex": 10,
+        "path": "/root/cat.jpg",
+        "top": 0,
+        "left": 0,
+        "height": 1080,
+        "width": 1920,
+        "screen_mode": "landscape",
+        "screen_rotate": 0
+    }
+ }
+ #End
+ ```
+ 
+ ```
+ // 显示动画
+ {
+    "id": "Z10_Play_1554437960000",
+    "type": "play",
+    "start": -1,
+    "libName": "gif",
+    "params": {
+        "zIndex": 10,
+        "path": "/root/aaa.gif",
+        "top": 0,
+        "left": 0,
+        "height": 100,
+        "width": 100,
+        "screen_mode": "landscape",
+        "screen_rotate": 0
+    }
+ }
+ #End
+ ```
+ 
+ ```
+ // 显示二维码
+ {
+    "id": "Z10_Play_1558837960000",
+    "type": "play",
+    "start": -1,
+    "libName": "qrcode",
+    "params": {
+        "zIndex": 10,
+        "content": "http://www.danoonetwork.com",
+        "top": 0,
+        "left": 0,
+        "height": 100,
+        "width": 100,
+        "screen_mode": "landscape",
+        "screen_rotate": 0
+    }
+ }
+ #End
+ ```
+
 ---
 ### 系统优化
 
