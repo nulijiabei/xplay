@@ -87,14 +87,14 @@
  | 参数 | 默认 |说明 |
  | --- | --- | --- |
  | -R | 0,0,1920,1080 | 分辨率设置 |
- | -fps | 24 | 帧率设置 |
+ | -fps | 25 | 帧率设置 |
  | -loop | 视频停止在最后一帧 | 视频循环设置 |
  | -mute | 播放声音 | 静音设置 |
  | -sample_rate | 44100 | 音频采样频率设置 |
  
  ```
  // 分辨率 1920x1080 【默认】
- // 帧率 24fps 【默认】
+ // 帧率 25fps 【默认】
  // 音频采样率 44100 【默认】
  // 视频停止在最后一帧【默认】
  // 播放声音【默认】
@@ -107,9 +107,46 @@
  ```
  
  ***6. 播放测试***
+ 
  ```
  // 测试工具
  apt-get install telnet
+ ```
+ 
+ ```
+ // 测试指令
+ root@raspberrypi:~# telnet 127.0.0.1 8700
+ Trying 127.0.0.1...
+ Connected to 127.0.0.1.
+ Escape character is '^]'.
+ 
+ // 指令内容
+ {
+    "libName": "video",
+    "params": {
+        "path": "/root/sample.mp4",
+        "width": 1920,
+        "height": 1080,
+        "zIndex": 10
+    },
+    "type": "play"
+ }
+ #End
+ ```
+ 
+ ```
+ // 指令说明
+ {
+     "libName": "video",             // 类型
+     "params": {                     // 参数
+         "path": "/root/sample.mp4", // 路径
+         "width": 1920,              // 宽
+         "height": 1080,             // 高
+         "zIndex": 10                // 层
+     },
+     "type": "play"                  // 播放
+ }
+ #End                                // 结束
  ```
  
  ***7. 查看日志***
