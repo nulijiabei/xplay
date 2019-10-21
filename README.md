@@ -161,13 +161,13 @@
  | play | 播放 |
  | stop | 停止 |
    
- | 素材类型(libName) | 素材/内容(键) | 说明 |
+ | 素材类型(libName) | 说明 |
  | --- | --- | --- | 
- | video | path | 视频 |
- | pic | path | 图片 |
- | gif | path | 动画 |
- | qrcode | content | 二维码 |
- | text | content | 文本 |
+ | video | 视频 |
+ | pic | 图片 |
+ | gif | 动画 |
+ | qrcode | 二维码 |
+ | text | 文本 |
  
  ```
  // 指令说明
