@@ -300,7 +300,7 @@
  {
     "libName": "video",
     "params": {
-        "path": "/root/a.mp4",
+        "path": "/root/b.mp4",
         "width": 1920,
         "height": 1080,
         "zIndex": 10
