@@ -141,17 +141,14 @@
  ```
 
 ---
-### 连接控制
+### 播放控制
 
  * 通过Socket接口与播放器建立TCP连接，向播放器发送指令，从播放器接收返回
  * 可以通过多种支持Socket连接语言开发控制程序(java、python、C++、golang、等 ...)
+ * 注：运行样例之前请先启动xplay主程序(/usr/bin/xplay &)
  
- ***连接样例***
- 
- ```
- 例：XXX
- ```
- 
+ [Golang 控制样例](https://github.com/nulijiabei/xplay/blob/master/example/example.go)
+
 ---
 ### 控制指令
 
