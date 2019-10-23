@@ -148,6 +148,7 @@
  * 注：运行样例之前请先启动xplay主程序(/usr/bin/xplay &)
  
  [Golang 控制样例](https://github.com/nulijiabei/xplay/blob/master/example/example.go)
+ 
  [Python 控制样例](https://github.com/nulijiabei/xplay/blob/master/example/example.py)
  
 ---
