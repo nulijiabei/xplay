@@ -337,7 +337,7 @@
  * 基于云服务的信息发布系统(www.danoonetworks.com)
  * 提供一站式解决方案(软硬件、一体机、4G/WIFI网络、等 ...)
 
-![image](https://github.com/nulijiabei/xplay/blob/master/images/cherry.jpg)
+![image](images/cherry.jpg)
 
  ---
 
