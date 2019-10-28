@@ -4,8 +4,8 @@
 
 ---
 
-![image](https://github.com/nulijiabei/xplay/blob/master/images/%E6%A8%AA%E7%AB%96%E5%B1%8F.jpg)
-![image](https://github.com/nulijiabei/xplay/blob/master/images/%E5%A4%9A%E5%88%86%E5%B1%8F.gif)
+![image](images/%E6%A8%AA%E7%AB%96%E5%B1%8F.jpg)
+![image](images/%E5%A4%9A%E5%88%86%E5%B1%8F.gif)
 
 ---
 
@@ -136,8 +136,8 @@
  * 可以通过多种支持Socket连接语言开发控制程序(java、python、C++、golang、等 ...)
  * 注：运行样例之前请先启动xplay主程序(/usr/bin/xplay &)
  
- [Golang 控制样例](https://github.com/nulijiabei/xplay/blob/master/example/example.go)  
- [Python 控制样例](https://github.com/nulijiabei/xplay/blob/master/example/example.py)
+ [Golang 控制样例](example/example.go)  
+ [Python 控制样例](example/example.py)
  
 ---
 ### 控制指令
