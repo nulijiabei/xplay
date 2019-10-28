@@ -215,8 +215,6 @@
  ```
  // 显示摄像头
  // 启用摄像头 raspi-config > Interfacing Options > P1 Camera
- // 使用 device 指定摄像头设备 /dev/video0
- // 使用 camera_width 与 camera_height 设置摄像头 videosize 分辨率
  {
     "id": "Z10_Play_1558837960000",
     "type": "play",
