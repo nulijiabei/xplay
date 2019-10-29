@@ -30,6 +30,7 @@
 | 系统 | 日期 | 安装 | 测试 |
 | --- | --- | --- | --- |
 | Raspbian Buster with desktop | 2019-09-26 | buster/install | 已测试 |
+| Raspbian Buster Lite | 2019-09-26 | buster-lite/install | 已测试 |
 
 ---
 ### 支持功能
