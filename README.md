@@ -208,12 +208,12 @@
  // "camera_width": 1280    // 摄像头像素宽
  // "camera_height": 720    // 摄像头像素高
  {
-    "id": "Z10_Play_1558837960000",
+    "id": "Z9_Play_1558837960000",
     "type": "play",
     "start": -1,
     "libName": "camera",
     "params": {
-        "zIndex": 10,
+        "zIndex": 9,
         "device": "/dev/video0",
         "camera_width": 1280,
         "camera_height": 720,
@@ -231,12 +231,12 @@
  ```
  // 显示动画
  {
-    "id": "Z10_Play_1554437960000",
+    "id": "Z9_Play_1554437960000",
     "type": "play",
     "start": -1,
     "libName": "gif",
     "params": {
-        "zIndex": 10,
+        "zIndex": 9,
         "path": "/root/aaa.gif",
         "top": 0,
         "left": 0,
@@ -283,12 +283,12 @@
  ```
  // 显示二维码
  {
-    "id": "Z10_Play_1558837960000",
+    "id": "Z9_Play_1558837960000",
     "type": "play",
     "start": -1,
     "libName": "qrcode",
     "params": {
-        "zIndex": 10,
+        "zIndex": 9,
         "content": "http://www.danoonetwork.com",
         "top": 0,
         "left": 0,
