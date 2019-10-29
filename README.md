@@ -204,9 +204,9 @@
  ```
  // 显示摄像头
  // 启用摄像头 raspi-config > Interfacing Options > P1 Camera
- // "device": "/dev/video0" // 摄像头设备地址
- // "camera_width": 1280    // 摄像头像素宽
- // "camera_height": 720    // 摄像头像素高
+ // "device": "/dev/video0" // 摄像头 设备地址
+ // "camera_width": 1280    // 摄像头 video_size 宽
+ // "camera_height": 720    // 摄像头 video_size 高
  {
     "id": "Z9_Play_1558837960000",
     "type": "play",
