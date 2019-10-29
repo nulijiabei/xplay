@@ -68,7 +68,7 @@
  ```
  git clone https://github.com/nulijiabei/xplay.git
  cd xplay/
- cd buster/ # Raspbian Buster with desktop
+ cd buster/ # Raspbian Buster with desktop 或者 cd buster-lite/ # Raspbian Buster Lite
  sh -x install
  ```
  
@@ -288,50 +288,7 @@
  }
  #End
  ```
- 
----
-### 无黑场切换（视频与图片）
 
- * 切换素材不需要stop，只有需要停止某一层时才需要stop。
- * 切换素材时只需要发送新素材的播放指令即可，相同层的素材将会被切换。
- 
- ```
- // 例如：
- 
- // 1. 先发送指令：播放一个视频 a.mp4 使用 10 层 ...
- {
-    "libName": "video",
-    "params": {
-        "path": "/root/a.mp4",
-        "width": 1920,
-        "height": 1080,
-        "zIndex": 10
-    },
-    "type": "play"
- }
- #End
- 
- // 2. 后发送指令：播放一个视频 b.mp4 使用 10 层 ...
- {
-    "libName": "video",
-    "params": {
-        "path": "/root/b.mp4",
-        "width": 1920,
-        "height": 1080,
-        "zIndex": 10
-    },
-    "type": "play"
- }
- #End
- 
- // 这样 10 层先播放的 a.mp4 会无黑场的切换为 b.mp4 播放 ... 
- ```
-
----
-### 系统优化
-
- * Raspbian 优化官方系统，使多媒体播放器更加稳定的长期运行 ...
- 
 ---
 ### 更多功能
 
