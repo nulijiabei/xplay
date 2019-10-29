@@ -204,6 +204,9 @@
  ```
  // 显示摄像头
  // 启用摄像头 raspi-config > Interfacing Options > P1 Camera
+ // "device": "/dev/video0" // 摄像头设备地址
+ // "camera_width": 1280    // 摄像头像素宽
+ // "camera_height": 720    // 摄像头像素高
  {
     "id": "Z10_Play_1558837960000",
     "type": "play",
@@ -241,6 +244,37 @@
         "width": 100,
         "screen_mode": "landscape",
         "screen_rotate": 0
+    }
+ }
+ #End
+ ```
+ 
+ ```
+ // 显示文本
+ // 注意：文本使用层需要小于其它素材层(例如：视频或者图片素材使用10层那文本或其它悬浮层使用2-9层)
+ // "content": "欢迎使用 xplay 多媒体播放器"  // 文本内容
+ // "color": "rgba(0, 128, 0, 100%)"         // 字体颜色及透明度
+ // "bgcolor": "rgba(0, 0, 0, 0%)"           // 背景颜色及透明度
+ // "font_size": 14                          // 字号
+ // "align": "center"                        // 排列方式
+ {
+    "type": "play",
+    "id": "Z9_Play_1572344489512",
+    "libName": "text",
+    "start": -1,
+    "params": {
+       "top": 0,
+       "left": 0,
+       "width": 300,
+       "height": 50,
+       "zIndex": 9,
+       "screen_rotate": 0,
+       "screen_mode": "landscape",
+       "content": "欢迎使用 xplay 多媒体播放器",
+       "color": "rgba(0, 128, 0, 100%)",
+       "bgcolor": "rgba(0, 0, 0, 0%)",
+       "font_size": 14,
+       "align": "center"
     }
  }
  #End
