@@ -210,7 +210,7 @@
     "start": -1,
     "type": "play",
     "params": {
-	       "path": "http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8",
+        "path": "http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8",
         "height": 1080,
         "width": 1920,
         "left": 0,
