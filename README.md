@@ -19,11 +19,11 @@
 | Raspberry Pi Zero  | 720p          | 25 | 已测试 |
 | Raspberry Pi 3A+   | 1080p/720p    | 25 | 已测试 |
 | Raspberry Pi 3B+   | 1080p/720p    | 25 | 已测试 |
-| Raspberry Pi 4B    | 1080p         | 30 | 待测试 |
-| Rockchip           | 1080p         | 30 | 可定制 |
-| Linux Intel/NVIDIA | 1080p/4K      | 30/60 | 可定制 |
-| Windows 7/10       | 1080p/4K      | 30/60 | 可定制 |
-| 其它               | 1080p/4K      | 30/60 | 可定制 |
+| Raspberry Pi 2B    | 1080p/720p    | 25 | 未测试 |
+| Raspberry Pi 3B    | 1080p/720p    | 25 | 未测试 |
+| Raspberry Pi 4B    | 无            | 无 | 待适配 |
+
+***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
 
 ### 支持系统
 
