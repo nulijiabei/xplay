@@ -161,24 +161,6 @@
  | qrcode | 二维码 |
  | text | 文本 |
  
-  >启用摄像头 raspi-config > Interfacing Options > P1 Camera 
- 
- | 摄像头素材(camera) | 值 | 说明 |
- | --- | --- | --- |
- | device | /dev/video0 | 设备地址 |
- | camera_width | 1280 | 摄像头 video_size 宽 |
- | camera_height | 720 | 摄像头 video_size 高 |
-
- 
- | 文本素材(text) | 值 | 说明 |
- | --- | --- | --- |
- | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
- | bgcolor   | rgba(0, 0, 0, 0%)     | 背景颜色及透明度 |
- | font_size | 14                    | 字体大小 |
- | align     | center、right、left   | 对齐方式 |
- | style     | normal、bold、italic、underline、strikethrough | 文本样式 |
- | content   | \t\t123,456,789.\n987,654,321.\n | 文本内容 |
- 
  ```
  // 指令说明
  {
@@ -262,6 +244,14 @@
  #End
  ```
  
+ | 摄像头素材(camera) | 值 | 说明 |
+ | --- | --- | --- |
+ | device | /dev/video0 | 设备地址 |
+ | camera_width | 1280 | 摄像头 video_size 宽 |
+ | camera_height | 720 | 摄像头 video_size 高 |
+  
+ >启用摄像头 raspi-config > Interfacing Options > P1 Camera 
+
  ```
  // 显示摄像头
  {
@@ -305,6 +295,15 @@
  }
  #End
  ```
+  
+ | 文本素材(text) | 值 | 说明 |
+ | --- | --- | --- |
+ | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
+ | bgcolor   | rgba(0, 0, 0, 0%)     | 背景颜色及透明度 |
+ | font_size | 14                    | 字体大小 |
+ | align     | center、right、left   | 对齐方式 |
+ | style     | normal、bold、italic、underline、strikethrough | 文本样式 |
+ | content   | \t\t123,456,789.\n987,654,321.\n | 文本内容 |
  
  ```
  // 显示文本
