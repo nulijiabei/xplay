@@ -160,6 +160,24 @@
  | qrcode | 二维码 |
  | text | 文本 |
  
+  >启用摄像头 raspi-config > Interfacing Options > P1 Camera 
+ 
+ | 摄像头素材(camera) | 值 | 说明 |
+ | --- | --- | --- |
+ | device | /dev/video0 | 设备地址 |
+ | camera_width | 1280 | 摄像头 video_size 宽 |
+ | camera_height | 720 | 摄像头 video_size 高 |
+
+ 
+ | 文本素材(text) | 值 | 说明 |
+ | --- | --- | --- |
+ | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
+ | bgcolor   | rgba(0, 0, 0, 0%)     | 背景颜色及透明度 |
+ | font_size | 14                    | 字体大小 |
+ | align     | center、right、left   | 对齐方式 |
+ | style     | normal、bold、italic、underline、strikethrough | 文本样式 |
+ | content   | \t\t123,456,789.\n987,654,321.\n | 文本内容 |
+ 
  ```
  // 指令说明
  {
@@ -245,10 +263,6 @@
  
  ```
  // 显示摄像头
- // 启用摄像头 raspi-config > Interfacing Options > P1 Camera
- // "device": "/dev/video0" // 摄像头 设备地址
- // "camera_width": 1280    // 摄像头 video_size 宽
- // "camera_height": 720    // 摄像头 video_size 高
  {
     "id": "Z9_Play_1558837960000",
     "type": "play",
@@ -293,13 +307,6 @@
  
  ```
  // 显示文本
- // 注意：文本使用层需要小于其它素材层(例如：视频或者图片素材使用10层那文本或其它悬浮层使用2-9层)
- // 说明：文本使用的宽度需要大于内容实际长度(例如：文字长度50，显示宽度40，则Play失败)
- // "content": "欢迎使用 xplay 多媒体播放器"  // 文本内容
- // "color": "rgba(0, 128, 0, 100%)"         // 字体颜色及透明度
- // "bgcolor": "rgba(0, 0, 0, 0%)"           // 背景颜色及透明度
- // "font_size": 14                          // 字号
- // "align": "center"                        // 排列方式
  {
     "type": "play",
     "id": "Z9_Play_1572344489512",
@@ -308,16 +315,17 @@
     "params": {
        "top": 0,
        "left": 0,
-       "width": 300,
+       "width": 1280,
        "height": 50,
        "zIndex": 9,
        "screen_rotate": 0,
        "screen_mode": "landscape",
-       "content": "欢迎使用 xplay 多媒体播放器",
-       "color": "rgba(0, 128, 0, 100%)",
+       "content": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+       "color": "rgba(255, 0, 0, 100%)",
        "bgcolor": "rgba(0, 0, 0, 0%)",
-       "font_size": 14,
-       "align": "center"
+       "font_size": 30,
+       "align": "center",
+       "style": "bold"
     }
  }
  #End
