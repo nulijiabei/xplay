@@ -50,7 +50,7 @@
 11. 支持(视频)音频同步(视频帧时间戳与音轨帧时间戳)播放
 12. 支持(视频、流媒体、图片、摄像头、动画、文本、滚动字幕、二维码)多层(Overlay)播放
 13. 支持(文本)自定义(字体大小、字体颜色、背景颜色、透明度、对齐方式、风格样式、多行)
-14. 支持(滚动字幕)自定义(字体大小、字体颜色、透明度、风格样式)方向(从右向左)
+14. 支持(滚动字幕)自定义(字体大小、字体颜色、透明度、风格样式、移动速度)方向(从右向左)
 15. 支持自定义布局(通过多层功能可以实现多种自定义布局)
 16. 支持自定义(视频)是否循环播放(视频在播放到结尾时是否停留在最后一帧)
 17. 支持自定义素材尺寸(width，height)，任意拉伸缩放素材尺寸播放
@@ -162,6 +162,7 @@
  | qrcode | 二维码 |
  | text | 文本 |
  | scroll | 滚动字幕 |
+ | background | 背景 |
  
  ```
  // 指令说明
@@ -246,7 +247,7 @@
  #End
  ```
  
- | 摄像头素材(camera) | 值 | 说明 |
+ | 摄像头(camera) | 值 | 说明 |
  | --- | --- | --- |
  | device | /dev/video0 | 设备地址 |
  | camera_width | 1280 | 摄像头 video_size 宽 |
@@ -277,7 +278,7 @@
  #End
  ```
  
- | 文本素材(text) | 值 | 说明 |
+ | 文本(text) | 值 | 说明 |
  | --- | --- | --- |
  | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
  | bgcolor   | rgba(0, 0, 0, 0%)     | 背景颜色及透明度 |
@@ -312,11 +313,12 @@
  #End
  ```
  
- | 滚动字幕素材(scroll) | 值 | 说明 |
+ | 滚动字幕(scroll) | 值 | 说明 |
  | --- | --- | --- |
  | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
  | font_size | 14 | 字体大小 |
  | style     | normal、bold、italic、underline、strikethrough | 文本样式 |
+ | speed     | 1 | 移动速度(每帧移动N像素) |
  | content   | ABCDEFGHIJKLMNOPQRSTUVWXYZ | 文本内容 |      
  
  ```
@@ -335,7 +337,33 @@
        "content": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
        "color": "rgba(255, 0, 0, 100%)",
        "font_size": 30,
-       "style": "bold"
+       "style": "bold",
+       "speed": 1
+    }
+ }
+ #End
+ ```
+ 
+ | 背景(background) | 值 | 说明 |
+ | --- | --- | --- |
+ | bgcolor | rgba(0, 0, 0, 0%) | 背景颜色及透明度 |
+ 
+ ```
+ // 显示背景
+ {
+    "type": "play",
+    "id": "Z6_Play_1572344489512",
+    "libName": "background",
+    "start": -1,
+    "params": {
+       "top": 0,
+       "left": 0,
+       "width": 1920,
+       "height": 50,
+       "zIndex": 6,
+       "screen_rotate": 0,
+       "screen_mode": "landscape",
+       "bgcolor": "rgba(0, 0, 0, 10%)"
     }
  }
  #End
