@@ -318,7 +318,7 @@
  | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
  | font_size | 14 | 字体大小 |
  | style     | normal、bold、italic、underline、strikethrough | 文本样式 |
- | speed     | 1 | 移动速度(每帧移动N像素) |
+ | speed     | 1(每帧向前移动N像素) | 移动速度 |
  | content   | ABCDEFGHIJKLMNOPQRSTUVWXYZ | 文本内容 |      
  
  ```
