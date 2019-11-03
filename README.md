@@ -328,8 +328,6 @@
     "start": -1,
     "params": {
        "top": 0,
-       "left": 0,
-       "width": 0,
        "height": 50,
        "zIndex": 5,
        "screen_rotate": 0,
