@@ -162,6 +162,7 @@
  | qrcode | 二维码 |
  | text | 文本 |
  | scroll | 滚动字幕 |
+ | background | 透明背景 |
  
  ```
  // 指令说明
@@ -315,7 +316,6 @@
  | 滚动字幕(scroll) | 值 | 说明 |
  | --- | --- | --- |
  | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
- | bgcolor   | rgba(0, 0, 0, 20%) | 背景颜色及透明度 |
  | font_size | 14 | 字体大小 |
  | style     | normal、bold、italic、underline、strikethrough | 文本样式 |
  | speed     | 1(每帧向前移动N像素) | 移动速度 |
@@ -336,10 +336,33 @@
        "screen_mode": "landscape",
        "content": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
        "color": "rgba(255, 0, 0, 100%)",
-       "bgcolor": "rgba(0, 0, 0, 20%)",
        "font_size": 30,
        "style": "bold",
        "speed": 1
+    }
+ }
+ #End
+ ```
+ 
+ | 透明背景(background) | 值 | 说明 |
+ | --- | --- | --- |
+ | bgcolor   | rgba(0, 0, 0, 20%) | 背景颜色及透明度 |
+ 
+ ```
+ {
+    "type": "play",
+    "id": "Z6_Play_1572344489512",
+    "libName": "background",
+    "start": -1,
+    "params": {
+       "top": 0,
+       "left": 0,
+       "width": 1920,
+       "height": 50,
+       "zIndex": 6,
+       "screen_rotate": 0,
+       "screen_mode": "landscape",
+       "bgcolor": "rgba(0, 0, 0, 20%)"
     }
  }
  #End
