@@ -275,27 +275,6 @@
  #End
  ```
  
- ```
- // 显示动画
- {
-    "id": "Z9_Play_1554437960000",
-    "type": "play",
-    "start": -1,
-    "libName": "gif",
-    "params": {
-        "zIndex": 9,
-        "path": "/root/aaa.gif",
-        "top": 0,
-        "left": 0,
-        "height": 100,
-        "width": 100,
-        "screen_mode": "landscape",
-        "screen_rotate": 0
-    }
- }
- #End
- ```
-  
  | 文本素材(text) | 值 | 说明 |
  | --- | --- | --- |
  | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
@@ -326,6 +305,29 @@
        "font_size": 30,
        "align": "center",
        "style": "bold"
+    }
+ }
+ #End
+ ```
+ 
+ >如果动画显示不正常, 您可以使用Photoshop重新存储一下
+ 
+ ```
+ // 显示动画
+ {
+    "id": "Z9_Play_1554437960000",
+    "type": "play",
+    "start": -1,
+    "libName": "gif",
+    "params": {
+        "zIndex": 9,
+        "path": "/root/aaa.gif",
+        "top": 0,
+        "left": 0,
+        "height": 100,
+        "width": 100,
+        "screen_mode": "landscape",
+        "screen_rotate": 0
     }
  }
  #End
