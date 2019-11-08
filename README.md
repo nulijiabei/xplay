@@ -28,6 +28,14 @@
 ***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
 
 ---
+### 支持系统
+
+| 系统 | 日期 | 安装 | 测试 |
+| --- | --- | --- | --- |
+| Raspbian Buster with desktop | 2019-09-26 | buster/install | 已测试 |
+| Raspbian Buster Lite | 2019-09-26 | buster-lite/install | 已测试 |
+
+---
 ### 关于 Raspberry Pi 4B 说明
 
  * 在旧RPI[023]中使用dispmanx显示, 在新RPI[4]中使用x11或drm显示
@@ -35,14 +43,6 @@
  * 在新RPI[4]中使用drm可以不依赖GUI，所以xplay使用drm显示
  * 在新RPI[4]中未解决HEVC(h.265)解码, 所以xplay使用h264解码
  * 因为上述问题，xplay 此时无法支持 RPI[4] 4k, 正在抓紧解决 ...
-
----
-### 支持系统
-
-| 系统 | 日期 | 安装 | 测试 |
-| --- | --- | --- | --- |
-| Raspbian Buster with desktop | 2019-09-26 | buster/install | 已测试 |
-| Raspbian Buster Lite | 2019-09-26 | buster-lite/install | 已测试 |
 
 ---
 ### 支持功能
