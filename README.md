@@ -23,7 +23,7 @@
 | Raspberry Pi 3B+   | 1080p/v720p  | 30 | 已测试 |
 | Raspberry Pi 2B    | 1080p/v720p  | 30 | 未测试 |
 | Raspberry Pi 3B    | 1080p/v720p  | 30 | 未测试 |
-| Raspberry Pi 4B    | GL1 Mode    | 无 | 待适配 |
+| Raspberry Pi 4B    | 1080p[暂时]  | 30 | 已测试 |
 
 ***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
 
