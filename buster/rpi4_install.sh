@@ -12,6 +12,5 @@ cp -aRrf ${dir}/etc/00-xplay.conf /etc/ld.so.conf.d/
 ldconfig
 
 systemctl disable display-manager
-systemctl stop display-manager
 
 echo "Successful installation -> reboot -> /usr/bin/xplay"
