@@ -25,7 +25,7 @@
 | Raspberry Pi 3B+   | 1080p/v720p  | 30 | 已测试 |
 | Raspberry Pi 2B    | 1080p/v720p  | 30 | 未测试 |
 | Raspberry Pi 3B    | 1080p/v720p  | 30 | 未测试 |
-| Raspberry Pi 4B    | 1080p[暂时]  | 30[暂时] | 已测试 |
+| Raspberry Pi 4B    | 1080p        | 30 | 已测试 |
 
 ***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
 
@@ -40,9 +40,7 @@
 ---
 ### 关于 Raspberry Pi 4B 说明
 
- * 由于在RPI[4]中使用drm显示所以需要关闭x11(display-manager)
- * 由于在RPI[4]中未解决HEVC(h.265)解码, 所以继续使用h264解码
- * 因为解码问题与帧传递问题，造成RPI[4]无法4K, 正在抓紧解决 ...
+*正在为 Raspberry Pi 4B 定制全新的支持 4K 的多媒体播放器，敬请期待 ...*
 
 ---
 ### 支持功能
