@@ -152,7 +152,8 @@
  * 注：运行样例之前请先启动xplay主程序(/usr/bin/xplay &)
  
  [Golang 控制样例](example/example.go)  
- [Python 控制样例](example/example.py)
+ [Python 控制样例](example/example.py)  
+ [xplayctl 命令行工具](example/xplayctl.py)
  
 ---
 ### 控制指令
@@ -443,6 +444,59 @@
  }
  #End
  ```
+---
+### 命令行工具
+
+| 命令行参数(type) | 默认值 | 说明 |
+| --- | --- | --- |
+| addr    | 127.0.0.1:8700 | 网络地址及端口 |
+| id      | 自动           | 唯一标识 |
+| start   | -1             | 开始时间 |
+| libName | 无             | 素材类型 |
+| play    | 无             | 指令类型(播放) |
+| stop    | 无             | 指令类型(停止) |
+
+| 命令行参数(play) | 默认值 | 说明 |
+| --- | --- | --- |
+| zIndex        | 10            | 层 |
+| rect          | 0,0,1920,1080 | 素材显示尺寸与位置 |
+| screen_mode   | landscape     | 屏幕模式 |
+| screen_rotate | 0             | 旋转角度 |
+| path          | 无            | 素材路径 |
+| content       | 无            | 数据内容 |
+
+| 命令行参数(text) | 默认值 | 说明 |
+| --- | --- | --- |
+| color     | rgba(0,128,0,100%) | 文本颜色及透明度 |
+| bgcolor   | rgba(0,0,0,20%)    | 背景颜色及透明度 |
+| font_size | 14                 | 字体大小 |
+| align     | center             | 对齐方式 |
+| style     | normal             | 文本样式 |
+
+| 命令行参数(scroll) | 默认值 | 说明 |
+| --- | --- | --- |
+| speed | 1 | 移动速度 |
+
+| 命令行参数(camera) | 默认值 | 说明 |
+| --- | --- | --- |
+| device       | /dev/video0 | 设备地址 |
+| camera_width | 1280        | 摄像头 video_size 宽 |
+| camera_height| 720         | 摄像头 video_size 高 |
+
+| 命令行参数(stop) | 默认值 | 说明 |
+| --- | --- | --- |
+| all | 无 | 停止全部层 |
+| ids | 无 | 停止指定层 |
+
+```
+/usr/bin/xplayctl -stop -all
+/usr/bin/xplayctl -stop -ids 10,11,12
+/usr/bin/xplayctl -addr 127.0.0.1:8700 -play -libName pic -path "/root/sample.jpg"
+/usr/bin/xplayctl -play -libName pic -path "/root/sample.jpg"
+/usr/bin/xplayctl -play -libName video -path "/root/sample.mp4"
+/usr/bin/xplayctl -play -libName video zIndex 10 -path "/root/sample.mp4"
+/usr/bin/xplayctl -play -libName video zIndex 10 -rect 0,0,1920,1080 -path "/root/sample.mp4"
+```
 
 ---
 ### 更多功能
