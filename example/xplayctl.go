@@ -16,15 +16,17 @@ import (
 // Connect Address
 var addr = flag.String("addr", "127.0.0.1:8700", "xplay tcp address")
 
+// Default
+var id = flag.String("id", "", "debug id")
+var start = flag.Int64("start", -1, "start time millisecond")
+var libName = flag.String("libName", "", "video、pic、camera、gif、qrcode、text、scroll、background")
+
 // Stop
 var stop = flag.Bool("stop", false, "stop or play")
 var all = flag.Bool("all", false, "stop all")
 var ids = flag.String("ids", "", "stop ids")
-var libName = flag.String("libName", "", "video、pic、camera、gif、qrcode、text、scroll、background")
 
-// Default
-var id = flag.String("id", "", "debug id")
-var start = flag.Int64("start", -1, "start time millisecond")
+// Play
 var play = flag.Bool("play", false, "play or stop")
 
 // Play Params
