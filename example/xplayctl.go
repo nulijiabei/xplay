@@ -10,6 +10,7 @@ import (
 	"net"
 	"strconv"
 	"strings"
+	"time"
 )
 
 // Connect Address
@@ -145,8 +146,12 @@ func (this *XPlay) play() error {
 		params["bgcolor"] = *bgcolor
 	}
 	data := make(map[string]interface{})
+	if *id == "" {
+		data["id"] = fmt.Sprintf("PLAY_Z%d_%s_%d", *zIndex, strings.ToUpper(*libName), time.Now().Unix())
+	} else {
+		data["id"] = *id
+	}
 	data["type"] = "play"
-	data["id"] = *id
 	data["start"] = *start
 	data["libName"] = *libName
 	data["params"] = params
