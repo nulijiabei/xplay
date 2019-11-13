@@ -492,7 +492,7 @@
 // 例：
 /usr/bin/xplayctl -h # 帮助
 /usr/bin/xplayctl -stop -all # 停止全部层
-/usr/bin/xplayctl -stop -ids 10,11,12 # 停止指定层
+/usr/bin/xplayctl -stop -ids "10,11,12" # 停止指定层
 /usr/bin/xplayctl -play -libName pic -path "/root/sample.jpg" # 显示图片
 /usr/bin/xplayctl -play -libName qrcode -content "www.danoonetworks.com" # 显示二维码
 /usr/bin/xplayctl -play -libName video -path "/root/sample.mp4" # 显示视频
