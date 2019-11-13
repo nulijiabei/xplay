@@ -153,7 +153,7 @@
  
  [Golang 控制样例](example/example.go)  
  [Python 控制样例](example/example.py)  
- [xplayctl 命令行工具](example/xplayctl.py)
+ [xplayctl 命令行工具](example/xplayctl.go)
  
 ---
 ### 控制指令
