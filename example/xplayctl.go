@@ -1,6 +1,6 @@
 ﻿package main
 
-// 2019/11/12 v1.1
+// 2019/11/18 v1.2
 
 import (
 	"encoding/json"
@@ -43,14 +43,19 @@ var camera_width = flag.Int("camera_width", 1280, "camera video width")
 var camera_height = flag.Int("camera_height", 720, "camera video height")
 
 // Play Text
+var font_ttf = flag.String("font_ttf", "", "TrueTypeFont")
+var font_size = flag.Int("font_size", 14, "")
 var color = flag.String("color", "rgba(0,128,0,100%)", "")
 var bgcolor = flag.String("bgcolor", "rgba(0,0,0,20%)", "")
-var font_size = flag.Int("font_size", 14, "")
 var align = flag.String("align", "center", "center、right、left")
 var style = flag.String("style", "normal", "normal、bold、italic、underline、strikethrough")
 
 // Play Scroll
 var speed = flag.Int("speed", 1, "move pixel / frame")
+
+// Play Toast
+var toast_type = flag.String("toast_type", "notice", "notice、success、warning、error")
+var duration = flag.Int("duration", 0, "timeout stop toast")
 
 type XPlay struct {
 	conn *net.TCPConn
@@ -133,17 +138,23 @@ func (this *XPlay) play() error {
 		params["content"] = *content
 	} else if (*libName) == "text" {
 		params["content"] = *content
+		params["font_ttf"] = *font_ttf
+		params["font_size"] = *font_size
 		params["color"] = *color
 		params["bgcolor"] = *bgcolor
-		params["font_size"] = *font_size
 		params["align"] = *align
 		params["style"] = *style
 	} else if (*libName) == "scroll" {
 		params["content"] = *content
-		params["color"] = *color
+		params["font_ttf"] = *font_ttf
 		params["font_size"] = *font_size
+		params["color"] = *color
 		params["style"] = *style
 		params["speed"] = *speed
+	} else if (*libName) == "toast" {
+		params["content"] = *content
+		params["toast_type"] = *toast_type
+		params["duration"] = *duration
 	} else if (*libName) == "background" {
 		params["bgcolor"] = *bgcolor
 	}
