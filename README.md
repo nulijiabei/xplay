@@ -76,6 +76,8 @@
 19. 支持自定义素材横竖屏播放
 20. 支持自定义素材开始播放时间(多个播放器间可以实现同步播放)
 21. 支持静音播放
+22. 支持信息提示框(Toast)自定义提示文本及多种状态标识(notice、success、warning、error)
+23. 支持(文本)自定义TTC字体(可以通过自定义字体来实现不同效果的文本样式)
 
 ---
 ### 安装方法
@@ -267,6 +269,30 @@
  #End
  ```
  
+ | 信息提示框(toast) | 值 | 说明 |
+ | --- | --- | --- |
+ | toast_type | notice、success、warning、error | 消息类型 |
+ | duration | 0(永不超时) | 持续时间(s) 超时关闭 |
+ 
+ ```
+ // 显示信息提示框
+ {
+    "type": "play",
+    "id": "Z3_Play_1572344489512",
+    "libName": "toast",
+    "start": -1,
+    "params": {
+       "zIndex": 3,
+       "screen_rotate": 0,
+       "screen_mode": "landscape",
+       "content": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+       "toast_type": "notice",
+       "duration": 5
+    }
+ }
+ #End
+ ```
+ 
  | 摄像头(camera) | 值 | 说明 |
  | --- | --- | --- |
  | device | /dev/video0 | 设备地址 |
@@ -302,6 +328,7 @@
  | --- | --- | --- |
  | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
  | bgcolor   | rgba(0, 0, 0, 0%)     | 背景颜色及透明度 |
+ | font_ttf  | /etc/xplay/simsun.ttc | 指定字体 |
  | font_size | 14                    | 字体大小 |
  | align     | center、right、left   | 对齐方式 |
  | style     | normal、bold、italic、underline、strikethrough | 文本样式 |
@@ -336,6 +363,7 @@
  | 滚动字幕(scroll) | 值 | 说明 |
  | --- | --- | --- |
  | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
+ | font_ttf  | /etc/xplay/simsun.ttc | 指定字体 |
  | font_size | 14 | 字体大小 |
  | style     | normal、bold、italic、underline、strikethrough | 文本样式 |
  | speed     | 1(每帧向前移动N像素) | 移动速度 |
