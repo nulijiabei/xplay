@@ -521,6 +521,11 @@
 | camera_width | 1280        | 摄像头 video_size 宽 |
 | camera_height| 720         | 摄像头 video_size 高 |
 
+| 命令行参数(toast) | 默认值 | 说明 |
+| --- | --- | --- |
+| toast_type | notice | 消息类型 |
+| duration   | 0      | 持续时间(s) |
+
 | 命令行参数(stop) | 默认值 | 说明 |
 | --- | --- | --- |
 | all | 无 | 停止全部层 |
