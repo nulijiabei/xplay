@@ -178,6 +178,7 @@
  | 素材类型(libName) | 说明 |
  | --- | --- |
  | video | 视频/流媒体 |
+ | toast | 信息提示框 |
  | camera | 摄像头 |
  | pic | 图片 |
  | gif | 动画 |
@@ -540,11 +541,11 @@
 /usr/bin/xplayctl -play -libName qrcode -content "www.danoonetworks.com" # 显示二维码
 /usr/bin/xplayctl -play -libName video -path "/root/sample.mp4" # 显示视频
 /usr/bin/xplayctl -play -libName video -zIndex 10 -path "/root/sample.mp4" # 指定层显示视频
+/usr/bin/xplayctl -play -libName toast -zIndex 3 -toast_type success -content "安装成功" -duration 5 # 信息提示框
 /usr/bin/xplayctl -play -libName video -zIndex 10 -rect "0,0,1920,1080" -path "/root/sample.mp4" # 指定层与素材显示的位置与宽高
 /usr/bin/xplayctl -play -libName scroll -zIndex 9 -speed 2 -rect "0,0,1920,50" -content "专为树莓派设计的多媒体播放器" # 滚动字幕
 /usr/bin/xplayctl -play -libName text -zIndex 9 -rect "0,0,1920,50" -content "专为树莓派设计的多媒体播放器" # 显示文本
 /usr/bin/xplayctl -play -libName text -zIndex 9 -color "rgba(0,128,0,100%)" -bgcolor "rgba(0,0,0,20%)" -font_size 14 -align center -style bold -rect "0,0,1920,50" -content "专为树莓派设计的多媒体播放器" # 显示文本及指定字体颜色与背景颜色及透明度字体大小等 ...
-等 ...
 ```
 
 ---
