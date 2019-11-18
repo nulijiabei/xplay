@@ -1,6 +1,6 @@
 ﻿package main
 
-// 2019/11/18 v1.2
+// 2019/11/18 v1.3
 
 import (
 	"encoding/json"
@@ -108,11 +108,11 @@ func (this *XPlay) stop(_ids string) error {
 	return this.send(data)
 }
 
-func (this *XPlay) params(_zIndex int, _top, _left, _width, _height int, _screen_mode string, _screen_rotate int) map[string]interface{} {
+func (this *XPlay) params(_zIndex int, _x, _y, _width, _height int, _screen_mode string, _screen_rotate int) map[string]interface{} {
 	params := make(map[string]interface{})
 	params["zIndex"] = _zIndex
-	params["top"] = _top
-	params["left"] = _left
+	params["top"] = _y
+	params["left"] = _x
 	params["width"] = _width
 	params["height"] = _height
 	params["screen_mode"] = _screen_mode
@@ -123,11 +123,11 @@ func (this *XPlay) params(_zIndex int, _top, _left, _width, _height int, _screen
 func (this *XPlay) play() error {
 	var params map[string]interface{}
 	rs := strings.Split(*rect, ",")
-	top, _ := strconv.Atoi(rs[0])
-	left, _ := strconv.Atoi(rs[1])
+	x, _ := strconv.Atoi(rs[0])
+	y, _ := strconv.Atoi(rs[1])
 	width, _ := strconv.Atoi(rs[2])
 	height, _ := strconv.Atoi(rs[3])
-	params = this.params(*zIndex, top, left, width, height, *screen_mode, *screen_rotate)
+	params = this.params(*zIndex, x, y, width, height, *screen_mode, *screen_rotate)
 	if (*libName) == "video" || (*libName) == "pic" || (*libName) == "gif" {
 		params["path"] = *path
 	} else if (*libName) == "camera" {
