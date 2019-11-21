@@ -333,8 +333,11 @@
  | font_size | 14                    | 字体大小 |
  | align     | center、right、left   | 对齐方式 |
  | style     | normal、bold、italic、underline、strikethrough | 文本样式 |
- | content   | \t\t123,456,789.\n987,654,321.\n | 文本内容 |
- 
+ | content   | \t\t123,456,789\n987,654,321 | 文本内容 |
+ | \t        | \t\tABC         | 强制缩进 |
+ | \n        | ABC\nBCD        | 强制换行 |
+ | 空格      | ABCDEF ABCDEF   | 超过宽度时，空格处自动换行 | 
+  
  ```
  // 显示文本
  {
