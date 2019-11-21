@@ -334,6 +334,9 @@
  | align     | center、right、left   | 对齐方式 |
  | style     | normal、bold、italic、underline、strikethrough | 文本样式 |
  | content   | \t\t123,456,789\n987,654,321 | 文本内容 |
+ 
+ | 内容(content) | 例 | 说明 |
+ | --- | --- | --- |
  | \t        | \t\tABC               | 强制缩进 |
  | \n        | ABC\nBCD              | 强制换行 |
  | 空格      | ABCDEF ABCDEF ABCDEF  | 超过宽度时在空格处换行 | 
