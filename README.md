@@ -90,7 +90,7 @@
  
  ***2. 安装程序***
  ```
- git clone https://github.com/nulijiabei/xplay.git
+ git clone https://github.com/nulijiabei/xplay.git 或 https://gitee.com/nljb/xplay.git
  cd xplay/
  cd buster/ 或者 cd buster-lite/ # Raspbian Buster with desktop 或者 Raspbian Buster Lite
  sh -x rpi_install.sh 或者 sh -x rpi4_install.sh # Raspberry Pi 023 或者 Raspberry Pi 4
