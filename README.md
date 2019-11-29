@@ -70,7 +70,7 @@
 11. 支持(视频)音频同步(视频帧时间戳与音轨帧时间戳)播放
 12. 支持(视频、流媒体、图片、摄像头、动画、文本、滚动字幕、二维码)多层(Overlay)播放
 13. 支持(文本)自定义(字体大小、字体颜色、背景颜色、透明度、对齐方式、风格样式、多行段落)
-14. 支持(滚动字幕)自定义(字体大小、字体颜色、透明度、风格样式、移动速度)方向(从右向左)
+14. 支持(滚动字幕)自定义(字体大小、字体颜色、透明度、风格样式、移动速度、移动方向)方向(从右向左、从下向上)
 15. 支持自定义布局(通过多层功能可以实现多种自定义布局)
 16. 支持自定义(视频)是否循环播放(视频在播放到结尾时是否停留在最后一帧)
 17. 支持自定义素材尺寸(width，height)，任意拉伸缩放素材尺寸播放
@@ -201,6 +201,7 @@
 | 命令行参数(scroll) | 默认值 | 说明 |
 | --- | --- | --- |
 | speed | 1 | 移动速度 |
+| orientation | horizontal | 移动方向 |
 
 | 命令行参数(camera) | 默认值 | 说明 |
 | --- | --- | --- |
@@ -436,12 +437,20 @@
  
  | 滚动字幕(scroll) | 值 | 说明 |
  | --- | --- | --- |
- | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
- | font_ttf  | /etc/xplay/simsun.ttc | 指定字体 |
- | font_size | 14 | 字体大小 |
- | style     | normal、bold、italic、underline、strikethrough | 文本样式 |
- | speed     | 1(每帧向前移动N像素) | 移动速度 |
- | content   | ABCDEFGHIJKLMNOPQRSTUVWXYZ | 文本内容 |      
+ | color       | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
+ | font_ttf    | /etc/xplay/simsun.ttc | 指定字体 |
+ | font_size   | 14 | 字体大小 |
+ | style       | normal、bold、italic、underline、strikethrough | 文本样式 |
+ | speed       | 1(每帧向前移动N像素) | 移动速度 |
+ | content     | ABCDEFGHIJKLMNOPQRSTUVWXYZ | 文本内容 |  
+ | orientation | horizontal、vertical | 移动方向 |
+ 
+ | 参数有效性(scroll) | 值 | 说明 |
+ | --- | --- | --- |
+ | width  | vertical 有效 / horizontal 无效 = screen.width | 宽有效性 |
+ | height | horizontal 有效 / vertical 无效 = screen.height | 高有效性 |
+ | left   | vertical 有效 / horizontal 无效 = 0 | 距左有效性 |
+ | top    | horizontal 有效 / vertical 无效 = 0 | 距顶有效性 |
  
  ```
  // 显示滚动字幕
@@ -452,6 +461,8 @@
     "start": -1,
     "params": {
        "top": 0,
+       "left": 0,
+       "width": 150,
        "height": 50,
        "zIndex": 5,
        "screen_rotate": 0,
@@ -460,6 +471,7 @@
        "color": "rgba(255, 0, 0, 100%)",
        "font_size": 30,
        "style": "bold",
+       "orientation": "horizontal",
        "speed": 1
     }
  }
