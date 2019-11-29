@@ -52,6 +52,7 @@ var style = flag.String("style", "normal", "normal縲｜old縲（talic縲「nderline縲
 
 // Play Scroll
 var speed = flag.Int("speed", 1, "move pixel / frame")
+var orientation = flag.String("orientation", "horizontal", "horizontal | vertical")
 
 // Play Toast
 var toast_type = flag.String("toast_type", "notice", "notice縲《uccess縲『arning縲‘rror")
@@ -150,6 +151,7 @@ func (this *XPlay) play() error {
 		params["font_size"] = *font_size
 		params["color"] = *color
 		params["style"] = *style
+		params["orientation"] = *orientation
 		params["speed"] = *speed
 	} else if (*libName) == "toast" {
 		params["content"] = *content
