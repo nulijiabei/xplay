@@ -6,8 +6,7 @@
 
 ---
 
-![image](images/%E6%A8%AA%E7%AB%96%E5%B1%8F.jpg)
-![image](images/%E5%A4%9A%E5%88%86%E5%B1%8F.gif)
+![image](images/logo.jpg)
 
 ---
 
