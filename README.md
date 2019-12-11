@@ -569,6 +569,20 @@
  ```
  
 ---
+### 许可信息
+
+>Qt 使用 LGPL 许可  
+
+>SDL 使用 zlib 许可 https://www.zlib.net/zlib_license.html  
+>授予任何人出于任何目的使用此软件的权限，包括商业应用，并对其进行更改和重新分发  
+
+>FFmpeg 使用 GNU较小通用公共许可证(LGPL) 许可 http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html  
+>FFmpeg License and Legal Considerations http://ffmpeg.org/legal.html  
+
+>Windows 系统许可 https://ffmpeg.zeranoe.com/builds/  
+>FFmpeg is the leading multimedia framework to decode, encode, transcode, mux, demux, stream, filter and play. All builds require at least Windows 7 or Mac OS X 10.10. Nightly git builds are licensed as GPL 3.0, and release build are licensed as GPL 3.0 and LGPL 3.0. LGPL 3.0 release builds can be found using the "All Builds" links.  
+
+---
 ### 更多功能
 
  * 基于云服务的信息发布系统(www.danoonetworks.com)
