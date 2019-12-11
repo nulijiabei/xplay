@@ -583,7 +583,7 @@
 >FFmpeg 在 Windows 系统许可 https://ffmpeg.zeranoe.com/builds/  
 >FFmpeg is the leading multimedia framework to decode, encode, transcode, mux, demux, stream, filter and play. All builds require at least Windows 7 or Mac OS X 10.10. Nightly git builds are licensed as GPL 3.0, and release build are licensed as GPL 3.0 and LGPL 3.0. LGPL 3.0 release builds can be found using the "All Builds" links.  
 
->LOG4QT 使用 APACHE LICENSE VERSION 2.0  
+>LOG4QT 使用 APACHE LICENSE VERSION 2.0 https://www.apache.org/licenses/LICENSE-2.0.html
 
 ---
 ### 更多功能
