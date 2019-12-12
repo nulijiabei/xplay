@@ -572,7 +572,11 @@
 ---
 ### 许可信息
 
->Qt 使用 LGPL 许可  
+>Qt 使用 LGPL 许可 https://www.qt.io/licensing/ 和 https://www.qt.io/features#js-6-3  
+>通过LGPLv3许可证选项，您可以使用基本库和Qt的某些附加库。只要满足LGPLv3的所有要求，LGPLv3即可保持您的应用程序源代码关闭。  
+>该程序所涉及 Qt Core、Qt GUI、Qt Network 满足 LGPL 要求  
+
+>LOG4QT 使用 APACHE LICENSE VERSION 2.0 https://www.apache.org/licenses/LICENSE-2.0.html  
 
 >SDL 与 SDL_ttf 使用 zlib 许可 https://www.zlib.net/zlib_license.html  
 >授予任何人出于任何目的使用此软件的权限，包括商业应用，并对其进行更改和重新分发  
@@ -582,8 +586,6 @@
 
 >FFmpeg 在 Windows 系统许可 https://ffmpeg.zeranoe.com/builds/  
 >FFmpeg is the leading multimedia framework to decode, encode, transcode, mux, demux, stream, filter and play. All builds require at least Windows 7 or Mac OS X 10.10. Nightly git builds are licensed as GPL 3.0, and release build are licensed as GPL 3.0 and LGPL 3.0. LGPL 3.0 release builds can be found using the "All Builds" links.  
-
->LOG4QT 使用 APACHE LICENSE VERSION 2.0 https://www.apache.org/licenses/LICENSE-2.0.html
 
 ---
 ### 更多功能
