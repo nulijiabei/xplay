@@ -181,27 +181,27 @@
 | play    | 无             | 指令类型(播放) |
 | stop    | 无             | 指令类型(停止) |
 
-| 命令行参数(play) | 默认值 | 说明 |
-| --- | --- | --- |
-| zIndex        | 10            | 层 |
-| rect          | 0,0,1920,1080 | 素材显示尺寸与位置 |
-| screen_mode   | landscape     | 屏幕模式 |
-| screen_rotate | 0             | 旋转角度 |
-| path          | 无            | 素材路径 |
-| content       | 无            | 数据内容 |
+| 命令行参数(play) | 默认值 | 可选参数 | 说明 |
+| --- | --- | --- | --- |
+| zIndex        | 10            | 1 - 999             | 层 |
+| rect          | 0,0,1920,1080 | x,y,width,height    | 素材显示尺寸与位置 |
+| screen_mode   | landscape     | landscape、portrait | 屏幕模式 |
+| screen_rotate | 0             | 0、180、90、270     | 旋转角度 |
+| path          | 无            | 无                  | 素材路径 |
+| content       | 无            | 无                  | 数据内容 |
 
-| 命令行参数(text) | 默认值 | 说明 |
-| --- | --- | --- |
-| color     | rgba(0,128,0,100%) | 文本颜色及透明度 |
-| bgcolor   | rgba(0,0,0,20%)    | 背景颜色及透明度 |
-| font_size | 14                 | 字体大小 |
-| align     | center             | 对齐方式 |
-| style     | normal             | 文本样式 |
+| 命令行参数(text) | 默认值 | 可选参数 | 说明 |
+| --- | --- | --- | --- |
+| color     | rgba(0,128,0,100%) | 无 | 文本颜色及透明度 |
+| bgcolor   | rgba(0,0,0,20%)    | 无 | 背景颜色及透明度 |
+| font_size | 14                 | 无 | 字体大小 |
+| align     | center             | center、right、left | 对齐方式 |
+| style     | normal             | normal、bold、italic、underline、strikethrough | 文本样式 |
 
-| 命令行参数(scroll) | 默认值 | 说明 |
-| --- | --- | --- |
-| speed | 1 | 移动速度 |
-| orientation | horizontal | 移动方向 |
+| 命令行参数(scroll) | 默认值 | 可选参数  | 说明 |
+| --- | --- | --- | --- |
+| speed | 1 | 无 | 移动速度 |
+| orientation | horizontal | horizontal、vertical | 移动方向 |
 
 | 命令行参数(camera) | 默认值 | 说明 |
 | --- | --- | --- |
@@ -209,10 +209,10 @@
 | camera_width | 1280        | 摄像头 video_size 宽 |
 | camera_height| 720         | 摄像头 video_size 高 |
 
-| 命令行参数(toast) | 默认值 | 说明 |
-| --- | --- | --- |
-| toast_type | notice | 消息类型 |
-| duration   | 0      | 持续时间(s) |
+| 命令行参数(toast) | 默认值 | 可选参数 | 说明 |
+| --- | --- | --- | --- |
+| toast_type | notice | notice、success、warning、error | 消息类型 |
+| duration   | 0      | 无 | 持续时间(s) |
 
 | 命令行参数(stop) | 默认值 | 说明 |
 | --- | --- | --- |
