@@ -167,8 +167,10 @@
  
  [Golang 控制样例](example/example.go)  
  [Python 控制样例](example/example.py)  
- [xplayctl 命令行工具](example/xplayctl.go)
-
+ [xplayctl 命令行工具](example/xplayctl.go)  
+ [example_x1_xplayctl.sh 基于命令行工具](example/example_x1_xplayctl.sh)  
+ [example_x4_xplayctl.sh 基于命令行工具](example/example_x4_xplayctl.sh)  
+ 
 ---
 ### 命令行工具
 
