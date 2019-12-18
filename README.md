@@ -126,38 +126,18 @@
  ```
  
  ***4. 播放测试***
- 
  ```
- // 测试工具
- apt-get install telnet
- ```
- 
- ```
+ // 测试素材
+ cp xplay/video/sample.mp4 /root/sample.mp4
  // 测试指令
- root@raspberrypi:~# telnet 127.0.0.1 8700
- Trying 127.0.0.1...
- Connected to 127.0.0.1.
- Escape character is '^]'.
- 
- // 指令内容
- {
-    "libName": "video",
-    "params": {
-        "path": "/root/sample.mp4",
-        "width": 1920,
-        "height": 1080,
-        "zIndex": 10
-    },
-    "type": "play"
- }
- #End
+ /usr/bin/xplayctl -play -libName video -path "/root/sample.mp4"
  ```
  
  ***5. 查看日志***
  ```
  tail -n 100 /dev/shm/xplay.log
  ```
-
+ 
 ---
 ### 播放控制
 
