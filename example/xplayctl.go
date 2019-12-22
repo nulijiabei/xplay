@@ -44,7 +44,7 @@ var camera_height = flag.Int("camera_height", 720, "camera video height")
 
 // Play Text
 var font_ttf = flag.String("font_ttf", "", "TrueTypeFont")
-var font_size = flag.Int("font_size", 14, "")
+var font_size = flag.Int("font_size", 18, "")
 var color = flag.String("color", "rgba(0,128,0,100%)", "")
 var bgcolor = flag.String("bgcolor", "rgba(0,0,0,20%)", "")
 var align = flag.String("align", "center", "center、right、left")
@@ -153,6 +153,13 @@ func (this *XPlay) play() error {
 		params["style"] = *style
 		params["orientation"] = *orientation
 		params["speed"] = *speed
+	} else if (*libName) == "datetime" {
+		params["font_ttf"] = *font_ttf
+		params["font_size"] = *font_size
+		params["color"] = *color
+		params["bgcolor"] = *bgcolor
+		params["align"] = *align
+		params["style"] = *style
 	} else if (*libName) == "toast" {
 		params["content"] = *content
 		params["toast_type"] = *toast_type
