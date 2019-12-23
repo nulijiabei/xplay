@@ -166,12 +166,12 @@
  | --- | --- |
  | -play | 播放指令 |
  | -stop | 停止指令 |
-
+ 
  | 命令行参数(play) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -id | 自动 | 无 | 唯一标识 |
  | -start | -1 | 无 | 开始时间(ms) |
- | -libName | 无 | video、pic、gif、qrcode、camera、text、scroll、datetime、toast、background | 素材类型 |
+ | -libName | 无 | video、pic、gif、qrcode、camera、text、scroll、datetime、toast | 素材类型 |
 
  | 命令行参数(video、pic、gif) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
