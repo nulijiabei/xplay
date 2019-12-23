@@ -148,59 +148,152 @@
  
  [Golang 控制样例](example/example.go)  
  [Python 控制样例](example/example.py)  
- [xplayctl 命令行工具](example/xplayctl.go)  
- [example_x1_xplayctl.sh 基于命令行工具](example/example_x1_xplayctl.sh)  
- [example_x4_xplayctl.sh 基于命令行工具](example/example_x4_xplayctl.sh)  
  
 ---
 ### 命令行工具
 
-| 命令行参数 | 默认值 | 说明 |
-| --- | --- | --- |
-| -addr | 127.0.0.1:8700 | 网络地址及端口 |
+ [xplayctl 命令行工具](example/xplayctl.go)  
+ [example_x1_xplayctl.sh 基于命令行工具](example/example_x1_xplayctl.sh)  
+ [example_x4_xplayctl.sh 基于命令行工具](example/example_x4_xplayctl.sh)  
 
->[控制指令](#控制指令)中键已转换为参数(例如)
+ >请参考[控制指令](#控制指令)来使用以下命令行参数
 
-| 键 | 参数 |
-| --- | --- |
-| "type": "play" | -play |
-| "type": "stop" | -stop |
-| "start": 1576990120663 | -start 1576990120663 |
-| "libName": "video" | -libName video |
-| "left": 0, "top": 0, "width": 1920, "height": 1080 | -rect 0,0,1920,1080 |
+ | 命令行参数(base) | 默认值 | 说明 |
+ | --- | --- | --- |
+ | -addr | 127.0.0.1:8700 | 网络地址及端口 |
+ 
+ | 命令行参数(type) | 说明 |
+ | --- | --- |
+ | -play | 播放指令 |
+ | -stop | 停止指令 |
 
-```
-/usr/bin/xplayctl -h # 帮助
-/usr/bin/xplayctl -stop -all # 停止全部层
-/usr/bin/xplayctl -stop -ids "10,11,12" # 停止指定层
-/usr/bin/xplayctl -play -libName pic -path "/root/sample.jpg" # 显示图片
-/usr/bin/xplayctl -play -libName gif -path "/root/sample.gif" # 显示动画
-/usr/bin/xplayctl -play -libName video -path "/root/sample.mp4" # 显示视频
-/usr/bin/xplayctl -play -libName video -zIndex 10 -path "/root/sample.mp4" # 显示视频
-/usr/bin/xplayctl -play -libName qrcode -zIndex 5 -content "www.danoonetworks.com" # 显示二维码
-/usr/bin/xplayctl -play -libName datetime -zIndex 9 -rect "0,0,500,50" -font_size 30 -align center # 显示日期时间
-/usr/bin/xplayctl -play -libName toast -zIndex 3 -content "安装成功" -toast_type success -duration 5 # 显示信息提示框
-/usr/bin/xplayctl -play -libName text -zIndex 9 -rect "0,0,1920,50" -content "专为树莓派设计的多媒体播放器" # 显示文本
-/usr/bin/xplayctl -play -libName scroll -zIndex 9 -rect "0,0,-1,50" -content "专为树莓派设计的多媒体播放器" # 显示滚动字幕
-```
+ | 命令行参数(play) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -id | 自动 | 无 | 唯一标识 |
+ | -start | -1 | 无 | 开始时间(ms) |
+ | -libName | 无 | video、pic、gif、qrcode、camera、text、scroll、datetime、toast、background | 素材类型 |
 
-```
-/usr/bin/xplayctl -play -libName scroll -zIndex 9 -rect "0,0,-1,50" \
-                      -content "专为树莓派设计的多媒体播放器" \
-                      -speed 2 \
-                      -orientation horizontal 
-/usr/bin/xplayctl -play -libName scroll -zIndex 9 -rect "0,0,500,-1" \
-                      -content "专为树莓派设计的多媒体播放器" \
-                      -speed 2 \
-                      -orientation vertical 
-/usr/bin/xplayctl -play -libName text -zIndex 9 -rect "0,0,1920,50" \
-                      -content "专为树莓派设计的多媒体播放器" \
-                      -color "rgba(0,128,0,100%)" \
-                      -bgcolor "rgba(0,0,0,20%)" \
-                      -font_size 14 \
-                      -align center \
-                      -style bold  
-```
+ | 命令行参数(video、pic、gif) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex        | 10            | 0 - 999               | 层 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
+ | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -path          | 无            | 无                    |	素材路径 |
+
+ | 命令行参数(qrcode) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex        | 10            | 0 - 999               | 层 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
+ | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -content       | 无            | 无                    | 文本内容 |
+
+ | 命令行参数(camera) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex        | 10            | 0 - 999               | 层 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
+ | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -device        | /dev/video0   |	无                    | 设备地址 |
+ | -camera_width  | 1280          | 无                    | 摄像头 video_size 宽 |
+ | -camera_height | 720           | 无                    | 摄像头 video_size 高 |
+
+ | 命令行参数(text) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex        | 10            | 0 - 999               | 层 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
+ | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -content       | 无            | 无                    | 文本内容 |
+ | -font_ttf      | 无            | 无                    | 指定字体 |
+ | -font_size     | 18            | 12 - 72               | 字体大小 |
+ | -color         | rgba(0,128,0,100%) | 无 | 文本颜色及透明度 |
+ | -bgcolor       | rgba(0,0,0,20%)    | 无 | 背景颜色及透明度 |
+ | -align         | center             | center、right、left | 对齐方式 |
+ | -style         | normal             | normal、bold、italic、underline、strikethrough |	文本样式 |
+
+ | 命令行参数(scroll) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex        | 10            | 0 - 999               | 层 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
+ | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -content       | 无            | 无                    | 文本内容 |
+ | -font_ttf      | 无            | 无                    | 指定字体 |
+ | -font_size     | 18            | 12 - 72               | 字体大小 |
+ | -color         | rgba(0,128,0,100%) | 无 | 文本颜色及透明度 |
+ | -style         | normal             | normal、bold、italic、underline、strikethrough |	文本样式 |
+ | -orientation   | horizontal         | horizontal、vertical	| 移动方向 |
+ | -speed         | 1                  | 每帧向前移动像素 | 移动速度 |
+
+ | 命令行参数(datetime) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex        | 10            | 0 - 999               | 层 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
+ | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -font_ttf      | 无            | 无                    | 指定字体 |
+ | -font_size     | 18            | 12 - 72               | 字体大小 |
+ | -color         | rgba(0,128,0,100%) | 无 | 文本颜色及透明度 |
+ | -bgcolor       | rgba(0,0,0,20%)    | 无 | 背景颜色及透明度 |
+ | -align         | center             | center、right、left | 对齐方式 |
+ | -style         | normal             | normal、bold、italic、underline、strikethrough |	文本样式 |
+
+ | 命令行参数(toast) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex        | 10            | 0 - 999               | 层 |
+ | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
+ | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -content       | 无            | 无                    | 文本内容 |
+ | -toast_type    | notice	       | notice、success、warning、error | 消息类型 |
+ | -duration      | 0	            | 无                    | 持续时间(s) 超时关闭 永不超时(0) |
+ 
+ | 命令行参数(background) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex        | 10              | 0 - 999               | 层 |
+ | -rect          | 0,0,1920,1080   | left,top,width,height |	素材显示尺寸与位置 |
+ | -screen_mode   | landscape       | landscape、portrait   |	横竖屏模式 |
+ | -screen_rotate | 0	              | 0、180、90、270       | 旋转角度 |
+ | -bgcolor       | rgba(0,0,0,20%) | 无                    | 背景颜色及透明度 |
+
+ | 命令行参数(stop) | 说明 |
+ | --- | --- |
+ | -all  | 停止全部层 |
+ | -ids  | 停止指定层 |
+
+ ```
+ /usr/bin/xplayctl -h # 帮助
+ /usr/bin/xplayctl -stop -all # 停止全部层
+ /usr/bin/xplayctl -stop -ids "10,11,12" # 停止指定层
+ /usr/bin/xplayctl -play -libName pic -path "/root/sample.jpg" # 显示图片
+ /usr/bin/xplayctl -play -libName gif -path "/root/sample.gif" # 显示动画
+ /usr/bin/xplayctl -play -libName video -path "/root/sample.mp4" # 显示视频
+ /usr/bin/xplayctl -play -libName video -zIndex 10 -path "/root/sample.mp4" # 显示视频
+ /usr/bin/xplayctl -play -libName qrcode -zIndex 5 -content "www.danoonetworks.com" # 显示二维码
+ /usr/bin/xplayctl -play -libName datetime -zIndex 9 -rect "0,0,500,50" -font_size 30 -align center # 显示日期时间
+ /usr/bin/xplayctl -play -libName toast -zIndex 3 -content "安装成功" -toast_type success -duration 5 # 显示信息提示框
+ /usr/bin/xplayctl -play -libName text -zIndex 9 -rect "0,0,1920,50" -content "专为树莓派设计的多媒体播放器" # 显示文本
+ /usr/bin/xplayctl -play -libName scroll -zIndex 9 -rect "0,0,-1,50" -content "专为树莓派设计的多媒体播放器" # 显示滚动字幕
+ ```
+
+ ```
+ /usr/bin/xplayctl -play -libName scroll -zIndex 9 -rect "0,0,-1,50" \
+                       -content "专为树莓派设计的多媒体播放器" \
+                       -speed 2 \
+                       -orientation horizontal 
+ /usr/bin/xplayctl -play -libName scroll -zIndex 9 -rect "0,0,500,-1" \
+                       -content "专为树莓派设计的多媒体播放器" \
+                       -speed 2 \
+                       -orientation vertical 
+ /usr/bin/xplayctl -play -libName text -zIndex 9 -rect "0,0,1920,50" \
+                       -content "专为树莓派设计的多媒体播放器" \
+                       -color "rgba(0,128,0,100%)" \
+                       -bgcolor "rgba(0,0,0,20%)" \
+                       -font_size 14 \
+                       -align center \
+                       -style bold  
+ ```
 
 ---
 ### 控制指令
