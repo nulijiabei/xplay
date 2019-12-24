@@ -70,7 +70,7 @@
 11. 支持(视频)音频同步(视频帧时间戳与音轨帧时间戳)播放
 12. 支持(视频、流媒体、图片、摄像头、动画、文本、滚动字幕、日期时间、二维码)多层(Overlay)播放
 13. 支持(文本)自定义(字体大小、字体颜色、背景颜色、透明度、对齐方式、风格样式、多行段落)
-14. 支持(滚动字幕)自定义(字体大小、字体颜色、透明度、风格样式、移动速度、移动方向)
+14. 支持(滚动字幕)自定义(字体大小、字体颜色、背景颜色、透明度、风格样式、移动速度、移动方向)
 15. 支持(信息提示框)自定义提示文本及多种状态标识(notice、success、warning、error)
 16. 支持(日期时间)自定义(字体大小、字体颜色、背景颜色、透明度、对齐方式、风格样式)
 17. 支持(字体)自定义(可以通过自定义指定TTC字体来实现不同效果的文本样式)
@@ -307,7 +307,6 @@
  | text | 文本 |
  | scroll | 滚动字幕 |
  | datetime | 日期时间 |
- | background | 透明背景 |
  
  ```
  // 指令说明
@@ -492,6 +491,7 @@
  | 滚动字幕(scroll) | 值 | 说明 |
  | --- | --- | --- |
  | color       | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
+ | bgcolor     | rgba(0, 0, 0, 0%)     | 背景颜色及透明度 |
  | font_ttf    | /etc/xplay/simsun.ttc | 指定字体 |
  | font_size   | 14 | 字体大小 |
  | style       | normal、bold、italic、underline、strikethrough | 文本样式 |
@@ -523,6 +523,7 @@
        "screen_mode": "landscape",
        "content": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
        "color": "rgba(255, 0, 0, 100%)",
+       "bgcolor": "rgba(0,128,0,80%)",
        "font_size": 30,
        "style": "bold",
        "orientation": "horizontal",
