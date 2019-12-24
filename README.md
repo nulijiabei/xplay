@@ -70,7 +70,7 @@
 11. 支持(视频)音频同步(视频帧时间戳与音轨帧时间戳)播放
 12. 支持(视频、流媒体、图片、摄像头、动画、文本、滚动字幕、日期时间、二维码)多层(Overlay)播放
 13. 支持(文本)自定义(字体大小、字体颜色、背景颜色、透明度、对齐方式、风格样式、多行段落)
-14. 支持(滚动字幕)自定义(字体大小、字体颜色、透明度、风格样式、移动速度、移动方向)
+14. 支持(滚动字幕)自定义(字体大小、字体颜色、背景颜色、透明度、风格样式、移动速度、移动方向)
 15. 支持(信息提示框)自定义提示文本及多种状态标识(notice、success、warning、error)
 16. 支持(日期时间)自定义(字体大小、字体颜色、背景颜色、透明度、对齐方式、风格样式)
 17. 支持(字体)自定义(可以通过自定义指定TTC字体来实现不同效果的文本样式)
@@ -223,6 +223,7 @@
  | -font_ttf      | 无            | 无                    | 指定字体 |
  | -font_size     | 18            | 12 - 72               | 字体大小 |
  | -color         | rgba(0,128,0,100%) | 无 | 文本颜色及透明度 |
+ | -bgcolor       | rgba(0,0,0,20%)    | 无 | 背景颜色及透明度 |
  | -style         | normal             | normal、bold、italic、underline、strikethrough |	文本样式 |
  | -orientation   | horizontal         | horizontal、vertical	| 移动方向 |
  | -speed         | 1                  | 每帧向前移动像素 | 移动速度 |
@@ -249,14 +250,6 @@
  | -toast_type    | notice	       | notice、success、warning、error | 消息类型 |
  | -duration      | 0	            | 无                    | 持续时间(s) 超时关闭 永不超时(0) |
  
- | 命令行参数(background) | 默认值 | 可选参数 | 说明 |
- | --- | --- | --- | --- |
- | -zIndex        | 10              | 0 - 999               | 层 |
- | -rect          | 0,0,1920,1080   | left,top,width,height |	素材显示尺寸与位置 |
- | -screen_mode   | landscape       | landscape、portrait   |	横竖屏模式 |
- | -screen_rotate | 0	              | 0、180、90、270       | 旋转角度 |
- | -bgcolor       | rgba(0,0,0,20%) | 无                    | 背景颜色及透明度 |
-
  | 命令行参数(stop) | 说明 |
  | --- | --- |
  | -all  | 停止全部层 |
@@ -314,7 +307,6 @@
  | text | 文本 |
  | scroll | 滚动字幕 |
  | datetime | 日期时间 |
- | background | 透明背景 |
  
  ```
  // 指令说明
@@ -499,6 +491,7 @@
  | 滚动字幕(scroll) | 值 | 说明 |
  | --- | --- | --- |
  | color       | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
+ | bgcolor     | rgba(0, 0, 0, 0%)     | 背景颜色及透明度 |
  | font_ttf    | /etc/xplay/simsun.ttc | 指定字体 |
  | font_size   | 14 | 字体大小 |
  | style       | normal、bold、italic、underline、strikethrough | 文本样式 |
@@ -530,6 +523,7 @@
        "screen_mode": "landscape",
        "content": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
        "color": "rgba(255, 0, 0, 100%)",
+       "bgcolor": "rgba(0,128,0,80%)",
        "font_size": 30,
        "style": "bold",
        "orientation": "horizontal",
@@ -568,31 +562,6 @@
        "font_size": 30,
        "align": "center",
        "style": "bold"
-    }
- }
- #End
- ```
- 
- | 透明背景(background) | 值 | 说明 |
- | --- | --- | --- |
- | bgcolor   | rgba(0, 0, 0, 20%) | 背景颜色及透明度 |
- 
- ```
- // 显示透明背景
- {
-    "type": "play",
-    "id": "Z6_Play_1572344489512",
-    "libName": "background",
-    "start": -1,
-    "params": {
-       "top": 0,
-       "left": 0,
-       "width": 1920,
-       "height": 50,
-       "zIndex": 6,
-       "screen_rotate": 0,
-       "screen_mode": "landscape",
-       "bgcolor": "rgba(0, 0, 0, 20%)"
     }
  }
  #End
