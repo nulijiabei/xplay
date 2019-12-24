@@ -1,6 +1,6 @@
 ﻿package main
 
-// v1.0.8.v20191222
+// v1.0.9.v20191226
 
 import (
 	"encoding/json"
@@ -116,8 +116,8 @@ func (this *XPlay) play() error {
 	height, _ := strconv.Atoi(rs[3])
 	if (*libName) == "video" {
 		params["zIndex"] = *zIndex
-		params["top"] = x
-		params["left"] = y
+		params["left"] = x
+		params["top"] = y
 		params["width"] = width
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
@@ -125,8 +125,8 @@ func (this *XPlay) play() error {
 		params["path"] = *path
 	} else if (*libName) == "pic" {
 		params["zIndex"] = *zIndex
-		params["top"] = x
-		params["left"] = y
+		params["left"] = x
+		params["top"] = y
 		params["width"] = width
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
@@ -134,8 +134,8 @@ func (this *XPlay) play() error {
 		params["path"] = *path
 	} else if (*libName) == "gif" {
 		params["zIndex"] = *zIndex
-		params["top"] = x
-		params["left"] = y
+		params["left"] = x
+		params["top"] = y
 		params["width"] = width
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
@@ -143,8 +143,8 @@ func (this *XPlay) play() error {
 		params["path"] = *path
 	} else if (*libName) == "qrcode" {
 		params["zIndex"] = *zIndex
-		params["top"] = x
-		params["left"] = y
+		params["left"] = x
+		params["top"] = y
 		params["width"] = width
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
@@ -152,8 +152,8 @@ func (this *XPlay) play() error {
 		params["content"] = *content
 	} else if (*libName) == "camera" {
 		params["zIndex"] = *zIndex
-		params["top"] = x
-		params["left"] = y
+		params["left"] = x
+		params["top"] = y
 		params["width"] = width
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
@@ -163,8 +163,8 @@ func (this *XPlay) play() error {
 		params["camera_height"] = *camera_height
 	} else if (*libName) == "text" {
 		params["zIndex"] = *zIndex
-		params["top"] = x
-		params["left"] = y
+		params["left"] = x
+		params["top"] = y
 		params["width"] = width
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
@@ -178,8 +178,8 @@ func (this *XPlay) play() error {
 		params["style"] = *style
 	} else if (*libName) == "scroll" {
 		params["zIndex"] = *zIndex
-		params["top"] = x
-		params["left"] = y
+		params["left"] = x
+		params["top"] = y
 		params["width"] = width
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
@@ -188,13 +188,14 @@ func (this *XPlay) play() error {
 		params["font_ttf"] = *font_ttf
 		params["font_size"] = *font_size
 		params["color"] = *color
+		params["bgcolor"] = *bgcolor
 		params["style"] = *style
 		params["orientation"] = *orientation
 		params["speed"] = *speed
 	} else if (*libName) == "datetime" {
 		params["zIndex"] = *zIndex
-		params["top"] = x
-		params["left"] = y
+		params["left"] = x
+		params["top"] = y
 		params["width"] = width
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
@@ -212,15 +213,6 @@ func (this *XPlay) play() error {
 		params["content"] = *content
 		params["toast_type"] = *toast_type
 		params["duration"] = *duration
-	} else if (*libName) == "background" {
-		params["zIndex"] = *zIndex
-		params["top"] = x
-		params["left"] = y
-		params["width"] = width
-		params["height"] = height
-		params["screen_mode"] = *screen_mode
-		params["screen_rotate"] = *screen_rotate
-		params["bgcolor"] = *bgcolor
 	}
 	data := make(map[string]interface{})
 	if *id == "" {
