@@ -642,10 +642,10 @@
  
  ```
  // 移动位置
- "start": -1,
- "type": "move",
  {
    "id": "MOVE_Z10_1577525151",
+   "type": "move",
+   "start": -1,
    "params": {
      "left": 100,
      "top": 100,
