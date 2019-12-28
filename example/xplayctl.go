@@ -1,6 +1,6 @@
 ﻿package main
 
-// v1.0.9.v20191226
+// v1.0.10.v20191231
 
 import (
 	"encoding/json"
@@ -16,14 +16,17 @@ import (
 // Connect Address
 var addr = flag.String("addr", "127.0.0.1:8700", "xplay tcp address")
 
+// Move
+var move = flag.Bool("move", false, "move playing")
+
 // Stop
 var stop = flag.Bool("stop", false, "stop or play")
 var all = flag.Bool("all", false, "stop all")
 var ids = flag.String("ids", "", "stop ids")
 
 // Play
+// var id = flag.String("id", "", "debug id") // 自动生成
 var play = flag.Bool("play", false, "play or stop")
-var id = flag.String("id", "", "debug id")
 var start = flag.Int64("start", -1, "start time millisecond")
 var libName = flag.String("libName", "", "video、pic、camera、gif、qrcode、text、scroll、background")
 
@@ -215,14 +218,26 @@ func (this *XPlay) play() error {
 		params["duration"] = *duration
 	}
 	data := make(map[string]interface{})
-	if *id == "" {
-		data["id"] = fmt.Sprintf("PLAY_Z%d_%s_%d", *zIndex, strings.ToUpper(*libName), time.Now().Unix())
-	} else {
-		data["id"] = *id
-	}
+	data["id"] = fmt.Sprintf("PLAY_Z%d_%s_%d", *zIndex, strings.ToUpper(*libName), time.Now().Unix())
 	data["type"] = "play"
 	data["start"] = *start
 	data["libName"] = *libName
+	data["params"] = params
+	return this.send(data)
+}
+
+func (this *XPlay) move() error {
+	params := make(map[string]interface{})
+	rs := strings.Split(*rect, ",")
+	x, _ := strconv.Atoi(rs[0])
+	y, _ := strconv.Atoi(rs[1])
+	params["zIndex"] = *zIndex
+	params["left"] = x
+	params["top"] = y
+	data := make(map[string]interface{})
+	data["id"] = fmt.Sprintf("MOVE_Z%d_%d", *zIndex, time.Now().Unix())
+	data["type"] = "move"
+	data["start"] = *start
 	data["params"] = params
 	return this.send(data)
 }
@@ -243,10 +258,14 @@ func main() {
 		defer xplay.conn.Close()
 	}
 
-	// 模式
+	// Error
 	var err error
+
+	// 模式
 	if *play { // Play
 		err = xplay.play()
+	} else if *move { // Move
+		err = xplay.move()
 	} else if *stop { // Stop
 		if *all { // Stop ALL
 			err = xplay.stop_all()
@@ -254,9 +273,9 @@ func main() {
 			err = xplay.stop(*ids)
 		}
 	}
+
+	// Print Error
 	if err != nil {
 		log.Fatal(err.Error())
-	} else {
-		log.Println("Success")
 	}
 }
