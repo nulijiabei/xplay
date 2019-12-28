@@ -166,10 +166,20 @@
  | --- | --- |
  | -play | 播放指令 |
  | -stop | 停止指令 |
+ | -move | 移动指令 |
+ 
+ | 命令行参数(stop) | 说明 |
+ | --- | --- |
+ | -all  | 停止全部层 |
+ | -ids  | 停止指定层 |
+ 
+ | 命令行参数(move) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex | 10  | 0 - 999  | 层 |
+ | -rect   | 0,0 | left,top |	素材显示位置 |
  
  | 命令行参数(play) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
- | -id | 自动 | 无 | 唯一标识 |
  | -start | -1 | 无 | 开始时间(ms) |
  | -libName | 无 | video、pic、gif、qrcode、camera、text、scroll、datetime、toast | 素材类型 |
 
@@ -249,16 +259,12 @@
  | -content       | 无            | 无                    | 文本内容 |
  | -toast_type    | notice	       | notice、success、warning、error | 消息类型 |
  | -duration      | 0	            | 无                    | 持续时间(s) 超时关闭 永不超时(0) |
- 
- | 命令行参数(stop) | 说明 |
- | --- | --- |
- | -all  | 停止全部层 |
- | -ids  | 停止指定层 |
 
  ```
  /usr/bin/xplayctl -h # 帮助
  /usr/bin/xplayctl -stop -all # 停止全部层
  /usr/bin/xplayctl -stop -ids "10,11,12" # 停止指定层
+ /usr/bin/xplayctl -move -zIndex 10 -rect 100,100 # 移动位置
  /usr/bin/xplayctl -play -libName pic -path "/root/sample.jpg" # 显示图片
  /usr/bin/xplayctl -play -libName gif -path "/root/sample.gif" # 显示动画
  /usr/bin/xplayctl -play -libName video -path "/root/sample.mp4" # 显示视频
