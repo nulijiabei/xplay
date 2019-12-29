@@ -235,9 +235,7 @@ func (this *XPlay) move() error {
 	params["left"] = x
 	params["top"] = y
 	data := make(map[string]interface{})
-	data["id"] = fmt.Sprintf("MOVE_Z%d_%d", *zIndex, time.Now().Unix())
 	data["type"] = "move"
-	data["start"] = *start
 	data["params"] = params
 	return this.send(data)
 }
