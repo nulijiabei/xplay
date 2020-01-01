@@ -18,6 +18,7 @@
 
 [支持硬件](#支持硬件)  
 [支持系统](#支持系统)  
+[目录结构](#目录结构)
 [支持功能](#支持功能)  
 [安装方法](#安装方法)  
 [播放控制](#播放控制)  
@@ -53,6 +54,18 @@
 ### 关于 Raspberry Pi 4B 说明
 
 *正在为 Raspberry Pi 4B 定制全新的支持 4K 的多媒体播放器，敬请期待 ...*
+
+---
+### 目录结构
+
+```
+/usr/bin/xplay                  主程序
+/usr/bin/xplayctl               命令行工具
+/etc/xplay/log4qt.properties    日志配置文件
+/etc/xplay/simsun.ttc           默认字体文件
+/etc/ld.so.conf.d/00-xplay.conf 关联库文件指向
+/usr/local/lib/...              关联库文件目录
+```
 
 ---
 ### 支持功能
