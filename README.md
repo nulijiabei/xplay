@@ -114,6 +114,8 @@
  sh -x rpi_install.sh 或者 sh -x rpi4_install.sh # Raspberry Pi 023 或者 Raspberry Pi 4
  ```
  
+ > 说明：Raspberry Pi 4 只支持 Raspbian Buster with desktop 下运行
+ 
  ***3. 运行程序***
  
  | 参数 | 默认 | 说明 |
