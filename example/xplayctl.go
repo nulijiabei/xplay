@@ -1,6 +1,6 @@
 ﻿package main
 
-// v1.0.10.v20191231
+// 20200221
 
 import (
 	"encoding/json"
@@ -28,7 +28,7 @@ var ids = flag.String("ids", "", "stop ids")
 // var id = flag.String("id", "", "debug id") // 自动生成
 var play = flag.Bool("play", false, "play or stop")
 var start = flag.Int64("start", -1, "start time millisecond")
-var libName = flag.String("libName", "", "video、pic、camera、gif、qrcode、text、scroll、background")
+var libName = flag.String("libName", "", "video、pic、sequence、camera、gif、qrcode、text、scroll、background")
 
 // Play Params
 var zIndex = flag.Int("zIndex", 10, "1-999")
@@ -117,7 +117,17 @@ func (this *XPlay) play() error {
 	y, _ := strconv.Atoi(rs[1])
 	width, _ := strconv.Atoi(rs[2])
 	height, _ := strconv.Atoi(rs[3])
-	if (*libName) == "video" {
+	if (*libName) == "sequence" {
+		params["zIndex"] = *zIndex
+		params["left"] = x
+		params["top"] = y
+		params["width"] = width
+		params["height"] = height
+		params["screen_mode"] = *screen_mode
+		params["screen_rotate"] = *screen_rotate
+		params["path"] = *path
+		params["duration"] = *duration
+	} else if (*libName) == "video" {
 		params["zIndex"] = *zIndex
 		params["left"] = x
 		params["top"] = y
