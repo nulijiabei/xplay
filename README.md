@@ -73,8 +73,8 @@
 ### 支持功能
 
 1. 支持自定义播放器分辨率、帧率(FPS)、音频采样率(Sample Rate)
-2. 支持使用(TCP)连接播放器发送指令控制(播放、覆盖、停止、等)
-3. 支持(视频、音频、流媒体、图片、摄像头、动画、文本、滚动字幕、二维码)素材播放
+2. 支持使用(TCP)连接播放器发送指令控制(播放、覆盖、停止、移动、等)
+3. 支持(视频、音频、流媒体、图片、摄像头、动画、文本、滚动字幕、日期时间、二维码)素材播放
 4. 支持(视频)多种格式(例如：MP4、AVI、MOV、等)基于H264的视频编码，音频(AAC)
 5. 支持(图片)JPG与PNG格式
 6. 支持(动画)GIF格式
@@ -82,20 +82,21 @@
 8. 支持(视频)预加载
 9. 支持(摄像头)设备(Raspberry Pi Camera V2)
 10. 支持(视频、图片)无黑场切换播放
-11. 支持(视频)音频同步(视频帧时间戳与音轨帧时间戳)播放
-12. 支持(视频、流媒体、图片、摄像头、动画、文本、滚动字幕、日期时间、二维码)多层(Overlay)播放
-13. 支持(文本)自定义(字体大小、字体颜色、背景颜色、透明度、对齐方式、风格样式、多行段落)
-14. 支持(滚动字幕)自定义(字体大小、字体颜色、背景颜色、透明度、风格样式、移动速度、移动方向)
-15. 支持(信息提示框)自定义提示文本及多种状态标识(notice、success、warning、error)
-16. 支持(日期时间)自定义(字体大小、字体颜色、背景颜色、透明度、对齐方式、风格样式)
-17. 支持(字体)自定义(可以通过自定义指定TTC字体来实现不同效果的文本样式)
-18. 支持自定义布局(通过多层功能可以实现多种自定义布局)
-19. 支持自定义(视频)是否循环播放(视频在播放到结尾时是否停留在最后一帧)
-20. 支持自定义素材尺寸(width，height)，任意拉伸缩放素材尺寸播放
-21. 支持自定义素材位置(x，y)播放，任意定义素材播放位置
-22. 支持自定义素材横竖屏播放
-23. 支持自定义素材开始播放时间(多个播放器间可以实现同步播放)
-24. 支持静音播放
+11. 支持(视频、图片)序列播放
+12. 支持(视频)音频同步(视频帧时间戳与音轨帧时间戳)播放
+13. 支持(视频、流媒体、图片、摄像头、动画、文本、滚动字幕、日期时间、二维码)多层(Overlay)播放
+14. 支持(文本)自定义(字体大小、字体颜色、背景颜色、透明度、对齐方式、风格样式、多行段落)
+15. 支持(滚动字幕)自定义(字体大小、字体颜色、背景颜色、透明度、风格样式、移动速度、移动方向)
+16. 支持(信息提示框)自定义提示文本及多种状态标识(notice、success、warning、error)
+17. 支持(日期时间)自定义(字体大小、字体颜色、背景颜色、透明度、对齐方式、风格样式)
+18. 支持(字体)自定义(可以通过自定义指定TTC字体来实现不同效果的文本样式)
+19. 支持自定义布局(通过多层功能可以实现多种自定义布局)
+20. 支持自定义(视频)是否循环播放(视频在播放到结尾时是否停留在最后一帧)
+21. 支持自定义素材尺寸(width，height)，任意拉伸缩放素材尺寸播放
+22. 支持自定义素材位置(x，y)播放，任意定义素材播放位置
+23. 支持自定义素材横竖屏旋转(横屏角度：0、180，竖屏角度：90、270)
+24. 支持自定义素材开始播放时间(多个播放器间可以实现同步播放)
+25. 支持静音播放
 
 ---
 ### 安装方法
@@ -198,7 +199,16 @@
  | 命令行参数(play) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -start | -1 | 无 | 开始时间(ms) |
- | -libName | 无 | video、pic、gif、qrcode、camera、text、scroll、datetime、toast | 素材类型 |
+ | -libName | 无 | video、pic、sequence、gif、qrcode、camera、text、scroll、datetime、toast | 素材类型 |
+ 
+ | 命令行参数(sequence) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex        | 10            | 0 - 999               | 层 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
+ | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -path          | 无            | 素材路径1,素材路径2,素材路径3,... |	多个素材路径通过逗号(,)分隔 |
+ | -duration      | 5	            | 无                    | 非视频素材所播放的时间(s) |
 
  | 命令行参数(video、pic、gif) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
@@ -309,6 +319,9 @@
                        -font_size 14 \
                        -align center \
                        -style bold  
+ /usr/bin/xplayctl -play -libName sequence -zIndex 10 -rect "0,0,1920,1080" \
+                      -path "/root/a1.mp4,/root/b1.jpg,/root/a2.mp4" \
+                      -duration 5
  ```
 
 ---
@@ -331,6 +344,7 @@
  | text | 文本 |
  | scroll | 滚动字幕 |
  | datetime | 日期时间 |
+ | sequence | 序列播放 |
  
  ```
  // 指令说明
@@ -338,7 +352,7 @@
      "id": "Z10_Play_1557737960000", // 唯一标记(自定义唯一标识)【非必填】
      "type": "play",                 // 指令类型【必填】
      "start": -1,                    // 开始时间(默认：-1，立即播放，本地毫秒时间戳)【非必填】
-     "libName": "video",             // 素材类型(video、pic、camera、gif、qrcode、text、scroll ...）【必填】
+     "libName": "video",             // 素材类型(video、pic、sequence、camera、gif、qrcode、text、scroll ...）【必填】
      "params": {                     // 参数集合【必填】
          "zIndex": 10,               // 层(支持多层播放，层数越小画面越靠前)【必填】
          "path": "/root/sample.mp4", // 素材路径【必填】
@@ -411,6 +425,77 @@
         "screen_mode": "landscape",
         "screen_rotate": 0
     }
+ }
+ #End
+ ```
+ 
+ | 序列播放(sequence) | 说明 |
+ | --- | --- |
+ | path | 多个素材路径通过逗号(,)分隔 |
+ | duration | 非视频素材所播放的时间(s) |
+ 
+ ```
+ // 序列播放(格式一)
+ {
+    "type": "play",
+    "id": "PLAY_Z10_1582276422",
+    "libName": "sequence",
+    "start": -1,
+    "params": {
+        "zIndex": 10,
+        "path": "/root/a1.mp4,/root/b1.jpg,/root/a2.mp4,/root/b2.jpg",
+        "duration": 10,
+        "top": 0,
+        "left": 0,
+        "width": 1920,
+        "height": 1080,
+        "screen_mode": "landscape",
+        "screen_rotate": 0
+    }
+ }
+ #End
+ ```
+ 
+ | 序列播放(sequence) | 说明 |
+ | --- | --- |
+ | deps[] | 序列数据 |
+ | deps[].path | 素材路径 |
+ | deps[].type | 素材对应的 libName(video、pic) |
+ | deps[].duration | 非视频素材所播放的时间(s) |
+ 
+ ```
+ // 序列播放(格式二)
+ {
+    "type": "play",
+    "id": "PLAY_Z10_1582276422",
+    "libName": "sequence",
+    "start": -1,
+    "params": {
+        "zIndex": 10,
+        "top": 0,
+        "left": 0,
+        "width": 1920,
+        "height": 1080,
+        "screen_mode": "landscape",
+        "screen_rotate": 0
+    },
+    "deps": [{
+        "duration": -1,
+        "path": "/root/a1.mp4",
+        "type": "video"
+    }, {
+        "duration": 10,
+        "path": "/root/b1.jpg",
+        "type": "pic"
+    }, {
+        "duration": -1,
+        "path": "/root/a2.mp4",
+        "type": "video"
+    }, {
+        "duration": 10,
+        "path": "/root/b2.jpg",
+        "type": "pic"
+    }]
  }
  #End
  ```
