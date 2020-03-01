@@ -113,6 +113,13 @@
  
  > 说明：经测试在720P视频轮播时显存不低于192M，1080P视频不低于256M，或更高 !!!
  
+ ```
+ // 该报错说明显存不足，请适当增加显存
+ mmal: mmal_vc_port_enable: failed to enable port vc.ril.video_decode:out:0(I420): ENOMEM
+ mmal: mmal_port_enable: failed to enable port vc.ril.video_decode:out:0(I420)(0xca5070) (ENOMEM)
+ mmal: mmal_port_disable: port vc.ril.video_decode:out:0(I420)(0xca5070) is not enabled
+ ```
+ 
  ***2. 安装程序***
  ```
  git clone https://github.com/nulijiabei/xplay.git 或 https://gitee.com/nljb/xplay.git
