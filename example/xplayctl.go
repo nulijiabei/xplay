@@ -1,6 +1,6 @@
 ﻿package main
 
-// 20200221
+// 20200306
 
 import (
 	"encoding/json"
@@ -15,6 +15,9 @@ import (
 
 // Connect Address
 var addr = flag.String("addr", "127.0.0.1:8700", "xplay tcp address")
+
+// Snap
+var snap = flag.Bool("snap", false, "screen snapshot")
 
 // Move
 var move = flag.Bool("move", false, "move playing")
@@ -250,6 +253,15 @@ func (this *XPlay) move() error {
 	return this.send(data)
 }
 
+func (this *XPlay) snap() error {
+	params := make(map[string]interface{})
+	params["path"] = *path
+	data := make(map[string]interface{})
+	data["type"] = "snap"
+	data["params"] = params
+	return this.send(data)
+}
+
 func main() {
 
 	// 设置一下日志的结构
@@ -274,6 +286,8 @@ func main() {
 		err = xplay.play()
 	} else if *move { // Move
 		err = xplay.move()
+	} else if *snap { // Snap
+		err = xplay.snap()
 	} else if *stop { // Stop
 		if *all { // Stop ALL
 			err = xplay.stop_all()
