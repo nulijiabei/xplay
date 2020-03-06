@@ -795,7 +795,7 @@
 
 >LOG4QT 使用 APACHE LICENSE VERSION 2.0 https://www.apache.org/licenses/LICENSE-2.0.html  
 
->SDL 与 SDL_ttf 使用 zlib 许可 https://www.zlib.net/zlib_license.html  
+>SDL 与 SDL_ttf 和 SDL_image(libjpeg、libpng、zlib1) 使用许可 https://www.zlib.net/zlib_license.html  
 >授予任何人出于任何目的使用此软件的权限，包括商业应用，并对其进行更改和重新分发  
 
 >FFmpeg 使用 GNU较小通用公共许可证(LGPL) 许可 http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html  
