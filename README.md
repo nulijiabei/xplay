@@ -14,12 +14,6 @@
 
 ---
 
-*注意：免费提供 xplay 程序 及 控制端源码(暂时支持：python、golang) ...*
-
-*注意：公司内部项目【无法开源】【免费提供】有哪些功能需要可以提, 尽量加上 ... 谢谢关注.*
-
----
-
 [支持硬件](#支持硬件)  
 [支持系统](#支持系统)  
 [目录结构](#目录结构)  
@@ -42,7 +36,7 @@
 | Raspberry Pi 2B    | 1080p/v720p  | 30 | 未测试 |
 | Raspberry Pi 3B    | 1080p/v720p  | 30 | 未测试 |
 | Raspberry Pi 4B    | 1080p        | 30 | 已测试 |
-| Windows 系统       | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | 30/60 | 已测试 |
+| Windows 系统       | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | 60 | 已测试 |
 
 ***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
 
@@ -55,11 +49,6 @@
 | Raspbian Buster Lite | 2019-09-26 | buster-lite/ | 已测试 |
 | Raspbian Buster with desktop | 2020-02-13 | buster/ | 已测试 |
 | Raspbian Buster Lite | 2020-02-13 | buster-lite/ | 已测试 |
-
----
-### 关于 Raspberry Pi 4B 说明
-
-*正在为 Raspberry Pi 4B 定制全新的支持 4K 的多媒体播放器，敬请期待 ...*
 
 ---
 ### 目录结构
