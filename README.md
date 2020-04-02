@@ -780,12 +780,15 @@
 
 >Qt 使用 LGPL 许可 https://www.qt.io/licensing/ 和 https://www.qt.io/features#js-6-3  
 >通过LGPLv3许可证选项，您可以使用基本库和Qt的某些附加库。只要满足LGPLv3的所有要求，LGPLv3即可保持您的应用程序源代码关闭。  
->该程序所涉及 Qt Core、Qt GUI、Qt Network 满足 LGPL 要求  
+>该程序所涉及 Qt Core 满足 LGPL 要求  
 
 >LOG4QT 使用 APACHE LICENSE VERSION 2.0 https://www.apache.org/licenses/LICENSE-2.0.html  
 
->SDL 与 SDL_ttf 和 SDL_image(libjpeg、libpng、zlib1) 使用许可 https://www.zlib.net/zlib_license.html  
+>SDL 与 SDL_ttf 和 SDL_image(libjpeg、libpng、zlib1) 和 SDL_net 使用许可 https://www.zlib.net/zlib_license.html  
 >授予任何人出于任何目的使用此软件的权限，包括商业应用，并对其进行更改和重新分发  
+
+>jsoncpp 使用 MIT License
+>被授权人有权利使用、复制、修改、合并、出版发行、散布、再授权及贩售软件及软件的副本。
 
 >FFmpeg 使用 GNU较小通用公共许可证(LGPL) 许可 http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html  
 >FFmpeg License and Legal Considerations http://ffmpeg.org/legal.html  
