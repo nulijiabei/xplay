@@ -12,6 +12,8 @@ cp -aRrf ${dir}/etc/simsun.ttc /etc/xplay/
 cp -aRrf ${dir}/etc/00-xplay.conf /etc/ld.so.conf.d/
 ldconfig
 
+raspi-config nonint do_memory_split 256
+
 systemctl disable display-manager
 
 echo "Successful installation -> reboot -> /usr/bin/xplay"
