@@ -163,12 +163,15 @@
 ---
 ### 视频音频
 
- >推荐格式：VIDEO: MPEG-4(H.264/AVC)(YUV420P) 30FPS AUDIO: (AAC/MP4A) 44100Hz STEREO FLTP
+ >推荐：VIDEO: MPEG-4(H.264/AVC)(YUV420P) 30FPS AUDIO: (AAC/MP4A) 44100Hz STEREO FLTP  
 
  ```
- // 注意：需要统一视频素材的帧率与音频采样率并设置到启动参数中 ...
- /usr/bin/xplay -fps 30 -sample_rate 44100
+ // 需要统一视频素材的帧率与音频采样率并设置到启动参数中 ...
+ winxplay/xplayctl.exe -fps 30 -sample_rate 44100
  ```
+ 
+ >注意：与配置不匹配的音频采样率会造成无声或声音异常 ...  
+ >注意：与配置不匹配的帧率会造成帧率显示异常或跳帧 ...  
  
 ---
 ### 播放控制
