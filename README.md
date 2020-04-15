@@ -1,6 +1,6 @@
 # xplay
 
-专为树莓派(Raspberry Pi)+Windows系统+Android系统设计的多媒体播放器 ...
+专为树莓派(Raspberry Pi)设计的多媒体播放器且支持(Windows、Linux、Android)系统
 
 ---
 
