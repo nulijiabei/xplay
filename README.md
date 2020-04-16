@@ -794,7 +794,8 @@
 ### 许可信息
 
 >Qt 使用 LGPL 许可 https://www.qt.io/licensing/ 和 https://www.qt.io/features#js-6-3  
->通过LGPLv3许可证选项，您可以使用基本库和Qt的某些附加库。只要满足LGPLv3的所有要求，LGPLv3即可保持您的应用程序源代码关闭。  
+>通过LGPLv3许可证选项，您可以使用基本库和Qt的某些附加库。  
+>只要满足LGPLv3的所有要求，LGPLv3即可保持您的应用程序源代码关闭。  
 >该程序所涉及 Qt Core 满足 LGPL 要求  
 
 >LOG4QT 使用 APACHE LICENSE VERSION 2.0 https://www.apache.org/licenses/LICENSE-2.0.html  
