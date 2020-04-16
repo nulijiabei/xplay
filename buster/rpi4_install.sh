@@ -4,6 +4,7 @@ dir=$(/usr/bin/dirname $0)
 
 cp -aRrf ${dir}/bin/xplay /usr/bin/
 cp -aRrf ${dir}/bin/xplayctl /usr/bin/
+cp -aRrf ${dir}/bin/xplayrun /usr/bin/
 cp -aRrf ${dir}/libs/rpi4/* /usr/local/lib/
 
 mkdir /etc/xplay
