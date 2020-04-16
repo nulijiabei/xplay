@@ -56,6 +56,7 @@
 ### 目录结构
 
 ```
+/usr/bin/xplayrun               启动脚本(可配置启动参数)
 /usr/bin/xplay                  主程序
 /usr/bin/xplayctl               命令行工具
 /etc/xplay/log4qt.properties    日志配置文件
