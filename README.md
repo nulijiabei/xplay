@@ -133,7 +133,7 @@
  | -sample_rate n | 44100 | 音频采样频率设置 |
  | -cpuid | 无 | 显示CPUID |
  | -version | 无 | 版本号 |
- | -playing | 无 | 播放视频(测试) |
+ | -playing | 无 | 播放测试 |
  
  ```
  // 分辨率 1920x1080 【默认】
