@@ -201,6 +201,7 @@
  
  [Golang 控制样例](example/example.go)  
  [Python 控制样例](example/example.py)  
+ [Java 控制样例](example/XplayCtl.java)  
  
 ---
 ### 命令行工具
