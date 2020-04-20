@@ -108,22 +108,33 @@
 
 ---
 ### 安装方法
-
- ***1. 安装提示***
  
- > 重要: 请您在(root)用户模式下进行安装, 安装完成后请重启您的树莓派后再运行.  
+ ***1. 安装程序***
+  
+ > 请您在(ROOT)用户下进行安装, 安装完成后请重启您的树莓派后再运行 ...
  
- ***2. 安装程序***
+ > 下载  
  ```
  git clone https://github.com/nulijiabei/xplay.git 或 https://gitee.com/nljb/xplay.git
- cd xplay/
- cd buster/ 或者 cd buster-lite/ # Raspbian Buster with desktop 或者 Raspbian Buster Lite
- sh -x rpi_install.sh 或者 sh -x rpi4_install.sh # Raspberry Pi 023 或者 Raspberry Pi 4
  ```
+ 
+ > 安装  
+ 
+ | 安装 | 框架 | 硬件 | 系统 | 备注 |  
+ | --- | --- | --- | --- | --- |  
+ | buster/rpi_omx_install.sh      | OMX | Raspbian 023 | Raspbian Buster with desktop | 桌面与命令行均可运行 |  
+ | buster/rpi4_drm_install.sh     | DRM | Raspbian 4   | Raspbian Buster with desktop | 仅命令行可运行 |  
+ | buster-lite/rpi_omx_install.sh | OMX | Raspbian 023 | Raspbian Buster Lite | 仅命令行可运行 |  
  
  > 说明：Raspberry Pi 4 只支持 Raspbian Buster with desktop 下运行
  
- ***3. 运行程序***
+ ```
+ cd xplay/
+ cd buster/ 或 cd buster-lite/ 
+ sh -x rpi_omx_install.sh 或 sh -x rpi4_drm_install.sh 或 sh -x rpi_omx_install.sh
+ ```
+ 
+ ***2. 运行程序***
  
  | 参数 | 默认 | 说明 |
  | --- | --- | --- |
@@ -149,7 +160,7 @@
  /usr/bin/xplay -R 0,0,1920,1080 -fps 30 -sample_rate 48000
  ```
  
- ***4. 播放测试***
+ ***3. 播放测试***
  ```
  // 测试素材
  cp xplay/video/sample.mp4 /root/sample.mp4
@@ -157,12 +168,12 @@
  /usr/bin/xplay -playing /root/sample.mp4
  ```
  
- ***5. 查看日志***
+ ***4. 查看日志***
  ```
  tail -n 100 /dev/shm/xplay.log
  ```
  
- ***6. 显存设置***
+ ***5. 显存设置***
 
  > 安装脚本默认已经为您设置了显存，安装完成后请重启您的树莓派
  
