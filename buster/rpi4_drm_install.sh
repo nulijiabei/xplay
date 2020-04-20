@@ -34,5 +34,6 @@ echo "/etc/ld.so.conf.d/00-xplay.conf" >> /etc/xplay/library.file
 raspi-config nonint do_memory_split 256
 
 systemctl disable display-manager
+# ln -s /lib/systemd/system/lightdm.service /etc/systemd/system/display-manager.service
 
 echo "Successful installation -> reboot -> /usr/bin/xplay"
