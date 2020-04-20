@@ -131,7 +131,7 @@
  ```
  cd xplay/
  cd buster/ 或 cd buster-lite/ 
- sh -x rpi_omx_install.sh 或 sh -x rpi4_drm_install.sh 或 sh -x rpi_omx_install.sh
+ sh -x rpi_omx_install.sh 或 sh -x rpi4_drm_install.sh
  ```
  
  ***2. 运行程序***
