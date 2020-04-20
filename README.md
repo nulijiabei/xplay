@@ -16,6 +16,7 @@
 
 [支持硬件](#支持硬件)  
 [支持系统](#支持系统)  
+[定制系统](#定制系统)  
 [目录结构](#目录结构)  
 [支持功能](#支持功能)  
 [安装方法](#安装方法)  
@@ -51,6 +52,18 @@
 | Raspbian Buster Lite | 2019-09-26 | buster-lite/ | 已测试 |
 | Raspbian Buster with desktop | 2020-02-13 | buster/ | 已测试 |
 | Raspbian Buster Lite | 2020-02-13 | buster-lite/ | 已测试 |
+
+---
+### 定制系统
+
+> 正在定制一款适合在国内使用的树莓派系统，会随系统版本与xplay版本更新 ...  
+
+1. 默认源 -> 清华大学开源软件镜像站
+2. 默认时区 -> Asia/Shanghai
+3. 默认开启 -> SSH
+4. 默认关闭 -> by-uuid(cmdline.txt|fstab)、logo.nologo、警告、系统更新
+5. 默认支持 -> Java Runtime Environment、xplay
+6. 默认设置 -> 终端字体颜色、终端命令别名、显存设置、网络超时时间
 
 ---
 ### 目录结构
