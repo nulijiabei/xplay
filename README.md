@@ -122,9 +122,9 @@
  
  | 安装 | 框架 | 硬件 | 系统 | 备注 |  
  | --- | --- | --- | --- | --- |  
- | buster/rpi_omx_install.sh      | OMX | Raspbian 023 | Raspbian Buster with desktop | 桌面与命令行均可运行 |  
- | buster/rpi4_drm_install.sh     | DRM | Raspbian 4   | Raspbian Buster with desktop | 仅命令行可运行 |  
- | buster-lite/rpi_omx_install.sh | OMX | Raspbian 023 | Raspbian Buster Lite | 仅命令行可运行 |  
+ | buster/rpi_omx_install.sh      | OMX | Raspberry Pi 023 | Raspbian Buster with desktop | 桌面与命令行均可运行 |  
+ | buster/rpi4_drm_install.sh     | DRM | Raspberry Pi 4   | Raspbian Buster with desktop | 仅命令行可运行 |  
+ | buster-lite/rpi_omx_install.sh | OMX | Raspberry Pi 023 | Raspbian Buster Lite | 仅命令行可运行 |  
  
  > 说明：Raspberry Pi 4 只支持 Raspbian Buster with desktop 下运行
  
