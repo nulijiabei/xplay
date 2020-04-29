@@ -40,6 +40,7 @@
 | Raspberry Pi 4B    | 1080p        | 30 | 已测试 |
 | Windows 系统       | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
 | Android 系统       | [baidu](https://pan.baidu.com/s/1Vudg5PIa_-kfkJETCcJd2g)(3qe9) | - | 已测试 |
+| Linux 系统         | VAAPI and QSV、VDPAU | - | 可定制 |
 
 ***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
 
