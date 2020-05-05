@@ -1,6 +1,6 @@
 ﻿package main
 
-// 20200306
+// 20200505
 
 import (
 	"encoding/json"
@@ -244,9 +244,13 @@ func (this *XPlay) move() error {
 	rs := strings.Split(*rect, ",")
 	x, _ := strconv.Atoi(rs[0])
 	y, _ := strconv.Atoi(rs[1])
+	width, _ := strconv.Atoi(rs[2])
+	height, _ := strconv.Atoi(rs[3])
 	params["zIndex"] = *zIndex
 	params["left"] = x
 	params["top"] = y
+	params["width"] = width
+	params["height"] = height
 	data := make(map[string]interface{})
 	data["type"] = "move"
 	data["params"] = params
