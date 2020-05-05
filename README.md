@@ -103,10 +103,11 @@
 20. 支持自定义(视频)是否循环播放(视频在播放到结尾时是否停留在最后一帧)
 21. 支持自定义素材尺寸(width，height)，任意拉伸缩放素材尺寸播放
 22. 支持自定义素材位置(x，y)播放，任意定义素材播放位置
-23. 支持自定义素材横竖屏旋转(横屏角度：0、180，竖屏角度：90、270)
-24. 支持自定义素材开始播放时间(多个播放器间可以实现同步播放)
-25. 支持实时屏幕快照(截屏)
-26. 支持静音播放
+23. 支持自定义移动素材位置(x，y)及改变素材尺寸(width，height)
+24. 支持自定义素材横竖屏旋转(横屏角度：0、180，竖屏角度：90、270)
+25. 支持自定义素材开始播放时间(多个播放器间可以实现同步播放)
+26. 支持实时屏幕快照(截屏)
+27. 支持静音播放
 
 ---
 ### 安装方法
@@ -248,7 +249,7 @@
  | 命令行参数(move) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -zIndex | 10  | 0 - 999  | 层 |
- | -rect   | 0,0 | left,top |	素材显示位置 |
+ | -rect   | 0,0,1920,1080  | left,top,width,height |	素材显示尺寸与位置 |
  
  | 命令行参数(snap) | 默认值 | 说明 |
  | --- | --- | --- |
@@ -350,7 +351,7 @@
  /usr/bin/xplayctl -stop -all # 停止全部层
  /usr/bin/xplayctl -stop -ids "10,11,12" # 停止指定层
  /usr/bin/xplayctl -snap -path "/dev/shm/snap.jpg" # 截屏
- /usr/bin/xplayctl -move -zIndex 10 -rect 100,100 # 移动位置
+ /usr/bin/xplayctl -move -zIndex 10 -rect 100,100,500,500 # 移动与改变
  /usr/bin/xplayctl -play -libName pic -path "/root/sample.jpg" # 显示图片
  /usr/bin/xplayctl -play -libName gif -path "/root/sample.gif" # 显示动画
  /usr/bin/xplayctl -play -libName video -path "/root/sample.mp4" # 显示视频
@@ -809,7 +810,9 @@
    "params": {
      "zIndex": 10,
      "left": 100,
-     "top": 100
+     "top": 100,
+     "height": 500,
+     "width": 500,
    }
  }
  #End
