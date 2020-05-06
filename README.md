@@ -74,6 +74,7 @@
 /usr/bin/xplayctl               命令行工具
 /etc/xplay/log4qt.properties    日志配置文件
 /etc/xplay/simsun.ttc           默认字体文件
+/etc/xplay/xplay.pid            运行时进程ID
 /etc/ld.so.conf.d/00-xplay.conf 关联库文件指向
 /usr/local/lib/...              关联库文件目录
 ```
