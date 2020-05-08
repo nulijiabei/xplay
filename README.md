@@ -151,7 +151,6 @@
  | -noloop | 无 | 视频在播放到结尾时是否停留在最后一帧 |
  | -mute | 无 | 静音设置 |
  | -sample_rate n | 44100 | 音频采样频率设置 |
- | -cpuid | 无 | 显示CPUID |
  | -version | 无 | 版本号 |
  | -playing | 无 | 播放测试 |
  
