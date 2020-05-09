@@ -20,7 +20,6 @@
 [目录结构](#目录结构)  
 [支持功能](#支持功能)  
 [安装方法](#安装方法)  
-[视频音频](#视频音频)  
 [播放控制](#播放控制)  
 [命令行工具](#命令行工具)  
 [控制指令](#控制指令)  
@@ -198,19 +197,6 @@
  mmal: mmal_port_enable: failed to enable port vc.ril.video_decode:out:0(I420)(0xca5070) (ENOMEM)
  mmal: mmal_port_disable: port vc.ril.video_decode:out:0(I420)(0xca5070) is not enabled
  ```
- 
----
-### 视频音频
-
- >推荐：VIDEO: MPEG-4(H.264/AVC)(YUV420P) 30FPS AUDIO: (AAC/MP4A) 44100Hz STEREO FLTP  
-
- ```
- // 需要统一视频素材的帧率与音频采样率并设置到启动参数中 ...
- winxplay/xplayctl.exe -fps 30 -sample_rate 44100
- ```
- 
- >注意：与配置不匹配的音频采样率会造成无声或声音异常 ...  
- >注意：与配置不匹配的帧率会造成帧率显示异常或跳帧 ...  
  
 ---
 ### 播放控制
