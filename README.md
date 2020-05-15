@@ -16,7 +16,6 @@
 
 [支持硬件](#支持硬件)  
 [支持系统](#支持系统)  
-[定制系统](#定制系统)  
 [目录结构](#目录结构)  
 [支持功能](#支持功能)  
 [安装方法](#安装方法)  
@@ -38,7 +37,7 @@
 | Raspberry Pi 3B    | 1080p/v720p  | 30 | 未测试 |
 | Raspberry Pi 4B    | 1080p        | 30 | 已测试 |
 | Windows 系统       | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
-| Android 系统       | [baidu](https://pan.baidu.com/s/1Vudg5PIa_-kfkJETCcJd2g)(3qe9) | - | 已测试 |
+| Android 系统       | mediacodec | - | 可定制 |
 | Linux 系统         | VAAPI and QSV、VDPAU | - | 可定制 |
 
 ***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
@@ -52,17 +51,6 @@
 | Raspbian Buster Lite | 2019-09-26 | buster-lite/ | 已测试 |
 | Raspbian Buster with desktop | 2020-02-13 | buster/ | 已测试 |
 | Raspbian Buster Lite | 2020-02-13 | buster-lite/ | 已测试 |
-
----
-### 定制系统
-
-> 正在定制一款适合在国内使用的树莓派系统 ...  
-
-1. 默认源 -> 清华大学开源软件镜像站
-2. 默认时区 -> Asia/Shanghai
-3. 默认开启 -> ssh
-4. 默认关闭 -> logo.nologo、警告、系统更新
-5. 默认设置 -> 终端字体颜色、终端命令别名、显存设置
 
 ---
 ### 目录结构
