@@ -75,7 +75,7 @@
 4. 支持(视频)多种格式(例如：MP4、AVI、MOV、等)、音频(AAC)
 5. 支持(图片)JPG与PNG格式
 6. 支持(动画)GIF格式
-7. 支持(视频)硬解播放(MMAL、VAAPI、VDPAU、QSV、MediaCodec、RKMPP)(H264)
+7. 支持(视频)硬解播放(MMAL、VAAPI、VDPAU、QSV、MediaCodec、RKMPP)、(H264)
 8. 支持(视频)预加载
 9. 支持(摄像头)设备(Raspberry Pi Camera V2)
 10. 支持(视频、图片)无黑场切换播放
