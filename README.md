@@ -36,9 +36,9 @@
 | Raspberry Pi 2B    | 1080p/v720p  | 30 | 未测试 |
 | Raspberry Pi 3B    | 1080p/v720p  | 30 | 未测试 |
 | Raspberry Pi 4B    | 1080p        | 30 | 已测试 |
+| Android 系统       | - | - | 可定制 |
+| Linux 系统         | - | - | 可定制 |
 | Windows 系统       | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
-| Android 系统       | mediacodec | - | 可定制 |
-| Linux 系统         | VAAPI and QSV、VDPAU | - | 可定制 |
 
 ***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
 
@@ -75,7 +75,7 @@
 4. 支持(视频)多种格式(例如：MP4、AVI、MOV、等)、音频(AAC)
 5. 支持(图片)JPG与PNG格式
 6. 支持(动画)GIF格式
-7. 支持(视频)硬解播放(H264的视频编码)
+7. 支持(视频)硬解播放(MMAL、VAAPI、VDPAU、QSV、MediaCodec、RKMPP)(H264)
 8. 支持(视频)预加载
 9. 支持(摄像头)设备(Raspberry Pi Camera V2)
 10. 支持(视频、图片)无黑场切换播放
