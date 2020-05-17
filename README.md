@@ -105,10 +105,12 @@
  
  > 注意：请您在(ROOT)用户下进行安装, 安装完成后请重启您的树莓派后再运行 ...  
  
- > 下载  
+ > 下载
  
  ```
- git clone https://github.com/nulijiabei/xplay.git 或 https://gitee.com/nljb/xplay.git
+ git clone https://github.com/nulijiabei/xplay.git -b v1.0.15.v20200505 # (最新发布版请查看标签)
+ 或 
+ git clone https://gitee.com/nljb/xplay.git -b v1.0.15.v20200505 # (最新发布版请查看标签)
  ```
  
  > 安装  
