@@ -35,7 +35,7 @@
 | Raspberry Pi 3B+   | 1080p/v720p  | 30 | 已测试 |
 | Raspberry Pi 2B    | 1080p/v720p  | 30 | 未测试 |
 | Raspberry Pi 3B    | 1080p/v720p  | 30 | 未测试 |
-| Raspberry Pi 4B    | 1080p        | 30 | 已测试 |
+| Raspberry Pi 4B    | 1080p/[【双】](https://gitee.com/nljb/xplay/issues/I1HPLH) | 30 | 已测试 |
 | Android 系统       | - | - | 可定制 |
 | Linux 系统         | - | - | 可定制 |
 | Windows 系统       | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
@@ -108,9 +108,9 @@
  > 下载
  
  ```
- git clone https://github.com/nulijiabei/xplay.git -b v1.0.15.v20200505 # (最新发布版请查看标签)
+ git clone https://github.com/nulijiabei/xplay.git -b v1.0.16.v20200518 # (最新发布版请查看标签)
  或 
- git clone https://gitee.com/nljb/xplay.git -b v1.0.15.v20200505 # (最新发布版请查看标签)
+ git clone https://gitee.com/nljb/xplay.git -b v1.0.16.v20200518 # (最新发布版请查看标签)
  ```
  
  > 安装  
