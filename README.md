@@ -69,7 +69,7 @@
 ---
 ### 支持功能
 
-1. 支持自定义播放器分辨率、帧率(FPS)、支持音频采样率(Sample Rate)自适应
+1. 支持自定义播放器分辨率、帧率(FPS)，支持音频采样率(Sample Rate)自适应
 2. 支持使用(TCP)连接播放器发送指令控制(播放、覆盖、停止、移动、等)
 3. 支持(视频、音频、流媒体、图片、摄像头、动画、文本、滚动字幕、日期时间、二维码)素材播放
 4. 支持(视频)多种格式(例如：MP4、AVI、MOV、等)、音频(AAC)
@@ -158,9 +158,9 @@
  ***3. 播放测试***
  ```
  // 测试素材
- cp xplay/video/sample.mp4 /root/sample.mp4
+ cp xplay/autotest/yiyezi.mp4 /root/yiyezi.mp4
  // 播放测试
- /usr/bin/xplay -playing /root/sample.mp4
+ /usr/bin/xplay -playing /root/yiyezi.mp4
  ```
  
  ***4. 查看日志***
