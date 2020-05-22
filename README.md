@@ -108,9 +108,9 @@
  > 下载
  
  ```
- git clone https://github.com/nulijiabei/xplay.git -b v1.0.16.v20200518 # (最新发布版请查看标签)
+ git clone https://github.com/nulijiabei/xplay.git -b v1.0.17.v20200522 # (最新发布版请查看标签)
  或 
- git clone https://gitee.com/nljb/xplay.git -b v1.0.16.v20200518 # (最新发布版请查看标签)
+ git clone https://gitee.com/nljb/xplay.git -b v1.0.17.v20200522 # (最新发布版请查看标签)
  ```
  
  > 安装  
