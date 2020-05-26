@@ -7,6 +7,7 @@
 支持(视频、音频、流媒体、图片、摄像头、动画、文本、滚动字幕、日期时间、二维码)
 
 ![image](images/logo.jpg)
+![image](images/demo.gif)
 
 ---
 
