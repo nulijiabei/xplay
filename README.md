@@ -218,11 +218,16 @@
  | -stop | 停止指令 |
  | -move | 移动指令 |
  | -snap | 截屏指令 |
+ | -query | 查询指令 |
+ 
+ | 命令行参数(query) | 说明 |
+ | --- | --- |
+ | -all | 查询全部层 |
  
  | 命令行参数(stop) | 说明 |
  | --- | --- |
- | -all  | 停止全部层 |
- | -ids  | 停止指定层 |
+ | -all | 停止全部层 |
+ | -ids | 停止指定层 |
  
  | 命令行参数(move) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
@@ -327,6 +332,7 @@
  ```
  /usr/bin/xplayctl -h # 帮助
  /usr/bin/xplayctl -stop -all # 停止全部层
+ /usr/bin/xplayctl -query -all # 查询全部层
  /usr/bin/xplayctl -stop -ids "10,11,12" # 停止指定层
  /usr/bin/xplayctl -snap -path "/dev/shm/snap.jpg" # 截屏
  /usr/bin/xplayctl -move -zIndex 10 -rect 100,100,500,500 # 移动与改变
@@ -371,6 +377,7 @@
  | stop | 停止 |
  | move | 移动 |
  | snap | 截屏 |
+ | query | 查询 |
  
  | 素材类型(libName) | 说明 |
  | --- | --- |
@@ -405,24 +412,41 @@
  }
  #End                                // 指令结束【必填】
  ```
+
+ ```
+ // 指令结果说明
+ {
+    "ok" : false,            // 指令执行失败 【必返回】
+    "data" : "错误信息"      // 指令失败信息 【非必返回】
+ }
+ #End
+ ```
+ ```
+ // 指令结果说明
+ {
+    "ok" : true,             // 指令执行成功 【必返回】
+    "data" : ...             // 指令对应格式 【非必返回】(例如：查询指令结果时此处返回查询结果)
+ }
+ #End
+ ```
  
  ```
-  // 显示视频
-  {
-     "id": "Z10_Play_1557737960000",
-     "type": "play",
-     "start": -1,
-     "libName": "video",
-     "params": {
-         "zIndex": 10,
-         "path": "/root/sample.mp4",
-         "left": 0,
-         "top": 0,
-         "width": 1920,
-         "height": 1080,
-         "screen_mode": "landscape",
-         "screen_rotate": 0
-     }
+ // 显示视频
+ {
+    "id": "Z10_Play_1557737960000",
+    "type": "play",
+    "start": -1,
+    "libName": "video",
+    "params": {
+        "zIndex": 10,
+        "path": "/root/sample.mp4",
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080,
+        "screen_mode": "landscape",
+        "screen_rotate": 0
+    }
  }
  #End
  ```
@@ -802,6 +826,17 @@
    "type": "snap",
    "params": {
      "path": "/dev/shm/snap.jpg"
+   }
+ }
+ #End
+ ```
+ 
+ ```
+ // 查询全部层
+ {
+   "type": "query",
+   "params": {
+       "all": true
    }
  }
  #End
