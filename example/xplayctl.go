@@ -1,8 +1,9 @@
 ﻿package main
 
-// 20200505
+// 20200605
 
 import (
+	"bufio"
 	"encoding/json"
 	"flag"
 	"fmt"
@@ -15,6 +16,9 @@ import (
 
 // Connect Address
 var addr = flag.String("addr", "127.0.0.1:8700", "xplay tcp address")
+
+// Query
+var query = flag.Bool("query", false, "query playing status")
 
 // Snap
 var snap = flag.Bool("snap", false, "screen snapshot")
@@ -86,9 +90,28 @@ func (this *XPlay) connect(_addr string) error {
 	return nil
 }
 
-// 发送 to XPlay
+// 从 XPlay 接收返回
+func (this *XPlay) result() {
+	fmt.Println(">>> RESULT >>>")
+	br := bufio.NewReader(this.conn)
+	for {
+		line, _, err := br.ReadLine()
+		if err != nil {
+			log.Println(err.Error())
+			break
+		}
+		data := string(line)
+		fmt.Println(data)
+		if strings.Trim(data, " ") == "#End" {
+			break
+		}
+	}
+}
+
+// 发送指令到 XPlay
 func (this *XPlay) send(_data map[string]interface{}) error {
 	js, _ := json.MarshalIndent(_data, "", "  ")
+	fmt.Println(">>> SEND >>>")
 	fmt.Println(string(js))
 	_, err := this.conn.Write(append(js, []byte("\n#End\n")...))
 	return err
@@ -266,6 +289,12 @@ func (this *XPlay) snap() error {
 	return this.send(data)
 }
 
+func (this *XPlay) query() error {
+	data := make(map[string]interface{})
+	data["type"] = "query"
+	return this.send(data)
+}
+
 func main() {
 
 	// 设置一下日志的结构
@@ -276,9 +305,13 @@ func main() {
 
 	// New XPlay
 	xplay := NewXPlay()
+
+	// 连接到 XPlay
 	if err := xplay.connect(*addr); err != nil {
+		// 连接异常退出 ...
 		log.Fatal(err.Error())
 	} else {
+		// 结束时断开连接
 		defer xplay.conn.Close()
 	}
 
@@ -298,10 +331,17 @@ func main() {
 		} else if *ids != "" { // Stop IDS
 			err = xplay.stop(*ids)
 		}
+	} else if *query { // Query
+		xplay.query()
 	}
 
 	// Print Error
-	if err != nil {
+	if err == nil {
+		// 接收返回
+		xplay.result()
+	} else {
+		// 输出异常 ...
 		log.Fatal(err.Error())
 	}
+
 }
