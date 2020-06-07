@@ -368,6 +368,20 @@
                       -duration 5
  ```
 
+ ```
+ # 路径补全(xplay 与 xplayctl 在同一台设备时)
+ cd /root/ ; /usr/bin/xplayctl -play -libName video -path ./sample.mp4 
+ # 等同于
+ /usr/bin/xplayctl -play -libName video -path /root/sample.mp4
+ ```
+
+ ```
+ # 远端推流(xplay 与 xplayctl 在不同设备时)
+ cd /root/ ; /usr/bin/xplayctl -addr 192.168.1.11:8700 -play -libName video -path ./sample.mp4
+ # 等同于
+ /usr/bin/xplayctl -addr 192.168.1.11:8700 -play -libName video -path http://192.168.1.11:8711/xplay/sample.mp4
+ ```
+
 ---
 ### 控制指令
   
