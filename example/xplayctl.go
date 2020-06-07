@@ -1,6 +1,6 @@
 ﻿package main
 
-// 20200605
+// 20200607
 
 import (
 	"bufio"
@@ -9,10 +9,16 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"net/http"
+	"os"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 )
+
+// Sync Wait Group
+var wg sync.WaitGroup
 
 // Connect Address
 var addr = flag.String("addr", "127.0.0.1:8700", "xplay tcp address")
@@ -151,7 +157,7 @@ func (this *XPlay) play() error {
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
 		params["screen_rotate"] = *screen_rotate
-		params["path"] = *path
+		params["path"] = this.path()
 		params["duration"] = *duration
 	} else if (*libName) == "video" {
 		params["zIndex"] = *zIndex
@@ -161,7 +167,7 @@ func (this *XPlay) play() error {
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
 		params["screen_rotate"] = *screen_rotate
-		params["path"] = *path
+		params["path"] = this.path()
 	} else if (*libName) == "pic" {
 		params["zIndex"] = *zIndex
 		params["left"] = x
@@ -170,7 +176,7 @@ func (this *XPlay) play() error {
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
 		params["screen_rotate"] = *screen_rotate
-		params["path"] = *path
+		params["path"] = this.path()
 	} else if (*libName) == "gif" {
 		params["zIndex"] = *zIndex
 		params["left"] = x
@@ -179,7 +185,7 @@ func (this *XPlay) play() error {
 		params["height"] = height
 		params["screen_mode"] = *screen_mode
 		params["screen_rotate"] = *screen_rotate
-		params["path"] = *path
+		params["path"] = this.path()
 	} else if (*libName) == "qrcode" {
 		params["zIndex"] = *zIndex
 		params["left"] = x
@@ -295,6 +301,63 @@ func (this *XPlay) query() error {
 	return this.send(data)
 }
 
+// TODO 暂时只支持视频 ...
+func (this *XPlay) path() string {
+	// 路径不能为空 ...
+	if *path == "" {
+		log.Fatal("not found path file ...")
+	}
+	// 本机播放 ...
+	if *addr == "127.0.0.1:8700" {
+		// 当前路径文件 ...
+		if strings.HasPrefix(*path, "./") {
+			dir, _ := os.Getwd()
+			ph := dir + string(os.PathSeparator) + (*path)[2:]
+			return ph
+		}
+	} else { // 远端播放 ...
+		// 当前路径文件 ...
+		if strings.HasPrefix(*path, "./") {
+			go func() {
+				wg.Add(1) // 添加计数
+				// 启动文件服务 ...
+				dir, _ := os.Getwd()
+				http.Handle("/xplay/", http.StripPrefix("/xplay/", http.FileServer(http.Dir(dir))))
+				log.Fatal(http.ListenAndServe(":8711", nil))
+				wg.Done() // 移除计数
+			}()
+			return "http://" + this.ipaddr() + ":8711/xplay/" + (*path)[2:]
+		}
+	}
+	return *path
+}
+
+func (this *XPlay) ipaddr() string {
+	addrs, err := net.InterfaceAddrs()
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+	for _, address := range addrs {
+		// 检查IP地址判断是否回环地址
+		if ipnet, ok := address.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
+			if ipnet.IP.To4() != nil {
+				ip := ipnet.IP.String()
+				a1 := strings.Split(*addr, ":")
+				if len(a1) == 2 {
+					a2 := strings.Split(a1[0], ".")
+					if len(a2) == 4 {
+						a3 := a2[0] + "." + a2[1] + "." + a2[2]
+						if strings.HasPrefix(ip, a3) {
+							return ip
+						}
+					}
+				}
+			}
+		}
+	}
+	return ""
+}
+
 func main() {
 
 	// 设置一下日志的结构
@@ -343,5 +406,12 @@ func main() {
 		// 输出异常 ...
 		log.Fatal(err.Error())
 	}
+
+	// 等待计数结束
+	log.Println("正在检查推流状态 ...")
+	log.Println("等待推流结束 ...")
+	log.Println("退出(Ctrl+C)")
+	wg.Wait()
+	log.Println("完成")
 
 }
