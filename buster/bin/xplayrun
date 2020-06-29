@@ -6,5 +6,6 @@
 # -mute			静音设置
 # -version		版本号
 # -cpuid		CPUID
+# -welcome		自定义欢迎页
 
 /usr/bin/xplay -R 0,0,1920,1080 -fps 30 -key xplay
