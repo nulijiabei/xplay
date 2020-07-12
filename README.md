@@ -197,7 +197,7 @@
 
  * 通过Socket接口与播放器建立TCP连接，向播放器发送指令，从播放器接收返回
  * 可以通过多种支持Socket连接语言开发控制程序(java、python、C++、golang、等 ...)
- * 注：运行样例之前请先启动xplay主程序(/usr/bin/xplay &)
+ * 注：运行样例之前请先启动xplay主程序(/usr/bin/xplay)
  
  [Golang 控制样例](example/example.go)  
  [Python 控制样例](example/example.py)  
