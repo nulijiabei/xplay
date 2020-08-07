@@ -1,4 +1,4 @@
-# xplay [技术博客](https://nljb.gitee.io)
+# xplay [博客](https://nljb.gitee.io)
 
 专为树莓派(Raspberry Pi)设计的多媒体播放器且支持(Windows、Linux、Android)系统
 
