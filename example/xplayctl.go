@@ -1,6 +1,6 @@
 ﻿package main
 
-// 20200607
+// 20200814
 
 import (
 	"bufio"
@@ -40,7 +40,7 @@ var ids = flag.String("ids", "", "stop ids")
 // Play
 // var id = flag.String("id", "", "debug id") // 自动生成
 var play = flag.Bool("play", false, "play or stop")
-var start = flag.Int64("start", -1, "start time millisecond")
+var start = flag.Int64("start", -1, "start time(ms)")
 var libName = flag.String("libName", "", "video、pic、sequence、camera、gif、qrcode、text、scroll、background")
 
 // Play Params
@@ -50,6 +50,7 @@ var screen_mode = flag.String("screen_mode", "landscape", "landscape、portrait"
 var screen_rotate = flag.Int("screen_rotate", 0, "landscape: 0、180 or portrait: 90、270")
 var path = flag.String("path", "", "file path")
 var content = flag.String("content", "", "data content")
+var timeout = flag.Int64("timeout", -1, "video stream timeout(ms)")
 
 // Text
 var font_ttf = flag.String("font_ttf", "", "TrueTypeFont")
@@ -70,7 +71,7 @@ var orientation = flag.String("orientation", "horizontal", "horizontal | vertica
 
 // Toast
 var toast_type = flag.String("toast_type", "notice", "notice、success、warning、error")
-var duration = flag.Int("duration", 0, "timeout stop toast")
+var duration = flag.Int("duration", 0, "toast duration(s)")
 
 type XPlay struct {
 	conn *net.TCPConn
@@ -168,6 +169,7 @@ func (this *XPlay) play() error {
 		params["screen_mode"] = *screen_mode
 		params["screen_rotate"] = *screen_rotate
 		params["path"] = this.path()
+		params["timeout"] = *timeout
 	} else if (*libName) == "pic" {
 		params["zIndex"] = *zIndex
 		params["left"] = x
