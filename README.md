@@ -451,7 +451,7 @@
  ```
  
  ```
- // 显示视频
+ // 视频播放
  {
      "id":"Z10_Play_1557737960000",
      "type":"play",
@@ -470,9 +470,13 @@
  }
  #End
  ```
+  
+ | 流媒体播放(video) | 说明 |
+ | --- | --- |
+ | timeout | 断流超时(ms) |
  
  ```
- // 显示流媒体(http)
+ // 流媒体播放
  {
      "id":"Z10_Play_1557737960000",
      "libName":"video",
@@ -480,6 +484,7 @@
      "type":"play",
      "params":{
          "path":"http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8",
+         "timeout":5000,
          "height":1080,
          "width":1920,
          "left":0,
@@ -870,6 +875,10 @@
  }
  #End
  
+ | 查询全部层(query) | 说明 |
+ | --- | --- |
+ | decoder | 解码器是否运行 |
+ 
  // 返回结果
  {
      "data":[
@@ -895,7 +904,8 @@
                  "screen_rotate":180,
                  "top":0,
                  "width":1920,
-                 "zIndex":10
+                 "zIndex":10,
+                 "decoder":true
              },
              "type":"video"
          }
