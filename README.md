@@ -257,8 +257,17 @@
  | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
  | -path          | 无            | 素材路径1,素材路径2,素材路径3,... |	多个素材路径通过逗号(,)分隔 |
  | -duration      | 5	            | 无                    | 非视频素材所播放的时间(s) |
+ 
+ | 命令行参数(video) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex        | 10            | 0 - 999               | 层 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
+ | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -path          | 无            | 无                    |	素材路径 |
+ | -timeout       | -1            | 无                    | 断流超时(ms) |
 
- | 命令行参数(video、pic、gif) | 默认值 | 可选参数 | 说明 |
+ | 命令行参数(pic、gif) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -zIndex        | 10            | 0 - 999               | 层 |
  | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
