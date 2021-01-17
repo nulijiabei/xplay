@@ -360,9 +360,9 @@
  /usr/bin/xplayctl -h # 帮助
  /usr/bin/xplayctl -stop -all # 停止全部层
  /usr/bin/xplayctl -query -all # 查询全部层
- /usr/bin/xplayctl -zIndex 10 -newIndex 11 # 改变层(切换层)
  /usr/bin/xplayctl -stop -ids "10,11,12" # 停止指定层
  /usr/bin/xplayctl -snap -path "/dev/shm/snap.jpg" # 截屏
+ /usr/bin/xplayctl -change -zIndex 10 -newIndex 11 # 改变层(切换层)
  /usr/bin/xplayctl -move -zIndex 10 -rect 100,100,500,500 # 移动与改变
  /usr/bin/xplayctl -play -libName pic -path "/root/sample.jpg" # 显示图片
  /usr/bin/xplayctl -play -libName gif -path "/root/sample.gif" # 显示动画
