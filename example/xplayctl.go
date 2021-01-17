@@ -1,6 +1,6 @@
 ﻿package main
 
-// 20200814
+// 20210117
 
 import (
 	"bufio"
@@ -32,6 +32,9 @@ var snap = flag.Bool("snap", false, "screen snapshot")
 // Move
 var move = flag.Bool("move", false, "move playing")
 
+// Change
+var change = flag.Bool("change", false, "change playing")
+
 // Stop
 var stop = flag.Bool("stop", false, "stop or play")
 var all = flag.Bool("all", false, "stop all")
@@ -51,6 +54,9 @@ var screen_rotate = flag.Int("screen_rotate", 0, "landscape: 0、180 or portrait
 var path = flag.String("path", "", "file path")
 var content = flag.String("content", "", "data content")
 var timeout = flag.Int64("timeout", -1, "video stream timeout(ms)")
+
+// Change Params
+var newIndex = flag.Int("newIndex", 0, "1-999")
 
 // Text
 var font_ttf = flag.String("font_ttf", "", "TrueTypeFont")
@@ -288,6 +294,16 @@ func (this *XPlay) move() error {
 	return this.send(data)
 }
 
+func (this *XPlay) change() error {
+	params := make(map[string]interface{})
+	params["zIndex"] = *zIndex
+	params["newIndex"] = *newIndex
+	data := make(map[string]interface{})
+	data["type"] = "change"
+	data["params"] = params
+	return this.send(data)
+}
+
 func (this *XPlay) snap() error {
 	params := make(map[string]interface{})
 	params["path"] = *path
@@ -388,6 +404,8 @@ func main() {
 		err = xplay.play()
 	} else if *move { // Move
 		err = xplay.move()
+	} else if *change { // Change
+		err = xplay.change()
 	} else if *snap { // Snap
 		err = xplay.snap()
 	} else if *stop { // Stop
