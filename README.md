@@ -231,6 +231,7 @@
  | -move | 移动指令 |
  | -snap | 截屏指令 |
  | -query | 查询指令 |
+ | -change | 改变指令 |
  
  | 命令行参数(query) | 说明 |
  | --- | --- |
@@ -245,6 +246,11 @@
  | --- | --- | --- | --- |
  | -zIndex | 10  | 0 - 999  | 层 |
  | -rect   | 0,0,1920,1080  | left,top,width,height |	素材显示尺寸与位置 |
+ 
+ | 命令行参数(change) | 默认值 | 可选参数 | 说明 |
+ | --- | --- | --- | --- |
+ | -zIndex | 10  | 0 - 999  | 层 |
+ | -newIndex | 0  | 0 - 999  | 层 |
  
  | 命令行参数(snap) | 默认值 | 说明 |
  | --- | --- | --- |
@@ -354,6 +360,7 @@
  /usr/bin/xplayctl -h # 帮助
  /usr/bin/xplayctl -stop -all # 停止全部层
  /usr/bin/xplayctl -query -all # 查询全部层
+ /usr/bin/xplayctl -zIndex 10 -newIndex 11 # 改变层(切换层)
  /usr/bin/xplayctl -stop -ids "10,11,12" # 停止指定层
  /usr/bin/xplayctl -snap -path "/dev/shm/snap.jpg" # 截屏
  /usr/bin/xplayctl -move -zIndex 10 -rect 100,100,500,500 # 移动与改变
@@ -413,6 +420,7 @@
  | move | 移动 |
  | snap | 截屏 |
  | query | 查询 |
+ | change | 改变 |
  
  | 素材类型(libName) | 说明 |
  | --- | --- |
@@ -870,7 +878,27 @@
  }
  #End
  ```
-  
+
+ | 改变(change) | 值 | 说明 |
+ | --- | --- | --- |
+ | zIndex | 0 - 999 | 层 |
+ | newIndex | 0 - 999 | 层 |
+ 
+ >当目标层存在时原始层会与目标层互换  
+ >当目标层不存在时原始层改变到目标层  
+ 
+ ```
+ // 改变层
+ {
+     "type":"change",
+     "params":{
+         "zIndex":10,
+         "newIndex":11
+     }
+ }
+ #End
+ ```
+
  ```
  // 截屏
  {
