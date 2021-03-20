@@ -20,6 +20,7 @@
 [目录结构](#目录结构)  
 [支持功能](#支持功能)  
 [安装方法](#安装方法)  
+[常见问题](#常见问题)  
 [播放控制](#播放控制)  
 [命令行工具](#命令行工具)  
 [控制指令](#控制指令)  
@@ -183,7 +184,17 @@
  tail -n 100 /dev/shm/xplay.log
  ```
  
- ***5. 显存设置***
+---
+### 常见问题
+
+ ***1. 显存报错***
+ 
+ ```
+ // 该报错说明显存不足，请适当增加显存
+ mmal: mmal_vc_port_enable: failed to enable port vc.ril.video_decode:out:0(I420): ENOMEM
+ mmal: mmal_port_enable: failed to enable port vc.ril.video_decode:out:0(I420)(0xca5070) (ENOMEM)
+ mmal: mmal_port_disable: port vc.ril.video_decode:out:0(I420)(0xca5070) is not enabled
+ ```
 
  > 安装脚本默认已经为您设置了显存，安装完成后请重启您的树莓派
  
@@ -193,13 +204,18 @@
  
  > 说明：经测试在720P视频轮播时显存不低于192M，1080P视频不低于256M，或更高 !!!
  
- ```
- // 该报错说明显存不足，请适当增加显存
- mmal: mmal_vc_port_enable: failed to enable port vc.ril.video_decode:out:0(I420): ENOMEM
- mmal: mmal_port_enable: failed to enable port vc.ril.video_decode:out:0(I420)(0xca5070) (ENOMEM)
- mmal: mmal_port_disable: port vc.ril.video_decode:out:0(I420)(0xca5070) is not enabled
- ```
+ ***2. 音频杂音***
  
+ >在 Raspberry Pi 4B 视频播放有杂音问题，建议视频音频采样率为 48.000kHz 
+ 
+ ```
+ // 设置音频使用 HDMI 或 3.5mm(音频接口) 输出
+ // 创建配置文件 /etc/asound.conf 内容如下：
+ defaults.pcm.card 1 # HDMI(0) 3.5mm(1)
+ defaults.pcm.device 0
+ defaults.ctl.card 0
+ ```
+
 ---
 ### 播放控制
 
