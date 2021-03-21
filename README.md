@@ -86,7 +86,7 @@
 5. 支持(流媒体)RTMP、RTSP、HTTP、H264/H265(YUV420P/YUVJ420P)
 6. 支持(图片)JPG与PNG格式
 7. 支持(动画)GIF格式
-8. 支持(视频)硬解播放(MMAL、VAAPI、VDPAU、QSV、MediaCodec、RKMPP)、(H264)
+8. 支持(视频)硬解播放(MMAL、VAAPI、VDPAU、QSV、MediaCodec、RKMPP、NVDEC)、(H264)
 9. 支持(视频)预加载
 10. 支持(视频)单线程解码与多线程解码双模式
 11. 支持(摄像头)设备(Raspberry Pi Camera V2)
