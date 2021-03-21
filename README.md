@@ -206,15 +206,10 @@
  
  ***2. 音频杂音***
  
- >在 Raspberry Pi 4B 视频播放有杂音问题，建议视频音频采样率为 48.000kHz 
- 
- ```
- // 设置音频使用 HDMI 或 3.5mm(音频接口) 输出
- // 创建配置文件 /etc/asound.conf 内容如下：
- defaults.pcm.card 1 # HDMI(0) 3.5mm(1)
- defaults.pcm.device 0
- defaults.ctl.card 0
- ```
+ > 问：在 Headphones 音频输出模式下杂音问题, 在 HDMI 音频模式下无杂音？  
+ > 答：可能是系统相关配置或软件关联库兼容问题，暂时无解 ...  
+ > 问：为什么 oxmplayer 在 Headphones 音频输出模式下无杂音？  
+ > 答：为了多平台兼容性 xplay 未使用 OMX 底层接口实现音频输出  
 
 ---
 ### 播放控制
