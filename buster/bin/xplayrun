@@ -8,4 +8,5 @@
 # -cpuid		CPUID
 # -welcome		自定义欢迎页
 
+export LD_LIBRARY_PATH=/usr/local/lib/
 /usr/bin/xplay -R 0,0,1920,1080 -fps 30 -key xplay
