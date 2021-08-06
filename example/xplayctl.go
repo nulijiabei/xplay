@@ -35,15 +35,17 @@ var move = flag.Bool("move", false, "move playing")
 // Change
 var change = flag.Bool("change", false, "change playing")
 
+// General
+// var id = flag.String("id", "", "debug id") // 自动生成
+var start = flag.Int64("start", -1, "start time(ms)")
+
 // Stop
 var stop = flag.Bool("stop", false, "stop or play")
 var all = flag.Bool("all", false, "stop all")
 var ids = flag.String("ids", "", "stop ids")
 
 // Play
-// var id = flag.String("id", "", "debug id") // 自动生成
 var play = flag.Bool("play", false, "play or stop")
-var start = flag.Int64("start", -1, "start time(ms)")
 var libName = flag.String("libName", "", "video、pic、sequence、camera、gif、qrcode、text、scroll、background")
 
 // Play Params
@@ -133,7 +135,9 @@ func (this *XPlay) send(_data map[string]interface{}) error {
 // 停止全部
 func (this *XPlay) stop_all() error {
 	data := make(map[string]interface{})
+	data["id"] = fmt.Sprintf("STOP_%d", time.Now().Unix())
 	data["type"] = "stop"
+	data["start"] = *start
 	data["params"] = map[string]bool{"all": true}
 	return this.send(data)
 }
@@ -144,7 +148,9 @@ func (this *XPlay) stop(_ids string) error {
 	data := make(map[string]interface{})
 	params := make(map[string]interface{})
 	params["ids"] = vs
+	data["id"] = fmt.Sprintf("STOP_%d", time.Now().Unix())
 	data["type"] = "stop"
+	data["start"] = *start
 	data["params"] = params
 	return this.send(data)
 }
