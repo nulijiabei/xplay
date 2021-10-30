@@ -32,15 +32,16 @@
 
 | 硬件 | 分辨率 | FPS | 测试 |
 | --- | --- | --- | --- |
-| Raspberry Pi Zero  | 1080p/v720p  | 30 | 已测试 |
-| Raspberry Pi 3A+   | 1080p/v720p  | 30 | 已测试 |
-| Raspberry Pi 3B+   | 1080p/v720p  | 30 | 已测试 |
-| Raspberry Pi 2B    | 1080p/v720p  | 30 | 未测试 |
-| Raspberry Pi 3B    | 1080p/v720p  | 30 | 未测试 |
-| Raspberry Pi 4B    | 1080p/[【双】](https://gitee.com/nljb/xplay/issues/I1HPLH) | 30 | 已测试 |
-| Android 系统       | - | - | 可定制 |
-| Linux 系统         | - | - | 可定制 |
-| Windows 系统       | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
+| Raspberry Pi Zero   | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi Zero 2 | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi 3A+    | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi 3B+    | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi 2B     | 1080p/v720p  | 30 | 未测试 |
+| Raspberry Pi 3B     | 1080p/v720p  | 30 | 未测试 |
+| Raspberry Pi 4B     | 1080p/[【双】](https://gitee.com/nljb/xplay/issues/I1HPLH) | 30 | 已测试 |
+| Android 系统        | - | - | 可定制 |
+| Linux 系统          | - | - | 可定制 |
+| Windows 系统        | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
 
 ***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
 
