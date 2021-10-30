@@ -33,7 +33,7 @@
 | 硬件 | 分辨率 | FPS | 测试 |
 | --- | --- | --- | --- |
 | Raspberry Pi Zero   | 1080p/v720p  | 30 | 已测试 |
-| Raspberry Pi Zero 2 | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi Zero 2 | 1080p/v720p  | 30 | 待测试 |
 | Raspberry Pi 3A+    | 1080p/v720p  | 30 | 已测试 |
 | Raspberry Pi 3B+    | 1080p/v720p  | 30 | 已测试 |
 | Raspberry Pi 2B     | 1080p/v720p  | 30 | 未测试 |
