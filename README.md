@@ -17,6 +17,7 @@
 
 [支持硬件](#支持硬件)  
 [支持系统](#支持系统)  
+[升级说明](#升级说明)  
 [目录结构](#目录结构)  
 [支持功能](#支持功能)  
 [安装方法](#安装方法)  
@@ -50,8 +51,7 @@
 
 | 系统版本 | 发布日期 | 安装程序 | 测试版本 | 测试状态 |
 | --- | --- | --- | --- | --- |
-| Raspberry Pi OS with desktop | 2021-10-30 | raspios/      |                   | 已测试 |
-| Raspberry Pi OS with Lite    | 2021-10-30 | raspios-lite/ |                   | 已测试 |
+| Raspberry Pi OS with desktop | 2021-10-30 | raspios/      | master            | 已测试 |
 | Raspberry Pi OS with desktop | 2021-05-07 | buster/       | v1.0.21.v20210806 | 已测试 |
 | Raspberry Pi OS with Lite    | 2021-05-07 | buster-lite/  | v1.0.21.v20210806 | 已测试 |
 | Raspberry Pi OS with desktop | 2021-03-04 | buster/       |                   | 已测试 |
@@ -68,6 +68,15 @@
 | Raspbian Buster Lite         | 2019-09-26 | buster-lite/  |                   | 已测试 |
 | Raspbian Buster with desktop | 2020-02-13 | buster/       |                   | 已测试 |
 | Raspbian Buster Lite         | 2020-02-13 | buster-lite/  |                   | 已测试 |
+
+---
+### 升级说明
+
+> 树莓派官方发布了 RaspiOS 2021-10-30 版本  
+> 为了兼容新系统 xplay 进行了如下改进 ...  
+
+1. 不在兼容 RaspiOS Lite 版本, 统一 RaspiOS desktop 版本
+2. 不在支持 OMX 版本，全部切换到 DRM 或 X11 版本
 
 ---
 ### 目录结构
@@ -136,17 +145,13 @@
  
  | 安装 | 框架 | 硬件 | 系统 | 备注 |  
  | --- | --- | --- | --- | --- |  
- | raspios/rpi_omx_install.sh      | OMX | Raspberry Pi 023 | Raspberry Pi OS with desktop | 桌面与命令行均可运行 |  
- | raspios-lite/rpi_omx_install.sh | OMX | Raspberry Pi 023 | Raspberry Pi OS with Lite | 仅命令行可运行 |  
- | raspios/rpi4_drm_install.sh     | DRM | Raspberry Pi 4   | Raspberry Pi OS with desktop | 仅命令行可运行(全屏推荐) |  
- | raspios/rpi4_x11_install.sh     | X11 | Raspberry Pi 4   | Raspberry Pi OS with desktop | 仅桌面可运行(可窗口化) |  
- 
- > 说明：Raspberry Pi 4 需要在 with desktop 系统下运行
+ | raspios/rpi_drm_install.sh     | DRM | Raspberry Pi 01234 | Raspberry Pi OS with desktop | 仅命令行可运行(全屏推荐) |  
+ | raspios/rpi_x11_install.sh     | X11 | Raspberry Pi 01234 | Raspberry Pi OS with desktop | 仅桌面可运行(可窗口化) |  
  
  ```
  cd xplay/
- cd raspios/ 或 cd raspios-lite/ 
- sh -x rpi_omx_install.sh 或 sh -x rpi4_drm_install.sh 或 sh -x rpi4_x11_install.sh
+ cd raspios/
+ sh -x rpi_drm_install.sh 或 sh -x rpi_x11_install.sh
  ```
  
  ***2. 运行程序***
