@@ -50,22 +50,24 @@
 
 | 系统版本 | 发布日期 | 安装程序 | 测试 |
 | --- | --- | --- | --- |
-| Raspberry Pi OS with desktop | 2021-05-07 | buster/ | 已测试 |
-| Raspberry Pi OS with Lite | 2021-05-07 | buster-lite/ | 已测试 |
-| Raspberry Pi OS with desktop | 2021-03-04 | buster/ | 已测试 |
-| Raspberry Pi OS with Lite | 2021-03-04 | buster-lite/ | 已测试 |
-| Raspberry Pi OS with desktop | 2021-01-11 | buster/ | 已测试 |
-| Raspberry Pi OS with Lite | 2021-01-11 | buster-lite/ | 已测试 |
-| Raspberry Pi OS with desktop | 2020-12-02 | buster/ | 已测试 |
-| Raspberry Pi OS with Lite | 2020-12-02 | buster-lite/ | 已测试 |
-| Raspberry Pi OS with desktop | 2020-08-20 | buster/ | 已测试 |
-| Raspberry Pi OS with Lite | 2020-08-20 | buster-lite/ | 已测试 |
-| Raspberry Pi OS with desktop | 2020-05-27 | buster/ | 已测试 |
-| Raspberry Pi OS with Lite | 2020-05-27 | buster-lite/ | 已测试 |
-| Raspbian Buster with desktop | 2019-09-26 | buster/ | 已测试 |
-| Raspbian Buster Lite | 2019-09-26 | buster-lite/ | 已测试 |
-| Raspbian Buster with desktop | 2020-02-13 | buster/ | 已测试 |
-| Raspbian Buster Lite | 2020-02-13 | buster-lite/ | 已测试 |
+| Raspberry Pi OS with desktop | 2021-10-30 | raspios/ | 已测试 |
+| Raspberry Pi OS with Lite | 2021-10-30 | raspios-lite/ | 已测试 |
+| Raspberry Pi OS with desktop | 2021-05-07 | raspios/ | 已测试 |
+| Raspberry Pi OS with Lite | 2021-05-07 | raspios-lite/ | 已测试 |
+| Raspberry Pi OS with desktop | 2021-03-04 | raspios/ | 已测试 |
+| Raspberry Pi OS with Lite | 2021-03-04 | raspios-lite/ | 已测试 |
+| Raspberry Pi OS with desktop | 2021-01-11 | raspios/ | 已测试 |
+| Raspberry Pi OS with Lite | 2021-01-11 | raspios-lite/ | 已测试 |
+| Raspberry Pi OS with desktop | 2020-12-02 | raspios/ | 已测试 |
+| Raspberry Pi OS with Lite | 2020-12-02 | raspios-lite/ | 已测试 |
+| Raspberry Pi OS with desktop | 2020-08-20 | raspios/ | 已测试 |
+| Raspberry Pi OS with Lite | 2020-08-20 | raspios-lite/ | 已测试 |
+| Raspberry Pi OS with desktop | 2020-05-27 | raspios/ | 已测试 |
+| Raspberry Pi OS with Lite | 2020-05-27 | raspios-lite/ | 已测试 |
+| Raspbian Buster with desktop | 2019-09-26 | raspios/ | 已测试 |
+| Raspbian Buster Lite | 2019-09-26 | raspios-lite/ | 已测试 |
+| Raspbian Buster with desktop | 2020-02-13 | raspios/ | 已测试 |
+| Raspbian Buster Lite | 2020-02-13 | raspios-lite/ | 已测试 |
 
 ---
 ### 目录结构
@@ -134,16 +136,16 @@
  
  | 安装 | 框架 | 硬件 | 系统 | 备注 |  
  | --- | --- | --- | --- | --- |  
- | buster/rpi_omx_install.sh      | OMX | Raspberry Pi 023 | Raspberry Pi OS with desktop | 桌面与命令行均可运行 |  
- | buster-lite/rpi_omx_install.sh | OMX | Raspberry Pi 023 | Raspberry Pi OS with Lite | 仅命令行可运行 |  
- | buster/rpi4_drm_install.sh     | DRM | Raspberry Pi 4   | Raspberry Pi OS with desktop | 仅命令行可运行(全屏推荐) |  
- | buster/rpi4_x11_install.sh     | X11 | Raspberry Pi 4   | Raspberry Pi OS with desktop | 仅桌面可运行(可窗口化) |  
+ | raspios/rpi_omx_install.sh      | OMX | Raspberry Pi 023 | Raspberry Pi OS with desktop | 桌面与命令行均可运行 |  
+ | raspios-lite/rpi_omx_install.sh | OMX | Raspberry Pi 023 | Raspberry Pi OS with Lite | 仅命令行可运行 |  
+ | raspios/rpi4_drm_install.sh     | DRM | Raspberry Pi 4   | Raspberry Pi OS with desktop | 仅命令行可运行(全屏推荐) |  
+ | raspios/rpi4_x11_install.sh     | X11 | Raspberry Pi 4   | Raspberry Pi OS with desktop | 仅桌面可运行(可窗口化) |  
  
  > 说明：Raspberry Pi 4 需要在 with desktop 系统下运行
  
  ```
  cd xplay/
- cd buster/ 或 cd buster-lite/ 
+ cd raspios/ 或 cd raspios-lite/ 
  sh -x rpi_omx_install.sh 或 sh -x rpi4_drm_install.sh 或 sh -x rpi4_x11_install.sh
  ```
  
@@ -209,12 +211,17 @@
  
  > 说明：经测试在720P视频轮播时显存不低于192M，1080P视频不低于256M，或更高 !!!
  
- ***2. 音频杂音***
+ ***2. 音频设置***
+
+ > 在 RaspiOS 2021-10-30 开始官方已经解决耳机音频杂音问题
+ > 配置文件（/etc/asound.conf）指定音频输出模式
  
- > 问：在 Headphones 音频输出模式下杂音问题, 在 HDMI 音频模式下无杂音？  
- > 答：可能是系统相关配置或软件关联库兼容问题，暂时无解 ...  
- > 问：为什么 oxmplayer 在 Headphones 音频输出模式下无杂音？  
- > 答：为了多平台兼容性 xplay 未使用 OMX 底层接口实现音频输出  
+ ```
+ // 0:3.5MM | 1:HDMI
+ defaults.pcm.card 0 
+ defaults.pcm.device 0
+ defaults.ctl.card 0
+ ``` 
 
 ---
 ### 播放控制
@@ -331,8 +338,8 @@
  | -content       | 无            | 无                    | 文本内容 |
  | -font_ttf      | 无            | 无                    | 指定字体 |
  | -font_size     | 18            | 12 - 72               | 字体大小 |
- | -color         | rgba(0,128,0,100%) | 无 | 文本颜色及透明度 |
- | -bgcolor       | rgba(0,0,0,20%)    | 无 | 背景颜色及透明度 |
+ | -color         | rgba(0,128,0,100) | 无 | 文本颜色及透明度 |
+ | -bgcolor       | rgba(0,0,0,20)    | 无 | 背景颜色及透明度 |
  | -align         | center             | center、right、left | 对齐方式 |
  | -style         | normal             | normal、bold、italic、underline、strikethrough |	文本样式 |
 
@@ -345,8 +352,8 @@
  | -content       | 无            | 无                    | 文本内容 |
  | -font_ttf      | 无            | 无                    | 指定字体 |
  | -font_size     | 18            | 12 - 72               | 字体大小 |
- | -color         | rgba(0,128,0,100%) | 无 | 文本颜色及透明度 |
- | -bgcolor       | rgba(0,0,0,20%)    | 无 | 背景颜色及透明度 |
+ | -color         | rgba(0,128,0,100) | 无 | 文本颜色及透明度 |
+ | -bgcolor       | rgba(0,0,0,20)    | 无 | 背景颜色及透明度 |
  | -style         | normal             | normal、bold、italic、underline、strikethrough |	文本样式 |
  | -orientation   | horizontal         | horizontal、vertical	| 移动方向 |
  | -speed         | 1                  | 每帧向前移动像素 | 移动速度 |
@@ -359,8 +366,8 @@
  | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
  | -font_ttf      | 无            | 无                    | 指定字体 |
  | -font_size     | 18            | 12 - 72               | 字体大小 |
- | -color         | rgba(0,128,0,100%) | 无 | 文本颜色及透明度 |
- | -bgcolor       | rgba(0,0,0,20%)    | 无 | 背景颜色及透明度 |
+ | -color         | rgba(0,128,0,100) | 无 | 文本颜色及透明度 |
+ | -bgcolor       | rgba(0,0,0,20)    | 无 | 背景颜色及透明度 |
  | -align         | center             | center、right、left | 对齐方式 |
  | -style         | normal             | normal、bold、italic、underline、strikethrough |	文本样式 |
 
@@ -403,8 +410,8 @@
                        -orientation vertical 
  /usr/bin/xplayctl -play -libName text -zIndex 9 -rect "0,0,1920,50" \
                        -content "专为树莓派设计的多媒体播放器" \
-                       -color "rgba(0,128,0,100%)" \
-                       -bgcolor "rgba(0,0,0,20%)" \
+                       -color "rgba(0,128,0,100)" \
+                       -bgcolor "rgba(0,0,0,20)" \
                        -font_size 14 \
                        -align center \
                        -style bold  
@@ -692,8 +699,8 @@
  
  | 文本(text) | 值 | 说明 |
  | --- | --- | --- |
- | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
- | bgcolor   | rgba(0, 0, 0, 0%)     | 背景颜色及透明度 |
+ | color     | rgba(0, 128, 0, 100) | 文本颜色及透明度 |
+ | bgcolor   | rgba(0, 0, 0, 0)     | 背景颜色及透明度 |
  | font_ttf  | /etc/xplay/simsun.ttc | 指定字体 |
  | font_size | 14                    | 字体大小 |
  | align     | center、right、left   | 对齐方式 |
@@ -722,8 +729,8 @@
          "screen_rotate":0,
          "screen_mode":"landscape",
          "content":"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-         "color":"rgba(255, 0, 0, 100%)",
-         "bgcolor":"rgba(0, 0, 0, 0%)",
+         "color":"rgba(255, 0, 0, 100)",
+         "bgcolor":"rgba(0, 0, 0, 0)",
          "font_size":30,
          "align":"center",
          "style":"bold"
@@ -734,8 +741,8 @@
  
  | 滚动字幕(scroll) | 值 | 说明 |
  | --- | --- | --- |
- | color       | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
- | bgcolor     | rgba(0, 0, 0, 0%)     | 背景颜色及透明度 |
+ | color       | rgba(0, 128, 0, 100) | 文本颜色及透明度 |
+ | bgcolor     | rgba(0, 0, 0, 0)     | 背景颜色及透明度 |
  | font_ttf    | /etc/xplay/simsun.ttc | 指定字体 |
  | font_size   | 14 | 字体大小 |
  | style       | normal、bold、italic、underline、strikethrough | 文本样式 |
@@ -766,8 +773,8 @@
          "screen_rotate":0,
          "screen_mode":"landscape",
          "content":"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-         "color":"rgba(255, 0, 0, 100%)",
-         "bgcolor":"rgba(0,128,0,80%)",
+         "color":"rgba(255, 0, 0, 100)",
+         "bgcolor":"rgba(0,128,0,80)",
          "font_size":30,
          "style":"bold",
          "orientation":"horizontal",
@@ -779,8 +786,8 @@
  
  | 日期时间(datetime) | 值 | 说明 |
  | --- | --- | --- |
- | color     | rgba(0, 128, 0, 100%) | 文本颜色及透明度 |
- | bgcolor   | rgba(0, 0, 0, 0%)     | 背景颜色及透明度 |
+ | color     | rgba(0, 128, 0, 100) | 文本颜色及透明度 |
+ | bgcolor   | rgba(0, 0, 0, 0)     | 背景颜色及透明度 |
  | font_ttf  | /etc/xplay/simsun.ttc | 指定字体 |
  | font_size | 30                    | 字体大小 |
  | align     | center、right、left   | 对齐方式 |
@@ -801,8 +808,8 @@
          "zIndex":9,
          "screen_rotate":0,
          "screen_mode":"landscape",
-         "color":"rgba(0, 128, 0, 100%)",
-         "bgcolor":"rgba(0, 0, 0, 20%)",
+         "color":"rgba(0, 128, 0, 100)",
+         "bgcolor":"rgba(0, 0, 0, 20)",
          "font_size":30,
          "align":"center",
          "style":"bold"
