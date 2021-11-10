@@ -40,7 +40,7 @@
 | Raspberry Pi 2B     | DRM | 1080p/v720p  | 30 | 未测试 |
 | Raspberry Pi 3B     | DRM | 1080p/v720p  | 30 | 未测试 |
 | Raspberry Pi 4B     | DRM / X11 | 1080p/[【双】](https://gitee.com/nljb/xplay/issues/I1HPLH) | 30 | 已测试 |
-| Android 系统        | DRM / X11 | - | - | 可定制 |
+| Android 系统        | DRM       | - | - | 可定制 |
 | Linux 系统          | DRM / X11 | - | - | 可定制 |
 | Windows 系统        | Microsoft Direct3D | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
 
