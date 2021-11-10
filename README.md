@@ -15,9 +15,9 @@
 
 ---
 
+[升级说明](#升级说明)  
 [支持硬件](#支持硬件)  
 [支持系统](#支持系统)  
-[升级说明](#升级说明)  
 [目录结构](#目录结构)  
 [支持功能](#支持功能)  
 [安装方法](#安装方法)  
@@ -27,6 +27,15 @@
 [控制指令](#控制指令)  
 [许可信息](#许可信息)  
 [更多功能](#更多功能)  
+
+---
+### 升级说明
+
+> 树莓派发布了 Raspberry Pi OS 2021-10-30 系统，为了更好的兼容新系统 ...  
+
+1. 不再兼容 Raspberry Pi OS with Lite 版本, 统一 Raspberry Pi OS with desktop 版本
+2. 不再支持 OMX 版本，全部切换到 DRM 或 X11 版本 ...
+3. 由于 Raspberry Pi 023 在 X11 不支持硬件加速，请使用 DRM 版本
 
 ---
 ### 支持硬件
@@ -69,17 +78,6 @@
 | Raspbian Buster Lite         | 2019-09-26 | buster-lite/  | ↑                 | 已测试 |
 | Raspbian Buster with desktop | 2020-02-13 | buster/       | v1.0.1.v20191105  | 已测试 |
 | Raspbian Buster Lite         | 2020-02-13 | buster-lite/  | v1.0.1.v20191105  | 已测试 |
-
----
-### 升级说明
-
-> 树莓派官方发布了 Raspberry Pi OS 2021-10-30 版本  
-
-> 为了兼容新系统 xplay 进行了如下改进 ...  
-
-1. 不再兼容 Raspberry Pi OS with Lite 版本, 统一 desktop 版本
-2. 不再支持 OMX 版本，全部切换到 DRM 或 X11 版本
-3. 由于 Raspberry Pi 023 在 X11 不支持硬件加速，请使用 DRM 版本
 
 ---
 ### 目录结构
