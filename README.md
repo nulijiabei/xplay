@@ -73,10 +73,11 @@
 ### 升级说明
 
 > 树莓派官方发布了 RaspiOS 2021-10-30 版本  
+
 > 为了兼容新系统 xplay 进行了如下改进 ...  
 
-1. 不在兼容 RaspiOS Lite 版本, 统一 RaspiOS desktop 版本
-2. 不在支持 OMX 版本，全部切换到 DRM 或 X11 版本
+1. 不再兼容 Raspberry Pi OS with Lite 版本, 统一 desktop 版本
+2. 不再支持 OMX 版本，全部切换到 DRM 或 X11 版本
 
 ---
 ### 目录结构
