@@ -52,22 +52,23 @@
 | 系统版本 | 发布日期 | 安装程序 | 测试版本 | 测试状态 |
 | --- | --- | --- | --- | --- |
 | Raspberry Pi OS with desktop | 2021-10-30 | raspios/      | master            | 已测试 |
+| Raspberry Pi OS with Lite    | 2021-10-30 |               |                   | 不兼容 |
 | Raspberry Pi OS with desktop | 2021-05-07 | buster/       | v1.0.21.v20210806 | 已测试 |
 | Raspberry Pi OS with Lite    | 2021-05-07 | buster-lite/  | v1.0.21.v20210806 | 已测试 |
-| Raspberry Pi OS with desktop | 2021-03-04 | buster/       |                   | 已测试 |
-| Raspberry Pi OS with Lite    | 2021-03-04 | buster-lite/  |                   | 已测试 |
-| Raspberry Pi OS with desktop | 2021-01-11 | buster/       |                   | 已测试 |
-| Raspberry Pi OS with Lite    | 2021-01-11 | buster-lite/  |                   | 已测试 |
-| Raspberry Pi OS with desktop | 2020-12-02 | buster/       |                   | 已测试 |
-| Raspberry Pi OS with Lite    | 2020-12-02 | buster-lite/  |                   | 已测试 |
-| Raspberry Pi OS with desktop | 2020-08-20 | buster/       |                   | 已测试 |
-| Raspberry Pi OS with Lite    | 2020-08-20 | buster-lite/  |                   | 已测试 |
-| Raspberry Pi OS with desktop | 2020-05-27 | buster/       |                   | 已测试 |
-| Raspberry Pi OS with Lite    | 2020-05-27 | buster-lite/  |                   | 已测试 |
-| Raspbian Buster with desktop | 2019-09-26 | buster/       |                   | 已测试 |
-| Raspbian Buster Lite         | 2019-09-26 | buster-lite/  |                   | 已测试 |
-| Raspbian Buster with desktop | 2020-02-13 | buster/       |                   | 已测试 |
-| Raspbian Buster Lite         | 2020-02-13 | buster-lite/  |                   | 已测试 |
+| Raspberry Pi OS with desktop | 2021-03-04 | buster/       | ↑                 | 已测试 |
+| Raspberry Pi OS with Lite    | 2021-03-04 | buster-lite/  | ↑                 | 已测试 |
+| Raspberry Pi OS with desktop | 2021-01-11 | buster/       | ↑                 | 已测试 |
+| Raspberry Pi OS with Lite    | 2021-01-11 | buster-lite/  | ↑                 | 已测试 |
+| Raspberry Pi OS with desktop | 2020-12-02 | buster/       | ↑                 | 已测试 |
+| Raspberry Pi OS with Lite    | 2020-12-02 | buster-lite/  | ↑                 | 已测试 |
+| Raspberry Pi OS with desktop | 2020-08-20 | buster/       | ↑                 | 已测试 |
+| Raspberry Pi OS with Lite    | 2020-08-20 | buster-lite/  | ↑                 | 已测试 |
+| Raspberry Pi OS with desktop | 2020-05-27 | buster/       | ↑                 | 已测试 |
+| Raspberry Pi OS with Lite    | 2020-05-27 | buster-lite/  | ↑                 | 已测试 |
+| Raspbian Buster with desktop | 2019-09-26 | buster/       | ↑                 | 已测试 |
+| Raspbian Buster Lite         | 2019-09-26 | buster-lite/  | ↑                 | 已测试 |
+| Raspbian Buster with desktop | 2020-02-13 | buster/       | v1.0.1.v20191105  | 已测试 |
+| Raspbian Buster Lite         | 2020-02-13 | buster-lite/  | v1.0.1.v20191105  | 已测试 |
 
 ---
 ### 升级说明
