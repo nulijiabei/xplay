@@ -33,10 +33,9 @@
 
 > 树莓派发布了 Raspberry Pi OS 2021-10-30 系统，为了更好的兼容新系统 ...  
 
-1. 不再兼容 Raspberry Pi OS with Lite 版本, 统一 Raspberry Pi OS with desktop 版本
+1. 不再兼容 Raspberry Pi OS with Lite 版本
 2. 不再支持 OMX 版本，全部切换到 DRM 或 X11 版本 ...
 3. 由于 Raspberry Pi 023 在 X11 不支持硬件加速，请使用 DRM 版本
-4. 在 Raspberry Pi Zero 设备上测试时（系统）无法正常识别音频设备待官方修正
 
 ---
 ### 支持硬件
