@@ -31,18 +31,18 @@
 ---
 ### 支持硬件
 
-| 硬件 | 分辨率 | 模式 | FPS | 测试 |
-| --- | --- | --- | --- |
+| 硬件 | 模式 | 分辨率 | FPS | 测试 |
+| --- | --- | --- | --- | --- |
 | Raspberry Pi Zero   | DRM | 1080p/v720p  | 30 | 已测试 |
 | Raspberry Pi Zero 2 | DRM | 1080p/v720p  | 30 | 待测试 |
 | Raspberry Pi 3A+    | DRM | 1080p/v720p  | 30 | 已测试 |
 | Raspberry Pi 3B+    | DRM | 1080p/v720p  | 30 | 已测试 |
 | Raspberry Pi 2B     | DRM | 1080p/v720p  | 30 | 未测试 |
 | Raspberry Pi 3B     | DRM | 1080p/v720p  | 30 | 未测试 |
-| Raspberry Pi 4B     | DRM/X11 | 1080p/[【双】](https://gitee.com/nljb/xplay/issues/I1HPLH) | 30 | 已测试 |
-| Android 系统        | - | - | 可定制 |
-| Linux 系统          | - | - | 可定制 |
-| Windows 系统        | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
+| Raspberry Pi 4B     | DRM / X11 | 1080p/[【双】](https://gitee.com/nljb/xplay/issues/I1HPLH) | 30 | 已测试 |
+| Android 系统        | DRM / X11 | - | - | 可定制 |
+| Linux 系统          | DRM / X11 | - | - | 可定制 |
+| Windows 系统        | Microsoft Direct3D | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
 
 ***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
 
