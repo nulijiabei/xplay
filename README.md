@@ -37,6 +37,8 @@
 2. 不再支持 OMX 版本，全部切换到 DRM 或 X11 版本 ...
 3. 由于 Raspberry Pi 023 在 X11 不支持硬件加速，请使用 DRM 版本
 
+[由于 Raspberry Pi 弃用 OMX 所以 omxplayer 已经被弃用](https://github.com/popcornmix/omxplayer)
+
 ---
 ### 支持硬件
 
