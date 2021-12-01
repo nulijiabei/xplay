@@ -132,11 +132,11 @@
 ---
 ### 安装方法
  
- ***1. 安装程序***
+ ***1. 安装程序 ([安装教程](https://gitee.com/nljb/xplay/issues/I4KL5W))***
  
  > 注意：请您在(ROOT)用户下进行安装, 安装完成后请重启您的树莓派后再运行 ...  
  
- > 下载
+ > 下载 
  
  ```
  git clone https://github.com/nulijiabei/xplay.git -b v1.0.20.v20210117 # (最新发布版请查看标签)
