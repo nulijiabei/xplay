@@ -32,15 +32,15 @@
 
 | 硬件 | 模式 | 分辨率 | FPS | 测试 |
 | --- | --- | --- | --- | --- |
-| Raspberry Pi Zero   | DRM | 1080p/v720p  | 30 | 已测试 |
-| Raspberry Pi Zero 2 | DRM | 1080p/v720p  | 30 | 待测试 |
-| Raspberry Pi 3A+    | DRM | 1080p/v720p  | 30 | 已测试 |
-| Raspberry Pi 3B+    | DRM | 1080p/v720p  | 30 | 已测试 |
-| Raspberry Pi 2B     | DRM | 1080p/v720p  | 30 | 未测试 |
-| Raspberry Pi 3B     | DRM | 1080p/v720p  | 30 | 未测试 |
-| Raspberry Pi 4B     | DRM / X11 | 1080p/[【双】](https://gitee.com/nljb/xplay/issues/I1HPLH) | 30 | 已测试 |
-| Android 系统        | DRM       | - | - | 可定制 |
-| Linux 系统          | DRM / X11 | - | - | 可定制 |
+| Raspberry Pi Zero   | DRM/OMX | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi Zero 2 | DRM/OMX | 1080p/v720p  | 30 | 待测试 |
+| Raspberry Pi 3A+    | DRM/OMX | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi 3B+    | DRM/OMX | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi 2B     | DRM/OMX | 1080p/v720p  | 30 | 未测试 |
+| Raspberry Pi 3B     | DRM/OMX | 1080p/v720p  | 30 | 未测试 |
+| Raspberry Pi 4B     | DRM/X11 | 1080p/[【双】](https://gitee.com/nljb/xplay/issues/I1HPLH) | 30 | 已测试 |
+| Android 系统        | DRM     | - | - | 可定制 |
+| Linux 系统          | DRM/X11 | - | - | 可定制 |
 | Windows 系统        | Microsoft Direct3D | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
 
 ***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
@@ -50,24 +50,25 @@
 
 | 系统版本 | 发布日期 | 安装程序 | 测试版本 | 测试状态 |
 | --- | --- | --- | --- | --- |
-| Raspberry Pi OS with desktop | 2021-10-30 | raspios/      | master            | 已测试 |
-| Raspberry Pi OS with Lite    | 2021-10-30 | →             | →                 | 不兼容 |
-| Raspberry Pi OS with desktop | 2021-05-07 | buster/       | v1.0.21.v20210806 | 已测试 |
-| Raspberry Pi OS with Lite    | 2021-05-07 | buster-lite/  | v1.0.21.v20210806 | 已测试 |
-| Raspberry Pi OS with desktop | 2021-03-04 | buster/       | ↑                 | 已测试 |
-| Raspberry Pi OS with Lite    | 2021-03-04 | buster-lite/  | ↑                 | 已测试 |
-| Raspberry Pi OS with desktop | 2021-01-11 | buster/       | ↑                 | 已测试 |
-| Raspberry Pi OS with Lite    | 2021-01-11 | buster-lite/  | ↑                 | 已测试 |
-| Raspberry Pi OS with desktop | 2020-12-02 | buster/       | ↑                 | 已测试 |
-| Raspberry Pi OS with Lite    | 2020-12-02 | buster-lite/  | ↑                 | 已测试 |
-| Raspberry Pi OS with desktop | 2020-08-20 | buster/       | ↑                 | 已测试 |
-| Raspberry Pi OS with Lite    | 2020-08-20 | buster-lite/  | ↑                 | 已测试 |
-| Raspberry Pi OS with desktop | 2020-05-27 | buster/       | ↑                 | 已测试 |
-| Raspberry Pi OS with Lite    | 2020-05-27 | buster-lite/  | ↑                 | 已测试 |
-| Raspbian Buster with desktop | 2019-09-26 | buster/       | ↑                 | 已测试 |
-| Raspbian Buster Lite         | 2019-09-26 | buster-lite/  | ↑                 | 已测试 |
-| Raspbian Buster with desktop | 2020-02-13 | buster/       | v1.0.1.v20191105  | 已测试 |
-| Raspbian Buster Lite         | 2020-02-13 | buster-lite/  | v1.0.1.v20191105  | 已测试 |
+| Raspberry Pi OS (Legacy) with desktop | 2021-12-02 | raspios-legacy/ | master            | 已测试 |
+| Raspberry Pi OS with desktop          | 2021-10-30 | raspios/        | master            | 已测试 |
+| Raspberry Pi OS with Lite    		| 2021-10-30 | →               | →                 | 不兼容 |
+| Raspberry Pi OS with desktop 		| 2021-05-07 | buster/         | v1.0.21.v20210806 | 已测试 |
+| Raspberry Pi OS with Lite    		| 2021-05-07 | buster-lite/    | v1.0.21.v20210806 | 已测试 |
+| Raspberry Pi OS with desktop 		| 2021-03-04 | buster/         | ↑                 | 已测试 |
+| Raspberry Pi OS with Lite    		| 2021-03-04 | buster-lite/    | ↑                 | 已测试 |
+| Raspberry Pi OS with desktop 		| 2021-01-11 | buster/         | ↑                 | 已测试 |
+| Raspberry Pi OS with Lite   		| 2021-01-11 | buster-lite/    | ↑                 | 已测试 |
+| Raspberry Pi OS with desktop 		| 2020-12-02 | buster/         | ↑                 | 已测试 |
+| Raspberry Pi OS with Lite		| 2020-12-02 | buster-lite/    | ↑                 | 已测试 |
+| Raspberry Pi OS with desktop		| 2020-08-20 | buster/         | ↑                 | 已测试 |
+| Raspberry Pi OS with Lite    		| 2020-08-20 | buster-lite/    | ↑                 | 已测试 |
+| Raspberry Pi OS with desktop 		| 2020-05-27 | buster/         | ↑                 | 已测试 |
+| Raspberry Pi OS with Lite    		| 2020-05-27 | buster-lite/    | ↑                 | 已测试 |
+| Raspbian Buster with desktop 		| 2019-09-26 | buster/         | ↑                 | 已测试 |
+| Raspbian Buster Lite         		| 2019-09-26 | buster-lite/    | ↑                 | 已测试 |
+| Raspbian Buster with desktop 		| 2020-02-13 | buster/         | v1.0.1.v20191105  | 已测试 |
+| Raspbian Buster Lite         		| 2020-02-13 | buster-lite/    | v1.0.1.v20191105  | 已测试 |
 
 ---
 ### 目录结构
