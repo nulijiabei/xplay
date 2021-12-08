@@ -127,8 +127,10 @@
  > 下载 
  
  ```
+ git clone https://github.com/nulijiabei/xplay.git # (Master分支最新版本)
  git clone https://github.com/nulijiabei/xplay.git -b v1.0.20.v20210117 # (最新发布版请查看标签)
  或 
+ git clone https://gitee.com/nljb/xplay.git # (Master分支最新版本)
  git clone https://gitee.com/nljb/xplay.git -b v1.0.20.v20210117 # (最新发布版请查看标签)
  ```
  
