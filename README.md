@@ -220,7 +220,38 @@
  defaults.pcm.card 0 
  defaults.pcm.device 0
  defaults.ctl.card 0
- ``` 
+ ```
+ 
+ > ALSA 发生欠载 (underrun occurred) 解决方案  
+ > 配置文件（/etc/asound.conf）指定混音输出模式  
+ 
+ ```
+ pcm.!default {
+	 type plug
+	 slave.pcm "dmixer"
+ }
+
+ pcm.dmixer {
+	 type dmix
+	 ipc_key 1024
+	 slave {
+		 pcm "hw:0,0"
+		 period_time 0
+		 period_size 4096
+		 buffer_size 8192
+		 rate 48000
+	 }
+	 bindings {
+	 	0 0
+	 	1 1
+	 }
+ }
+
+ ctl.dmixer {
+	 type hw
+	 card 0
+ }
+ ```
 
 ---
 ### 播放控制
