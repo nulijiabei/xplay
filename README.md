@@ -139,8 +139,9 @@
  
  | 安装 | 框架 | 硬件 | 系统 | 备注 |  
  | --- | --- | --- | --- | --- |  
- | raspios/rpi_drm_install.sh     | DRM | Raspberry Pi 01234 | Raspberry Pi OS with desktop | 仅命令行可运行(全屏推荐) |  
- | raspios/rpi_x11_install.sh     | X11 | Raspberry Pi     4 | Raspberry Pi OS with desktop | 仅桌面可运行(可窗口化) |  
+ | raspios/rpi_drm_install.sh        | DRM | Raspberry Pi 01234 | Raspberry Pi OS with desktop | 仅命令行可运行(全屏推荐) |  
+ | raspios/rpi_x11_install.sh        | X11 | Raspberry Pi 4     | Raspberry Pi OS with desktop | 仅桌面可运行(可窗口化)   |  
+ | raspios-legacy/rpi_omx_install.sh | OMX | Raspberry Pi 0123  | Raspberry Pi OS (Legacy)     | 仅命令行可运行           |
  
  ```
  cd xplay/
