@@ -144,8 +144,7 @@
  | raspios-legacy/rpi_omx_install.sh | OMX | Raspberry Pi 0123  | Raspberry Pi OS (Legacy)     | 仅命令行可运行           |
  
  ```
- cd xplay/
- cd raspios/
+ cd xplay/raspios/
  sh -x rpi_drm_install.sh 或 sh -x rpi_x11_install.sh
  ```
  
@@ -181,7 +180,7 @@
  ***3. 播放测试***
  ```
  // 测试素材
- cp xplay/autotest/yiyezi.mp4 /root/yiyezi.mp4
+ cp autotest/yiyezi.mp4 /root/yiyezi.mp4
  // 播放测试
  /usr/bin/xplay -playing /root/yiyezi.mp4
  ```
