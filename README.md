@@ -50,6 +50,8 @@
 
 | 系统版本 | 发布日期 | 安装程序 | 测试版本 | 测试状态 |
 | --- | --- | --- | --- | --- |
+| Raspberry Pi OS (Legacy) with desktop | 2022-01-28 | raspios-legacy/ | master            | 已测试 |
+| Raspberry Pi OS with desktop          | 2022-01-28 | raspios/        | master            | 已测试 |
 | Raspberry Pi OS (Legacy) with desktop | 2021-12-02 | raspios-legacy/ | master            | 已测试 |
 | Raspberry Pi OS with desktop          | 2021-10-30 | raspios/        | master            | 已测试 |
 | Raspberry Pi OS with Lite    		| 2021-10-30 | →               | →                 | 不兼容 |
