@@ -171,11 +171,13 @@
  ```
  // 分辨率 1920x1080 【默认】
  // 帧率 30fps 【默认】
+ export LD_LIBRARY_PATH=/usr/local/lib/
  /usr/bin/xplay
  
  // 分辨率设置 1920x1080
  // 帧率 30fps
  // 【未设置则使用默认设置】
+ export LD_LIBRARY_PATH=/usr/local/lib/
  /usr/bin/xplay -R 0,0,1920,1080 -fps 30
  ```
  
@@ -184,6 +186,7 @@
  // 测试素材
  cp autotest/yiyezi.mp4 /root/yiyezi.mp4
  // 播放测试
+ export LD_LIBRARY_PATH=/usr/local/lib/
  /usr/bin/xplay -playing /root/yiyezi.mp4
  ```
  
