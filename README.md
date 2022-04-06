@@ -992,30 +992,32 @@
      "data":[
          {
              "id":"PLAY_Z9_PIC_1591330423",
+             "libName":"pic",
              "params":{
                  "height":600,
                  "left":100,
+                 "path":":/welcome.jpg",
                  "screen_mode":"portrait",
                  "screen_rotate":270,
                  "top":100,
                  "width":800,
                  "zIndex":9
-             },
-             "type":"pic"
+             }
          },
          {
              "id":"PLAY_Z10_VIDEO_1591330410",
+             "libName":"video",
              "params":{
                  "height":1080,
                  "left":0,
+                 "path":"/root/yiyezi.mp4",     
                  "screen_mode":"landscape",
                  "screen_rotate":180,
                  "top":0,
                  "width":1920,
                  "zIndex":10,
                  "decoder":true
-             },
-             "type":"video"
+             }
          }
      ],
      "ok":true
