@@ -32,16 +32,16 @@
 
 | 硬件 | 模式 | 分辨率 | FPS | 测试 |
 | --- | --- | --- | --- | --- |
-| Raspberry Pi Zero   | OMX (推荐) / DRM | 1080p/v720p  | 30 | 已测试 |
-| Raspberry Pi Zero 2 | OMX (推荐) / DRM | 1080p/v720p  | 30 | 已测试 |
-| Raspberry Pi 3A+    | OMX (推荐) / DRM | 1080p/v720p  | 30 | 已测试 |
-| Raspberry Pi 3B+    | OMX (推荐) / DRM | 1080p/v720p  | 30 | 已测试 |
-| Raspberry Pi 2B     | OMX (推荐) / DRM | 1080p/v720p  | 30 | 未测试 |
-| Raspberry Pi 3B     | OMX (推荐) / DRM | 1080p/v720p  | 30 | 未测试 |
-| Raspberry Pi 4B     | DRM (推荐) / X11 | 1080p/[【双】](https://gitee.com/nljb/xplay/issues/I1HPLH) | 30 | 已测试 |
-| Android 系统        | DRM     | - | - | 可定制 |
-| Linux 系统          | DRM / X11 | [github](https://github.com/nulijiabei/ubuntu-xplay) / [gitee](https://gitee.com/nljb/ubuntu-xplay) | - | 已测试 |
-| Windows 系统        | Microsoft Direct3D | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
+| Raspberry Pi Zero       | OMX (推荐) / DRM | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi Zero 2     | OMX (推荐) / DRM | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi 2 Model B  | OMX (推荐) / DRM | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi 3 Model B  | OMX (推荐) / DRM | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi 3 Model A+ | OMX (推荐) / DRM | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi 3 Model B+ | OMX (推荐) / DRM | 1080p/v720p  | 30 | 已测试 |
+| Raspberry Pi 4 Model B  | DRM (推荐) / X11 | 1080p/[【双】](https://gitee.com/nljb/xplay/issues/I1HPLH) | 30 | 已测试 |
+| Android 系统            | DRM     | - | - | 可定制 |
+| Linux 系统              | DRM / X11 | [github](https://github.com/nulijiabei/ubuntu-xplay) / [gitee](https://gitee.com/nljb/ubuntu-xplay) | - | 已测试 |
+| Windows 系统            | Microsoft Direct3D | [github](https://github.com/nulijiabei/winxplay) / [gitee](https://gitee.com/nljb/winxplay) | - | 已测试 |
 
 ***理论上支持所有树莓派，但是经过测试的树莓派只有上面几款***
 
