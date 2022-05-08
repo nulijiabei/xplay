@@ -50,12 +50,12 @@
 
 | 系统版本 | 发布日期 | 安装程序 | 测试版本 | 测试状态 |
 | --- | --- | --- | --- | --- |
-| Raspberry Pi OS (Legacy) with desktop | 2022-04-04 | raspios-legacy/ | master            | 已测试 |
-| Raspberry Pi OS with desktop          | 2022-04-04 | raspios/        | master            | 已测试 |
-| Raspberry Pi OS (Legacy) with desktop | 2022-01-28 | raspios-legacy/ | master            | 已测试 |
-| Raspberry Pi OS with desktop          | 2022-01-28 | raspios/        | master            | 已测试 |
-| Raspberry Pi OS (Legacy) with desktop | 2021-12-02 | raspios-legacy/ | master            | 已测试 |
-| Raspberry Pi OS with desktop          | 2021-10-30 | raspios/        | master            | 已测试 |
+| Raspberry Pi OS (Legacy) with desktop | 2022-04-04 | raspios-legacy/ | v1.0.22.v20220406 | 已测试 |
+| Raspberry Pi OS with desktop          | 2022-04-04 | raspios/        | v1.0.22.v20220406 | 已测试 |
+| Raspberry Pi OS (Legacy) with desktop | 2022-01-28 | raspios-legacy/ | ↑                 | 已测试 |
+| Raspberry Pi OS with desktop          | 2022-01-28 | raspios/        | ↑                 | 已测试 |
+| Raspberry Pi OS (Legacy) with desktop | 2021-12-02 | raspios-legacy/ | ↑                 | 已测试 |
+| Raspberry Pi OS with desktop          | 2021-10-30 | raspios/        | ↑                 | 已测试 |
 | Raspberry Pi OS with Lite    		| 2021-10-30 | →               | →                 | 不兼容 |
 | Raspberry Pi OS with desktop 		| 2021-05-07 | buster/         | v1.0.21.v20210806 | 已测试 |
 | Raspberry Pi OS with Lite    		| 2021-05-07 | buster-lite/    | v1.0.21.v20210806 | 已测试 |
