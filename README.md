@@ -324,98 +324,99 @@
  
  | 命令行参数(sequence) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
- | -zIndex        | 10            | 0 - 999               | 层 |
- | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
- | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
- | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
- | -path          | 无            | 素材路径1,素材路径2,素材路径3,... |	多个素材路径通过逗号(,)分隔 |
- | -duration      | 5	            | 无                    | 非视频素材所播放的时间(s) |
+ | -zIndex        | 10            | 0 - 999                 | 层 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height   | 素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait     | 横竖屏模式 |
+ | -screen_rotate | 0	          | 0、180、90、270         | 旋转角度 |
+ | -path          | 无            | 素材路径1,素材路径2,素材路径3,... | 多个素材路径通过逗号(,)分隔 |
+ | -duration      | 5	          | 无                      | 非视频素材所播放的时间(s) |
  
  | 命令行参数(video) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -zIndex        | 10            | 0 - 999               | 层 |
- | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
- | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
- | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
- | -path          | 无            | 无                    |	素材路径 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height | 素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   | 横竖屏模式 |
+ | -screen_rotate | 0	          | 0、180、90、270       | 旋转角度 |
+ | -path          | 无            | 无                    | 素材路径 |
+ | -offset        | -1            | 无                    | 偏移量(ms) |
  | -timeout       | -1            | 无                    | 断流超时(ms) |
 
  | 命令行参数(pic、gif) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -zIndex        | 10            | 0 - 999               | 层 |
- | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
- | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
- | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
- | -path          | 无            | 无                    |	素材路径 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height | 素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   | 横竖屏模式 |
+ | -screen_rotate | 0	          | 0、180、90、270       | 旋转角度 |
+ | -path          | 无            | 无                    | 素材路径 |
 
  | 命令行参数(qrcode) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -zIndex        | 10            | 0 - 999               | 层 |
- | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
- | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
- | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height | 素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   | 横竖屏模式 |
+ | -screen_rotate | 0	          | 0、180、90、270       | 旋转角度 |
  | -content       | 无            | 无                    | 文本内容 |
 
  | 命令行参数(camera) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -zIndex        | 10            | 0 - 999               | 层 |
- | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
- | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
- | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
- | -device        | /dev/video0   |	无                    | 设备地址 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height | 素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   | 横竖屏模式 |
+ | -screen_rotate | 0	          | 0、180、90、270       | 旋转角度 |
+ | -device        | /dev/video0   | 无                    | 设备地址 |
  | -camera_width  | 1280          | 无                    | 摄像头 video_size 宽 |
  | -camera_height | 720           | 无                    | 摄像头 video_size 高 |
 
  | 命令行参数(text) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -zIndex        | 10            | 0 - 999               | 层 |
- | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
- | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
- | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height | 素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   | 横竖屏模式 |
+ | -screen_rotate | 0	          | 0、180、90、270       | 旋转角度 |
  | -content       | 无            | 无                    | 文本内容 |
  | -font_ttf      | 无            | 无                    | 指定字体 |
  | -font_size     | 18            | 12 - 72               | 字体大小 |
- | -color         | rgba(0,128,0,100) | 无 | 文本颜色及透明度 |
- | -bgcolor       | rgba(0,0,0,20)    | 无 | 背景颜色及透明度 |
+ | -color         | rgba(0,128,0,100)  | 无 | 文本颜色及透明度 |
+ | -bgcolor       | rgba(0,0,0,20)     | 无 | 背景颜色及透明度 |
  | -align         | center             | center、right、left | 对齐方式 |
- | -style         | normal             | normal、bold、italic、underline、strikethrough |	文本样式 |
+ | -style         | normal             | normal、bold、italic、underline、strikethrough | 文本样式 |
 
  | 命令行参数(scroll) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -zIndex        | 10            | 0 - 999               | 层 |
- | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
- | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
- | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height | 素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   | 横竖屏模式 |
+ | -screen_rotate | 0	          | 0、180、90、270       | 旋转角度 |
  | -content       | 无            | 无                    | 文本内容 |
  | -font_ttf      | 无            | 无                    | 指定字体 |
  | -font_size     | 18            | 12 - 72               | 字体大小 |
- | -color         | rgba(0,128,0,100) | 无 | 文本颜色及透明度 |
- | -bgcolor       | rgba(0,0,0,20)    | 无 | 背景颜色及透明度 |
- | -style         | normal             | normal、bold、italic、underline、strikethrough |	文本样式 |
- | -orientation   | horizontal         | horizontal、vertical	| 移动方向 |
+ | -color         | rgba(0,128,0,100)  | 无 | 文本颜色及透明度 |
+ | -bgcolor       | rgba(0,0,0,20)     | 无 | 背景颜色及透明度 |
+ | -style         | normal             | normal、bold、italic、underline、strikethrough | 文本样式 |
+ | -orientation   | horizontal         | horizontal、vertical | 移动方向 |
  | -speed         | 1                  | 每帧向前移动像素 | 移动速度 |
 
  | 命令行参数(datetime) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -zIndex        | 10            | 0 - 999               | 层 |
- | -rect          | 0,0,1920,1080 | left,top,width,height |	素材显示尺寸与位置 |
- | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
- | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -rect          | 0,0,1920,1080 | left,top,width,height | 素材显示尺寸与位置 |
+ | -screen_mode   | landscape     | landscape、portrait   | 横竖屏模式 |
+ | -screen_rotate | 0	          | 0、180、90、270       | 旋转角度 |
  | -font_ttf      | 无            | 无                    | 指定字体 |
  | -font_size     | 18            | 12 - 72               | 字体大小 |
- | -color         | rgba(0,128,0,100) | 无 | 文本颜色及透明度 |
- | -bgcolor       | rgba(0,0,0,20)    | 无 | 背景颜色及透明度 |
+ | -color         | rgba(0,128,0,100)  | 无 | 文本颜色及透明度 |
+ | -bgcolor       | rgba(0,0,0,20)     | 无 | 背景颜色及透明度 |
  | -align         | center             | center、right、left | 对齐方式 |
- | -style         | normal             | normal、bold、italic、underline、strikethrough |	文本样式 |
+ | -style         | normal             | normal、bold、italic、underline、strikethrough | 文本样式 |
 
  | 命令行参数(toast) | 默认值 | 可选参数 | 说明 |
  | --- | --- | --- | --- |
  | -zIndex        | 10            | 0 - 999               | 层 |
- | -screen_mode   | landscape     | landscape、portrait   |	横竖屏模式 |
- | -screen_rotate | 0	            | 0、180、90、270       | 旋转角度 |
+ | -screen_mode   | landscape     | landscape、portrait   | 横竖屏模式 |
+ | -screen_rotate | 0	          | 0、180、90、270       | 旋转角度 |
  | -content       | 无            | 无                    | 文本内容 |
- | -toast_type    | notice	       | notice、success、warning、error | 消息类型 |
- | -duration      | 0	            | 无                    | 持续时间(s) 超时关闭 永不超时(0) |
+ | -toast_type    | notice	  | notice、success、warning、error | 消息类型 |
+ | -duration      | 0	          | 无                    | 持续时间(s) 超时关闭 永不超时(0) |
 
  ```
  /usr/bin/xplayctl -h # 帮助
@@ -534,6 +535,10 @@
  #End
  ```
  
+ | 视频播放(video) | 说明 |
+ | --- | --- |
+ | offset | 偏移量(ms) |
+ 
  ```
  // 视频播放
  {
@@ -544,6 +549,7 @@
      "params":{
          "zIndex":10,
          "path":"/root/sample.mp4",
+         "offset":5000,
          "left":0,
          "top":0,
          "width":1920,
