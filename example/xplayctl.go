@@ -1,6 +1,6 @@
 ﻿package main
 
-// 20210117
+// 20220520
 
 import (
 	"bufio"
@@ -55,6 +55,7 @@ var screen_mode = flag.String("screen_mode", "landscape", "landscape、portrait"
 var screen_rotate = flag.Int("screen_rotate", 0, "landscape: 0、180 or portrait: 90、270")
 var path = flag.String("path", "", "file path")
 var content = flag.String("content", "", "data content")
+var offset = flag.Int64("offset", -1, "video offset(ms)")
 var timeout = flag.Int64("timeout", -1, "video stream timeout(ms)")
 
 // Change Params
@@ -181,6 +182,7 @@ func (this *XPlay) play() error {
 		params["screen_mode"] = *screen_mode
 		params["screen_rotate"] = *screen_rotate
 		params["path"] = this.path()
+		params["offset"] = *offset
 		params["timeout"] = *timeout
 	} else if (*libName) == "pic" {
 		params["zIndex"] = *zIndex
