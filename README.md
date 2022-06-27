@@ -229,9 +229,14 @@
  defaults.ctl.card 0
  ```
  
- > ALSA 发生欠载 (underrun occurred) 解决方案  
- > 配置文件（/etc/asound.conf）指定混音输出模式  
- 
+ > 如果在使用中出现音频杂音问题可以尝试以下方案
+ 1. 更新系统到最新版本
+ ```
+ sudo apt update
+ sudo apt upgrade
+ sudo reboot
+ ```
+ 2. 配置混音输出模式（/etc/asound.conf）
  ```
  pcm.!default {
 	 type plug
