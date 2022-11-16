@@ -25,7 +25,6 @@
 [命令行工具](#命令行工具)  
 [控制指令](#控制指令)  
 [许可信息](#许可信息)  
-[更多功能](#更多功能)  
 
 ---
 ### 支持硬件
@@ -1064,12 +1063,5 @@
 >FFmpeg is the leading multimedia framework to decode, encode, transcode, mux, demux, stream, filter and play. All builds require at least Windows 7 or Mac OS X 10.10. Nightly git builds are licensed as GPL 3.0, and release build are licensed as GPL 3.0 and LGPL 3.0. LGPL 3.0 release builds can be found using the "All Builds" links.  
 
 ---
-### 更多功能
 
- * 基于云服务的信息发布系统(www.danoonetworks.com)
- * 提供一站式解决方案(软硬件、一体机、4G/WIFI网络、等 ...)
-
-![image](images/cherry.jpg)
-
- ---
 
