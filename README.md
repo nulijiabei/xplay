@@ -11,7 +11,7 @@
 
 ---
 
-### [免费授权（免费、个人免费、商用免费、重要的事情说三遍）（点击获取）](https://gitee.com/nljb/xplay/issues/I14K0K)
+### [免费授权（支持定制）（点击获取）](https://gitee.com/nljb/xplay/issues/I14K0K)
 
 ---
 
