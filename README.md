@@ -11,8 +11,8 @@
 
 ---
 
-***注意：新版（Raspberry Pi OS）系统已经移除了 MMAL 的支持, 无法在最新发布的系统中继续使用（legacy）版本不受影响。***  
-#### 新版（nlplay）播放器已经发布（ [Github](https://github.com/nulijiabei/nlplay) / [Gitee](https://gitee.com/nljb/nlplay) ），无任何限制，支持新版（Raspberry Pi OS 32-bit and 64-bit）系统。
+***注意：新版（Raspberry Pi OS）系统已经移除了 MMAL 的支持, 无法在最新的系统中继续使用（legacy）版本不受影响。***  
+#### 新版（nlplay）播放器已经发布（ [Github](https://github.com/nulijiabei/nlplay) / [Gitee](https://gitee.com/nljb/nlplay) ），无限制，支持新版（Raspberry Pi OS 32-bit and 64-bit）系统。
 
 ---
 
