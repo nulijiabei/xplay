@@ -11,7 +11,8 @@
 
 ---
 
-### [免费授权（支持定制）（点击获取）](https://gitee.com/nljb/xplay/issues/I14K0K)
+***注意：新版（Raspberry Pi OS）系统已经移除了 MMAL 的支持, 无法在最新发布的系统中继续使用（legacy）版本不受影响。***  
+#### 新版（nlplay）播放器已经发布（ [Github](https://github.com/nulijiabei/nlplay) / [Gitee](https://gitee.com/nljb/nlplay)），无任何限制，支持新版（Raspberry Pi OS 32-bit and 64-bit）系统。
 
 ---
 
@@ -49,6 +50,8 @@
 
 | 系统版本 | 发布日期 | 安装程序 | 测试版本 | 测试状态 |
 | --- | --- | --- | --- | --- |
+| Raspberry Pi OS (Legacy) with desktop | 2023-10-10 | raspios-legacy/ | -                 | 待测试 |
+| Raspberry Pi OS with desktop          | 2023-10-10 | raspios/        | -                 | 不支持 |
 | Raspberry Pi OS (Legacy) with desktop | 2023-05-03 | raspios-legacy/ | -                 | 待测试 |
 | Raspberry Pi OS with desktop          | 2023-05-03 | raspios/        | -                 | 待测试 |
 | Raspberry Pi OS (Legacy) with desktop | 2023-02-21 | raspios-legacy/ | -                 | 待测试 |
