@@ -12,7 +12,6 @@
 ---
 
 ***需要在（Raspberry Pi OS (Legacy) with desktop）系统中使用（xplay）多媒体播放器，因为（Legacy）系统支持（VideoCore IV）。***  
-***在新的（Raspberry Pi OS 32-bit and 64-bit）系统中不再支持（VideoCore IV）无法使用 OMX 与 MMAL 进行渲染和解码。***  
 ***新发布（nlplay）多媒体播放器（ [Github](https://github.com/nulijiabei/nlplay) / [Gitee](https://gitee.com/nljb/nlplay) ），支持（Raspberry Pi OS 32-bit and 64-bit）系统，使用（V4L2）进行解码。***  
 
 ---
