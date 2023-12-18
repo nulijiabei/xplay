@@ -11,8 +11,9 @@
 
 ---
 
-***新版（Raspberry Pi OS）系统已经移除了 MMAL 的支持, 无法在最新的系统中继续使用（legacy）版本不受影响***  
-#### 新版（nlplay）播放器已经发布（ [Github](https://github.com/nulijiabei/nlplay) / [Gitee](https://gitee.com/nljb/nlplay) ），无限制，支持新版（Raspberry Pi OS 32-bit and 64-bit）
+***需要在（Raspberry Pi OS (Legacy) with desktop）系统中使用（xplay）多媒体播放器，因为（Legacy）系统支持（VideoCore IV）。***  
+***在新的（Raspberry Pi OS 32-bit and 64-bit）系统中不再支持（VideoCore IV）无法使用 OMX 与 MMAL 进行渲染和解码。***  
+***新发布（nlplay）多媒体播放器（ [Github](https://github.com/nulijiabei/nlplay) / [Gitee](https://gitee.com/nljb/nlplay) ），支持（Raspberry Pi OS 32-bit and 64-bit）系统，使用（V4L2）进行解码。***  
 
 ---
 
@@ -50,7 +51,8 @@
 
 | 系统版本 | 发布日期 | 安装程序 | 测试版本 | 测试状态 |
 | --- | --- | --- | --- | --- |
-| Raspberry Pi OS (Legacy) with desktop | 2023-10-10 | raspios-legacy/ | v1.0.22.v20220406 | 待测试 |
+| Raspberry Pi OS (Legacy) with desktop | 2023-12-05 | raspios/        | v1.0.22.v20220406 | 已测试 |
+| Raspberry Pi OS (Legacy) with desktop | 2023-10-10 | raspios/        | v1.0.22.v20220406 | 已测试 |
 | Raspberry Pi OS with desktop          | 2023-10-10 | raspios/        | v1.0.22.v20220406 | 不支持 |
 | Raspberry Pi OS (Legacy) with desktop | 2023-05-03 | raspios-legacy/ | ↓                 | 待测试 |
 | Raspberry Pi OS with desktop          | 2023-05-03 | raspios/        | ↓                 | 待测试 |
@@ -155,7 +157,6 @@
  | --- | --- | --- | --- | --- |  
  | raspios/rpi_drm_install.sh        | DRM | Raspberry Pi 34    | Raspberry Pi OS with desktop | 仅命令行可运行(全屏推荐) |  
  | raspios/rpi_x11_install.sh        | X11 | Raspberry Pi 4     | Raspberry Pi OS with desktop | 仅桌面可运行(可窗口化)   |  
- | raspios-legacy/rpi_omx_install.sh | OMX | Raspberry Pi 0123  | Raspberry Pi OS (Legacy)     | 仅命令行可运行           |
  
  ```
  cd xplay/raspios/
