@@ -50,9 +50,10 @@
 
 | 系统版本 | 发布日期 | 安装程序 | 测试版本 | 测试状态 |
 | --- | --- | --- | --- | --- |
-| Raspberry Pi OS (Legacy) with desktop | 2023-12-05 | raspios/        | v1.0.22.v20220406 | 已测试 |
-| Raspberry Pi OS (Legacy) with desktop | 2023-10-10 | raspios/        | v1.0.22.v20220406 | 已测试 |
-| Raspberry Pi OS with desktop          | 2023-10-10 | raspios/        | v1.0.22.v20220406 | 不支持 |
+| Raspberry Pi OS (Legacy) with desktop | 2024-03-12 | raspios/        | v1.0.22.v20220406 | 待测试 |
+| Raspberry Pi OS (Legacy) with desktop | 2023-12-05 | raspios/        | ↓                 | 已测试 |
+| Raspberry Pi OS (Legacy) with desktop | 2023-10-10 | raspios/        | ↓                 | 已测试 |
+| Raspberry Pi OS with desktop          | 2023-10-10 | raspios/        | ↓                 | 不支持 |
 | Raspberry Pi OS (Legacy) with desktop | 2023-05-03 | raspios-legacy/ | ↓                 | 待测试 |
 | Raspberry Pi OS with desktop          | 2023-05-03 | raspios/        | ↓                 | 待测试 |
 | Raspberry Pi OS (Legacy) with desktop | 2023-02-21 | raspios-legacy/ | ↓                 | 待测试 |
