@@ -81,10 +81,10 @@
 | Raspberry Pi OS with Lite    		| 2020-08-20 | buster-lite/    | ↑                 | 已测试 |
 | Raspberry Pi OS with desktop 		| 2020-05-27 | buster/         | ↑                 | 已测试 |
 | Raspberry Pi OS with Lite    		| 2020-05-27 | buster-lite/    | ↑                 | 已测试 |
-| Raspbian Buster with desktop 		| 2019-09-26 | buster/         | ↑                 | 已测试 |
-| Raspbian Buster Lite         		| 2019-09-26 | buster-lite/    | ↑                 | 已测试 |
-| Raspbian Buster with desktop 		| 2020-02-13 | buster/         | v1.0.1.v20191105  | 已测试 |
-| Raspbian Buster Lite         		| 2020-02-13 | buster-lite/    | v1.0.1.v20191105  | 已测试 |
+| Raspbian Buster with desktop 		| 2020-02-13 | buster/         | ↑                 | 已测试 |
+| Raspbian Buster Lite         		| 2020-02-13 | buster-lite/    | ↑                 | 已测试 |
+| Raspbian Buster with desktop 		| 2019-09-26 | buster/         | v1.0.1.v20191105  | 已测试 |
+| Raspbian Buster Lite         		| 2019-09-26 | buster-lite/    | v1.0.1.v20191105  | 已测试 |
 
 ---
 ### 目录结构
