@@ -12,7 +12,7 @@
 ---
 
 ***需要在（Raspberry Pi OS (Legacy) with desktop）系统中使用（xplay）多媒体播放器，因为（Legacy）系统支持（VideoCore IV）。***  
-***新发布（nlplay）多媒体播放器（ [Github](https://github.com/nulijiabei/nlplay) / [Gitee](https://gitee.com/nljb/nlplay) ），支持（Raspberry Pi OS 32-bit and 64-bit）系统，使用（V4L2）进行解码。***  
+***基于云发布的多媒体播放器（ [Github](https://github.com/nulijiabei/uplay) / [Gitee](https://gitee.com/nljb/uplay) ），可以通过浏览器集中管理（Win、Linux、ARM、等）设备上的多媒体播放器 ...***  
 
 ---
 
