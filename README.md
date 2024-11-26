@@ -12,7 +12,15 @@
 ---
 
 ***需要在（Raspberry Pi OS (Legacy) with desktop）系统中使用（xplay）多媒体播放器，因为（Legacy）系统支持（VideoCore IV）。***  
-***基于云发布的多媒体播放器（ [Github](https://github.com/nulijiabei/uplay) / [Gitee](https://gitee.com/nljb/uplay) ），可以云端集中管理（Win、Linux、ARM）设备上的多媒体播放器 ...***  
+
+---
+
+基于云发布的多媒体播放器（uplay）
+
+可以云端集中管理（Win、Linux、ARM）设备上的多媒体播放器  
+uplay（这个不是免费的）联系（QQ328292201）欢迎试用 ...
+
+![image](images/uplay.png)
 
 ---
 
