@@ -15,10 +15,7 @@
 
 ---
 
-基于云发布的多媒体播放器（uplay）
-
-可以云端集中管理（Win、Linux、ARM）设备上的多媒体播放器  
-uplay（这个不是免费的）联系（QQ328292201）欢迎试用 ...
+基于云发布的多媒体播放器（uplay）不支持（android）
 
 ![image](images/uplay.png)
 
